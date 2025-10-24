@@ -1,0 +1,27 @@
+.tr-favorite:hover .favorite
+{
+    display: block;
+}
+.tr-favorite:hover .favorite:hover
+{
+    color: #8a8a8a;
+}
+.trd-name
+{
+    position: relative;
+    padding-right: 5px;
+}
+.favorite
+{
+    position: absolute;
+    right: 4px;
+    top: -1px;
+    /*display: none;*/
+    cursor: pointer;
+    color: #ced2d6;
+}
+.favorite.active
+{
+    display: block!important;
+    color: #eb8d11;
+}

@@ -1,0 +1,57 @@
+div.check_file_status_progress
+{
+    margin: auto;
+    width: 32px;
+    height: 32px;
+    background:url("/images/fcs_progress.gif") no-repeat;
+}
+div.check_file_status_ok
+{
+    margin: auto;
+    width: 32px;
+    height: 32px;
+    background:url("/images/button_ok_32.png") no-repeat;
+}
+div.check_file_status_fail
+{
+    margin: auto;
+    width: 32px;
+    height: 32px;
+    background:url("/images/button_stop_32.png") no-repeat;
+}
+div.check_file_status_skip
+{
+    margin: auto;
+    width: 32px;
+    height: 32px;
+    background:url("/images/skipcheck-32.png") no-repeat;
+}
+div.check_file_status_row_progress
+{
+    margin: auto;
+    padding-left: 23px;
+    height: 16px;
+    background:url("/images/fcs_progress16.gif") no-repeat;
+}
+div.check_file_status_row_fail
+{
+    margin: auto;
+    padding-left: 23px;
+    height: 16px;
+    background:url("/images/button_stop_16.png") no-repeat;
+}
+div.check_file_status_row_ok
+{
+    margin: auto;
+
+    padding-left: 23px;
+    height: 16px;
+    background:url("/images/button_ok_16.png") no-repeat;
+}
+div.check_file_status_row_skip
+{
+    margin: auto;
+    padding-left: 23px;
+    height: 16px;
+    background:url("/images/skipcheck-16.png") no-repeat;
+}
