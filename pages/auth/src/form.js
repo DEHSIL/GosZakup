@@ -61,6 +61,10 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    function showAllert() {
+        
+    }
+
     // --- Показ и скрытие модалки ---
     function showModal() {
         passwordModal.style.display = "block";
@@ -81,12 +85,13 @@ document.addEventListener("DOMContentLoaded", function() {
     confirmBtn.addEventListener("click", () => {
         const pass = keyPassword.value.trim();
         if (!pass) {
-            alert("Введите пароль");
+            showAllert()
             return;
         }
 
         passwordModal.style.display = "none";
-        alert("Ключ успешно подтверждён!");
+        // alert("Ключ успешно подтверждён!");
+        window.location.href = "/pages/auth/Вход после ЭЦП/register.html"
         keyPassword.value = "";
     });
 });

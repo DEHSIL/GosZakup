@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+    
+    <title>Портал государственных закупок Республики Казахстан</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="robots" content="noindex">
+    <link rel="manifest" href="https://v3bl.goszakup.gov.kz/manifest.json">
+    <link rel="shortcut icon" href="https://v3bl.goszakup.gov.kz/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://v3bl.goszakup.gov.kz/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-16x16.png">
+    <link href="src/bootstrap.min.css" rel="stylesheet">
+    <link href="src/all.min.css" rel="stylesheet">
+    <link href="src/style.css" rel="stylesheet">
+    <link href="src/datepicker.css" rel="stylesheet">
+    <link href="src/upload.css" rel="stylesheet">
+
+    <script src="src/jquery.js.загрузка"></script>
+    <script src="src/bootstrap.min.js.загрузка"></script>
+    <script src="src/confirmation.js.загрузка"></script>
+    
+    
+    <script type="text/javascript" src="src/bootstrap.datepicker.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="src/bootstrap-datepicker.ru.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="src/helpers.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="src/subject.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="src/bootstrap-filestyle.min.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="src/upload.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="src/jquery.blockUI.js.загрузка" charset="utf-8"></script>
+
+    <!-- <script>
+            var user_id = 1563337;
+            window.lang_key = "ru";
+            window.current_controller_url = "https://v3bl.goszakup.gov.kz/ru/subject";
+            
+            window.current_directory = "";
+            window.current_controller = "subject";
+            window.current_method = "register";
+
+            window.url_params = [];
+            ; var lang = 'ru'; var controller = 'subject';    
+    </script> -->
+</head>
+<body style="">
+
+<!-- BEGIN WRAP -->
+<div class="wrap">
+    <!-- BEGIN NAVBAR -->
+    <div id="navbar-main" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand big-screen-element" href="https://v3bl.goszakup.gov.kz/">АИИС ЭГЗ</a>
+            </div>
+            <div id="main-nav" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav"><li><a href="https://goszakup.gov.kz/">Главная</a></li><li><a href="https://wiki.goszakup.gov.kz/">Справка</a></li><li class="dropdown"><a data-id="181" href="https://v3bl.goszakup.gov.kz/ru/subject/register#" class="dropdown-toggle" data-toggle="dropdown">Реестры <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="https://v3bl.goszakup.gov.kz/ru/complaint/reestrcomplaint">Реестр жалоб</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/careless/reestr">Реестр недобросовестных участников ГЗ</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/eDepository/dataWorkPerformed">Реестр опытов работы</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/careless/reestr/index_quasi">Реестр недобросовестных участников закупок</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/register/supplierreg">Реестр участников ГЗ </a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/register/plansreg">Планы ГЗ</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/egzcontract/cpublic">Реестр договоров</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/rqc/registry">Реестр квалифицированных поставщиков</a></li></ul></li><li class="dropdown"><a data-id="66" href="https://v3bl.goszakup.gov.kz/ru/subject/register#" class="dropdown-toggle" data-toggle="dropdown">Закупки <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="https://v3bl.goszakup.gov.kz/ru/search/lots">Поиск лотов</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/searchanno">Поиск объявлений</a></li></ul></li></ul>
+                <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://v3bl.goszakup.gov.kz/kz/subject/register">Қаз</a></li>
+                <li><a href="https://v3bl.goszakup.gov.kz/ru/subject/register">Рус</a></li>
+              
+                    <li class="dropdown">
+                    <a href="https://v3bl.goszakup.gov.kz/ru/subject/register#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-user online" id="online-status"></span>
+                      Сагайдак Яна Валерьевна                    
+                      <b class="caret"></b>
+                    </a>
+                    
+                    <ul class="dropdown-menu">
+                        <li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/profile">Кабинет</a></li>
+                        <li class="divider"></li>
+                        <li><a href="https://v3bl.goszakup.gov.kz/ru/favorites">Избранное</a></li>
+                        <li class="divider"></li>
+                        <li><a href="https://v3bl.goszakup.gov.kz/ru/user/sso_logout">Выход</a></li>
+                    </ul>
+                </li></ul>
+                <ul id="navbar-notice" class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="https://v3bl.goszakup.gov.kz/ru/subject/register#" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown"><span class="label label-success"><i class="far fa-bell"></i></span>&nbsp;</a><ul class="dropdown-menu menu-sm" id="notify-container">
+                        <li><a href="https://v3bl.goszakup.gov.kz/ru/notices/">Все уведомления</a></li>
+                        
+                    </ul>
+                </li></ul>
+            </div>
+        </div>
+    </div>
+    <!-- END NAVBAR -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="container-full">
+        <div class="alert alert-danger" id="offline-message">
+            <strong>Внимание!</strong> Соединение с приложением прервано. Пожалуйста, авторизуйтесь заново.
+        </div>
+        
+        
+        
+        
+        
+        <div id="loading" class="alert alert-info" style="display: none">Подождите, идет загрузка данных</div>
+        
+        
+                        <div class="content-block"><div class="container">
+    <h2>Регистрация участника</h2>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <b>Запрос данных в ИСНА по данным сертификата</b>
+        </div>
+
+        <div class="panel-body">
+            <div class="panel-body row">
+                <div class="col-md-12">
+                    <b>Товарищество с ограниченной ответственностью "Организация"</b>
+                </div>
+            </div>
+            <div class="panel-body row">
+                <div class="col-sm-3">
+                    <button class="btn btn-primary" id="sendRequest" onclick="send_inis_request();">
+                        Получить данные                    </button>
+                </div>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="biniin" id="biniin" readonly="" value="BIN240140022429" wfd-id="id0">
+                    <br><br>
+                                            <select name="tax_payer_type" class="form-control" id="tax_payer_type">
+<option value="" selected=""></option><option value="IPS">Индивидуальное предпринимательство (совместное)</option>
+<option value="UL">Юридическое лицо</option>
+</select>                                    </div>
+            </div>
+            <div class="panel-body row">
+                <div class="col-sm-3">
+                    <a href="/pages/Профиль/profile.html" class="btn btn-default">
+                        Вернуться назад                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div id="requestResult">
+<div class="panel panel-info">
+    <div class="panel-heading"><b>Данные сервиса ИНИС</b></div>
+    <form action="https://v3bl.goszakup.gov.kz/ru/subject/ajax_inis_request" method="post" accept-charset="utf-8" id="frm_agr_sign">    <div class="panel-body form-horizontal">
+        <!-- ИИН/БИН -->
+                    <div class="form-group">
+                <label class="col-sm-2  control-label">БИН</label>
+
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="bin" value="240162682429" readonly="">
+                </div>
+            </div>
+                <!-- РНН -->
+        <div class="form-group">
+            <label class="col-sm-2  control-label">РНН</label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="rnn" value="" readonly="">
+                <input type="hidden" name="tax_payer_type" id="tax_payer_type" value="UL">
+            </div>
+        </div>
+        <!-- атрибуты -->
+<!-- роли - чекбоксы -->
+
+<div class="panel-body row">
+    <div class="col-sm-2">
+        &nbsp;
+    </div>
+    <div class="col-sm-10">
+        
+  <input type="checkbox" name="qvazi" value="1">
+<b>Не субъект ГЗ</b><br>
+
+  <input type="checkbox" name="customer" value="1">
+<b>Заказчик</b><br>
+
+  <input type="checkbox" name="organizer" value="1">
+<b>Организатор</b><br>
+
+  <input type="checkbox" name="supplier" value="1">
+<b>Поставщик</b><br>
+
+  <input type="checkbox" disabled="">
+Банк<br>
+    </div>
+</div>
+
+
+<div class="panel-body row">
+ <label class="col-sm-2 control-label">Полное наименование на казахском языке</label>
+ <div class="col-sm-10">
+  <input type="text" class="form-control" value="&quot;Организация&quot; жауапкершілігі шектеулі серіктестігі" readonly="">
+ </div>
+</div>
+
+<div class="panel-body row">
+ <label class="col-sm-2 control-label">Полное наименование на русском языке</label>
+ <div class="col-sm-10">
+  <input type="text" class="form-control" value="Товарищество с ограниченной ответственностью &quot;Огранизация&quot;" readonly="">
+ </div>
+</div>
+
+<div class="panel-body row">
+ <label class="col-sm-2 control-label">Краткое наименование на казахском языке</label>
+ <div class="col-sm-10">
+  <input type="text" class="form-control" value="&quot;Организация&quot; ЖШС" readonly="">
+ </div>
+</div>
+
+<div class="panel-body row">
+ <label class="col-sm-2 control-label">Краткое наименование на русском языке</label>
+ <div class="col-sm-10">
+  <input type="text" class="form-control" value="ТОО &quot;Организация&quot;" readonly="">
+ </div>
+</div>
+<!-- ФИО руководителя -->
+<div class="panel-body row">
+    <label class="col-sm-2 control-label">ФИО руководителя</label>
+
+    <div class="col-sm-4">
+        <input class="form-control" value="ФАМИЛИЯ" readonly="">
+    </div>
+    <div class="col-sm-3">
+        <input class="form-control" value="ИМЯ" readonly="">
+    </div>
+    <div class="col-sm-3">
+        <input class="form-control" value="" readonly="">
+    </div>
+</div>
+
+<div class="panel-body row">
+ <label class="col-sm-2 control-label">Должность руководителя</label>
+ <div class="col-sm-10">
+  <input type="text" class="form-control" name="leader_job" value="">
+ </div>
+</div>
+
+<div class="panel-body row">
+ <label class="col-sm-2 control-label">ФИО заявителя</label>
+ <div class="col-sm-10">
+  <input type="text" class="form-control" value="Фамилия Имя Отчество" readonly="">
+ </div>
+</div>
+
+<div class="panel-body row">
+ <label class="col-sm-2 control-label">Должность заявителя</label>
+ <div class="col-sm-10">
+  <input type="text" class="form-control" name="declarant_job" value="">
+ </div>
+</div>
+
+<div class="panel-body row">
+ <label class="col-sm-2 control-label">Адрес веб-сайта</label>
+ <div class="col-sm-10">
+  <input type="text" class="form-control" name="website" value="">
+ </div>
+</div>
+
+<div class="panel-body row">
+ <label class="col-sm-2 control-label">Адрес электронной почты</label>
+ <div class="col-sm-10">
+  <input type="text" class="form-control" name="email" value="">
+ </div>
+</div>
+
+<div class="panel-body row">
+ <label class="col-sm-2 control-label">Контактный телефон</label>
+ <div class="col-sm-10">
+  <input type="text" class="form-control" name="phone" value="">
+ </div>
+</div>
+
+<div class="panel-body row">
+ <label class="col-sm-2 control-label">Организационно-правовая форма (КОПФ)</label>
+ <div class="col-sm-10">
+  <input type="text" class="form-control" value="ТОО - Товарищество с ограниченной ответственностью" readonly="">
+ </div>
+</div>
+
+<div class="panel-body row">
+ <label class="col-sm-2 control-label">Форма организации</label>
+ <div class="col-sm-10">
+  <input type="text" class="form-control" value="Юридическое лицо" readonly="">
+ </div>
+</div>
+
+<div class="panel-body row">
+ <label class="col-sm-2 control-label">Форма собственности</label>
+ <div class="col-sm-10">
+  <input type="text" class="form-control" value="Частная собственность" readonly="">
+ </div>
+</div>
+
+<!-- Сектор экономики -->
+<div class="panel-body row">
+    <label class="col-sm-2 control-label">
+        Сектор экономики    </label>
+
+    <div class="col-sm-10">
+        <select name="kse" id="kse" class="form-control">
+<option value="" selected=""> -- </option><option value="1">Центральное правительство</option>
+<option value="2">Региональные и местные органы управления</option>
+<option value="3">Центральные (национальные) банки</option>
+<option value="4">Другие депозитные организации</option>
+<option value="5">Другие финансовые организации</option>
+<option value="6">Государственные нефинансовые организации</option>
+<option value="7">Негосударственные нефинансовые организации</option>
+<option value="8">Некоммерческие организации, обслуживающие домашние хозяйства</option>
+<option value="9">Домашние хозяйства</option>
+</select>    </div>
+</div>
+
+<!-- Размерность предприятия (КРП) -->
+
+<div class="panel-body row">
+ <label class="col-sm-2 control-label">Размерность предприятия (КРП)</label>
+ <div class="col-sm-10">
+  <input type="text" class="form-control" value="" readonly="">
+ </div>
+</div>
+
+<div class="panel-body row">
+    <div class="col-sm-2">
+        &nbsp;
+    </div>
+    <div class="col-sm-10">
+        
+  <input type="checkbox" checked="" disabled="">
+Резидент Республики Казахстан<br>
+
+  <input type="checkbox" disabled="">
+Субъект малого предпринимательства<br>
+
+  <input type="checkbox" disabled="">
+Субъект среднего предпринимательства<br>
+
+  <input type="checkbox" disabled="">
+Объединение инвалидов<br>
+
+  <input type="checkbox" disabled="">
+Отечественный товаропроизводитель<br>
+
+  <input type="checkbox" disabled="">
+Отечественный поставщик<br>
+
+  <input type="checkbox" disabled="">
+Единый организатор<br>
+
+  <input type="checkbox" name="mark_national_company" value="1">
+<b>Национальная компания</b><br>
+
+  <input type="checkbox" name="mark_state_monopoly" value="1">
+<b>Субъект государственной монополии</b><br>
+
+  <input type="checkbox" name="mark_natural_monopoly" value="1">
+<b>Субъект естественной монополии</b><br>
+
+  <input type="checkbox" name="mark_world_company" value="1">
+<b>Международная организация</b><br>
+    </div>
+</div>
+<!-- Код ОКЭД -->
+<!-- Код ОКЭД OK -->
+        <!-- соглашение участника -->
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Соглашение участника</label>
+
+            <div class="col-sm-10">
+                <textarea class="form-control" rows="15" readonly="">СОГЛАШЕНИЕ об использовании веб-портала государственных закупок Участником
+
+1. Общие положения
+
+1.1. Веб-портал государственных закупок «GOSZAKUP.GOV.KZ» (далее – Портал) - государственная информационная система, предоставляющая единую точку доступа к электронным услугам электронных государственных закупок.
+1.2. Владельцем Портала (далее – Владелец) является Министерство финансов Республики Казахстан, осуществляющее регулирование системы государственных закупок.
+1.3. Участником является любое юридическое лицо, филиал, представительство и/или физическое лицо, осуществляющее предпринимательскую деятельность, зарегистрировавшееся на Портале с ролями заказчика, организатора, поставщика и пользующееся услугами Портала.
+1.4. Администратор Портала (далее – Администратор) - АО «Центр электронных финансов», уполномоченное осуществлять реализацию единой технической политики в сфере электронных государственных закупок, размещение и обмен информации на Портале.
+1.5. Термины и определения, используемые в настоящем Соглашении, трактуются в соответствии с действующим законодательством Республики Казахстан.
+1.6. Подписанием настоящего Соглашения Участник дает согласие на сбор, обработку и распространение своих персональных данных, предоставленных им на Портале, в качестве общедоступной информации для целей использования на Портале, предоставления по запросу уполномоченных государственных органов, размещения на других информационных Интернет-ресурсах, в периодических печатных изданиях и иных открытых источниках в пределах, установленных законодательством Республики Казахстан о персональных данных и их защите.
+
+2. Предмет Соглашения
+
+2.1. Настоящее Пользовательское соглашение (далее - Соглашение) заключено между Владельцем, Участником и Администратором для урегулирования взаимоотношений в рамках пользования и оказания электронных государственных услуг на Портале.
+2.2. Данное Соглашение может быть изменено Владельцем в одностороннем порядке без согласия на то Участника и Администратора. При этом Владелец должен известить Участника о внесенных в Соглашение изменениях и/или дополнениях путем публикации на соответствующего уведомления на странице Портала.
+
+3. Права и обязанности Участника
+
+3.1. Участник вправе:
+3.1.1. получать консультационную и практическую помощь от Администратора в области пользования Порталом;
+3.1.2. получать методические рекомендации от Владельца в области государственных закупок.
+3.2. Участник обязуется:
+3.2.1. предоставить Владельцу и Администратору точную и полную информацию по пунктам, предлагаемым в форме регистрации;
+3.2.2. не выдавать себя за другое юридическое или физическое лицо;
+3.2.3. хранить свой пароль в тайне;
+3.2.4. не нарушать умышленно или случайно какие-либо действующие государственные или международные законы;
+3.2.5. не размещать на Портале:
+1) информацию, которую Участник не имеет права делать публичной по закону или согласно каким-либо договорным отношениям;
+2) информацию, нарушающую действующее законодательство, честь и достоинство, права и охраняемые законом интересы третьих лиц;
+3) информацию, которая нарушает авторские и/или смежные права собственности;
+4) информацию оскорбительного содержания, а также пропагандирующую дискриминацию людей по какому-либо признаку, насилие, ненависть;
+5) информацию и/или ссылки на материалы, содержащие вирусы или другое вредоносное программное обеспечение.
+
+4.Права и обязанности Владельца
+
+4.1. Владелец вправе:
+4.1.1.запрашивать и получать необходимую информацию от Участника в порядке определенном законодательством Республики Казахстан о государственных закупках;
+4.1.2. проверять достоверность отчетных данных, материалов и информации, представленных Участником на Портале.
+4.2. Владелец обязуется:
+4.2.1. определять порядок оказания электронных услуг субъектам системы государственных закупок и другим заинтересованным лицам;
+4.2.2. оказывать методологическое руководство в области государственных закупок.
+
+5. Права и обязанности Администратора
+
+5.1. Администратор вправе:
+5.1.1. в случае нарушения Участником условий настоящего Соглашения отказать в регистрации Участнику, удалить или блокировать учетную запись Участника.
+5.2. Администратор обязуется:
+5.2.1. обеспечить функционирование и техническое сопровождение Портала;
+5.2.2. оказывать консультационную и практическую помощь Участнику по пользованию Порталом
+
+6. Вступление Соглашения в силу
+
+6.1. Соглашение вступает в силу после регистрации Участника на Портале.
+6.2. Регистрация выполняется путем заполнения формы регистрации Участника, выражения Участником согласия со всеми условиями настоящего Соглашения, и отправки данных формы регистрации на Портал.
+
+7. Ответственность
+
+7.1. Участник настоящим не возражает и дает свое согласие на получение, обработку и хранение Порталом дополнительных сведений о себе, содержащихся в государственных и/или негосударственных информационных системах (базах данных), включая банковские, коммерческие и персональные данные. Пользователь также выражает согласие на получение данных о своих банковских счетах от Комитета государственных доходов Министерства финансов Республики Казахстан (КГД МФ РК) и их передачу на Портал. Портал вправе использовать указанные сведения в целях информационного обмена с другими информационными системами в соответствии с установленными законодательством Республики Казахстан правилами информационного обмена и защиты персональных данных.
+7.2. Участник несет персональную ответственность за безопасное хранение своего пароля, а так же за последствия, которые могут произойти при его компрометации.
+7.3. Участник несет персональную ответственность за своевременное размещение на Портале материалов, информации, сведений, отчетностей, подлежащих обязательному размещению на Портале.
+7.4. Владелец, Администратор не несут ответственности за содержание информации, сведений, материалов, размещаемых Участником на Портале, их соответствие требованиям законодательства Республики Казахстан, за неправомерные действия Участника по использованию информации, сведений и материалов, размещенных на Портале, за нарушение Участником авторских прав и любых других прав третьих лиц.
+7.5. Администратор не несет ответственности за технические временные сбои и перерывы в работе Портала, возникшие по независящим от Администратора, Владельца причинам или в случае проведения плановых или внеплановых мероприятий по обслуживанию Портала.
+7.6. Владелец и Администратор не несут ответственности за временные сбои и перерывы в работе линий связи, иные аналогичные сбои, а также за неполадки компьютера, с которого Участник осуществляет выход в Интернет.
+7.7. Владелец и Администратор не несут ответственности перед Участником за действия других Участников или других пользователей Портала.
+7.8. Владелец и Администратор не несут ответственности за любой прямой, косвенный ущерб, включая упущенную выгоду, ущерб от использования, потерю данных или какие-либо другие нематериальные потери, ущерб репутации и иной ущерб, возникающий вследствие:
+7.8.1. пользования или невозможности пользования Порталом;
+7.8.2. изменения условий Соглашения;
+7.8.3. неуполномоченного доступа к данным Участника или изменения передаваемых Участником или хранящихся на сервере данных;
+7.8.4. любого другого случая, имеющего отношение к оказываемым на Портале услугам.
+7.9. Участник несет ответственность, установленную законодательством Республики Казахстан, в случае использования персональных данных других Участников или других пользователей Портала иначе, чем для работы на Портале либо связанной с работой на Портале деятельности в области электронных государственных закупок и (или) распространения указанных персональных данных.
+7.10. Владелец и Администратор несут ответственность за сбор, обработку и распространение персональных данных Участника посредством Портала в соответствии с законодательством Республики Казахстан и условиями настоящего Соглашения.
+
+8. Прочие условия
+
+8.1. Участник настоящим не возражает и дает свое согласие на получение и обработку Владельцем дополнительных сведений о себе, содержащихся в государственных и/или негосударственных информационных системах (базах данных) составляющих банковские, коммерческие и персональные данные, включая публикацию и предоставление доступа к информации другим информационным системам, в соответствии с установленными правилами информационного обмена.
+8.2. Все претензии, запросы, вопросы, любая иная корреспонденция касательно работы Портала должны направляться по адресу электронной почты, указанному на главной странице Портала.
+8.3. Отношения Участника, Владельца и Администратора в рамках настоящего Соглашения регулируются законодательством Республики Казахстан.
+8.4. Бездействие со стороны Владельца и/или Администратора в случае нарушения Участником либо иными пользователями положений Соглашения не лишает их права предпринять соответствующие действия в защиту своих интересов позднее.
+8.5. В случае поступления претензий от третьих лиц, связанных с размещением и/или использованием материалов, Участник самостоятельно и за свой счет урегулирует указанные претензии.</textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-3">
+                <script>$(function(){
+                    $('.btn-add-signature[data-file-identifier="sign"]')[0].afterGenSignEvent = function(){saveAgreement();};
+            });</script><div class="add_signature_block">
+        <button type="button" class="btn btn-success btn-add-signature" data-url="https://v3bl.goszakup.gov.kz/ru/subject/getAgreementText" data-form-id="frm_agr_sign" data-file-identifier="sign" onclick="helpers.sign_workaround.form_sign_helper.sign_uploaded_file(this)">
+        <span>
+            Подписать        </span>
+    </button>
+</div>                <div id="frm_agr_res" style="display:none"></div>
+            </div>
+        </div>
+        <!-- --- -->
+
+        <div id="form_ajax_alert" class="col-sm-10 col-sm-offset-2">
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="button" class="btn btn-success" onclick="subject_button_ok()" id="btn_subject_button_ok">
+                   
+                    Подтверждаю данные                </button>
+            </div>
+        </div>
+    </div>
+    </form></div>
+
+<script>
+    function saveAgreement() {
+        var msg = '<h4><span class="glyphicon glyphicon-ok" style="color:green"> <b>Подписано</b> </span></h4>';
+        $('#frm_agr_res').show();
+        $('#frm_agr_res').html(msg);
+        $("button.btn-add-signature[data-file-identifier='sign']").hide();
+    }
+</script>
+</div>
+</div>
+</div>
+        <div class="clearfix"></div>
+        
+            </div>
+    <!-- END CONTAINER -->
+
+</div>
+<!-- END WRAP -->
+
+
+
+<!-- BEGIN FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <p class="pull-left">
+            АИИС ЭГЗ © 2025 | <a href="">Министерство финансов Республики Казахстан</a>
+        </p>
+        <p class="pull-right">
+            <span class="ecc">
+                <a href="">АО «Центр электронных финансов»</a>
+            </span>
+        </p>
+    </div>
+    <p class="text-center text-muted">
+        Техническая поддержка пользователей портала (7/7 с 09:00 до 21:00): 8(7172) 73 55 15, +7 705 956 53 88 (в соответствие с тарифами оператора связи), <a href="mailto:support@ecc.kz">support@ecc.kz</a>    </p>
+</footer>
+<!-- END FOOTER -->
+
+</body></html>
