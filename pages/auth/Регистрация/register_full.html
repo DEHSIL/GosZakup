@@ -10,7 +10,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <meta name="robots" content="noindex">
-    <link rel="manifest" href="https://v3bl.goszakup.gov.kz/manifest.json">
+    <!-- <link rel="manifest" href="https://v3bl.goszakup.gov.kz/manifest.json"> -->
     <link rel="shortcut icon" href="https://v3bl.goszakup.gov.kz/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="57x57" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-60x60.png">
@@ -71,15 +71,15 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand big-screen-element" href="">АИИС ЭГЗ</a>
+                <a class="navbar-brand big-screen-element" href="/pages/auth/ecp.html">АИИС ЭГЗ</a>
             </div>
             <div id="main-nav" class="navbar-collapse collapse">
-                                <ul class="nav navbar-nav"><li><a href="">Главная</a></li><li><a href="">Справка</a></li></ul>
+                                <ul class="nav navbar-nav"><li><a href="/index.html">Главная</a></li><li><a href="">Справка</a></li></ul>
                 <ul class="nav navbar-nav navbar-right">
                 <li><a href="">Қаз</a></li>
                 <li><a href="">Рус</a></li>
               <li>
-                       <a id="user-login" href=""> <span class="glyphicon glyphicon-user " id="online-status"></span> Войти</a>
+                       <a id="user-login" href=""> Войти</a>
                      </li></ul>
                 <ul id="navbar-notice" class="nav navbar-nav navbar-right"></ul>
             </div>
@@ -346,12 +346,166 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <button type="button" class="btn btn-success" onclick="user_button_ok()" id="btn_user_button_ok">
-                    <span class="glyphicon glyphicon-refresh" id="btn_loading"></span>
                     Подтверждаю данные                </button>
             </div>
         </div>
     </div>
     </form></div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const btnConfirm = document.getElementById("btn_user_button_ok");
+    const emailInput = document.getElementById("email");
+    const passInput = document.getElementById("password");
+    const repassInput = document.getElementById("repassword");
+    const alertBox = document.getElementById("form_ajax_alert");
+    const signBtn = document.querySelector('.btn-add-signature[data-file-identifier="sign"]');
+    const form = document.getElementById("frm_agr_sign");
+
+    let isSigned = false; // Флаг — подписано ли ЭЦП
+
+    // --- Вывод уведомлений ---
+    function showAlert(message, type = "danger") {
+        alertBox.innerHTML = `<div class="alert alert-${type}" style="margin-top:10px;">${message}</div>`;
+    }
+
+    // --- Проверка формы ---
+    function validateForm() {
+        const email = emailInput.value.trim();
+        const pass = passInput.value.trim();
+        const repass = repassInput.value.trim();
+
+        if (!email) return showAlert("Введите адрес электронной почты.");
+        if (!email.includes("@") || !email.includes(".")) return showAlert("Введите корректный адрес электронной почты.");
+        if (!pass) return showAlert("Введите пароль.");
+        if (pass.length < 6) return showAlert("Пароль должен содержать не менее 6 символов.");
+        if (pass !== repass) return showAlert("Пароли не совпадают.");
+
+        alertBox.innerHTML = "";
+        return true;
+    }
+
+    // --- Эмуляция выбора файла и модалки ---
+    const fileInput = document.createElement("input");
+    const fileName = document.createElement("p");
+    const fileSucces = document.createElement("p")
+
+    fileInput.type = "file";
+    fileInput.accept = ".txt";
+    fileInput.style.display = "none";
+    fileName.className = "text-muted";
+    fileName.style.marginTop = "10px";
+    fileSucces.textContent = "Подписанно"
+    
+
+    // вставляем рядом с кнопкой "Подписать"
+    signBtn.insertAdjacentElement("afterend", fileInput);
+    signBtn.insertAdjacentElement("afterend", fileName);
+
+    // --- Создаём модальное окно ---
+    const modalHTML = `
+        <div id="passwordModal" class="modal" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.4);">
+            <div class="modal-dialog" style="max-width:400px;margin:10% auto;background:#fff;border-radius:8px;overflow:hidden;">
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:10px 15px;border-bottom:1px solid #ddd;">
+                        <b>Подтверждение пароля</b>
+                        <span id="closeModal" style="float:right;cursor:pointer;">&times;</span>
+                    </div>
+                    <div class="modal-body text-center" style="padding:15px;">
+                        <p>Введите пароль для доступа к ключу:</p>
+                        <input type="password" id="keyPassword" class="form-control" placeholder="Пароль">
+                    </div>
+                    <div class="modal-footer text-center" style="padding:10px 15px;border-top:1px solid #ddd;">
+                        <button id="confirmBtn" class="btn btn-success">Подтвердить</button>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+    document.body.insertAdjacentHTML("beforeend", modalHTML);
+
+    const passwordModal = document.getElementById("passwordModal");
+    const closeModal = document.getElementById("closeModal");
+    const confirmBtn = document.getElementById("confirmBtn");
+    const keyPassword = document.getElementById("keyPassword");
+
+    // --- Нажатие на кнопку "Подписать" ---
+    signBtn.addEventListener("click", () => {
+        fileInput.click();
+    });
+
+    // --- Когда выбран файл ---
+    fileInput.addEventListener("change", function() {
+        if (fileInput.files.length > 0) {
+            const file = fileInput.files[0];
+            if (!file.name.endsWith(".txt")) {
+                alert("Пожалуйста, выберите файл с расширением .txt");
+                fileInput.value = "";
+                return;
+            }
+
+            fileName.textContent = "Выбран файл: " + file.name;
+            showModal();
+        }
+    });
+
+    // --- Показ и скрытие модалки ---
+    function showModal() {
+        passwordModal.style.display = "block";
+    }
+
+    closeModal.addEventListener("click", () => {
+        passwordModal.style.display = "none";
+        keyPassword.value = "";
+    });
+
+    window.addEventListener("click", (e) => {
+        if (e.target === passwordModal) {
+            passwordModal.style.display = "none";
+        }
+    });
+
+    // --- Подтверждение пароля ---
+    confirmBtn.addEventListener("click", () => {
+        const pass = keyPassword.value.trim();
+        if (pass != "Aa12345!") {
+            alert("Введите пароль для ключа.");
+            return;
+        }
+
+        passwordModal.style.display = "none";
+        keyPassword.value = "";
+        isSigned = true; // ставим флаг, что ЭЦП подписана
+        signBtn.insertAdjacentElement("afterend", fileSucces)
+    });
+
+    function saveData(){
+        const email = emailInput.value.trim();
+        const password = passInput.value.trim();
+        const USER_DATA = {
+            "email": email,
+            "password": password
+        }
+        
+        localStorage.setItem("userData", JSON.stringify(USER_DATA))
+        localStorage.setItem("verifiEmail", "false")
+        localStorage.setItem("userMember", "false")
+        localStorage.setItem("userSchet", "false")
+    }
+
+    // --- Обработка кнопки "Подтверждаю данные" ---
+    btnConfirm.addEventListener("click", function() {
+        if (!isSigned) {
+            showAlert("Перед подтверждением необходимо подписать ЭЦП.", "warning");
+            signBtn.scrollIntoView({ behavior: "smooth", block: "center" });
+            return;
+        }
+
+        if (!validateForm()) return;
+        saveData()
+        window.location.href = "/pages/Профиль/profile.html"
+    });
+});
+</script>
+
 
 <script>
     function saveAgreement() {

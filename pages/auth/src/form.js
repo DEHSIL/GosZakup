@@ -84,14 +84,18 @@ document.addEventListener("DOMContentLoaded", function() {
     // --- Подтверждение пароля ---
     confirmBtn.addEventListener("click", () => {
         const pass = keyPassword.value.trim();
-        if (!pass) {
+        if (pass !== "Aa12345!") {
             showAllert()
             return;
         }
 
         passwordModal.style.display = "none";
-        // alert("Ключ успешно подтверждён!");
-        window.location.href = "/pages/auth/Вход после ЭЦП/register.html"
+        if (localStorage.getItem("userData")){
+            window.location.href = "/pages/auth/Вход второе подтверждение пароля/auth_confirm.html"
+        } else {
+            window.location.href = "/pages/auth/Вход после ЭЦП/register.html"
+        }
+        
         keyPassword.value = "";
     });
 });

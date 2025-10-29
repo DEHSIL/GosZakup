@@ -108,9 +108,9 @@
                 <div class="text-center">
                     <div class="panel-row">
                         <b>
-                            Здравствуйте<br>МАШРИКОВ ЕРЖАН                        </b>
+                            Здравствуйте<br>Фамилия Имя                       </b>
                     </div>
-                                            <small>Товарищество с ограниченной ответственностью "ALAU"</small>
+                                            <small>Товарищество с ограниченной ответственностью "Организация"</small>
                                     </div>
                 <br>
 
@@ -122,9 +122,8 @@
                     <div class="form-group">
                         <input type="password" class="form-control" name="password" placeholder="Введите пароль" autocomplete="off">
                     </div>
-                    <button type="submit" class="btn btn-success">
-                        <a href="/pages/Профиль/profile.html">Войти  </a>
-                                          </button>
+                    <button id="singinBtn" class="btn btn-success">
+                        Войти</button>
                     <br>
                     <br>
                     <div class="form-check">
@@ -138,6 +137,61 @@
         </div>
     </div>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector("form");
+    const passwordInput = form.querySelector('input[name="password"]');
+    const checkBox = document.getElementById("agreed_check");
+    const status = document.getElementById("status_message");
+    const signinBtn = document.getElementById("singinBtn");
+
+    signinBtn.addEventListener("click", function(event) {
+        event.preventDefault(); // отменяем отправку формы
+
+        const userData = JSON.parse(localStorage.getItem("userData") || "{}");
+        const storedPass = userData.password;
+        const inputPass = passwordInput.value.trim();
+
+        // --- Проверка чекбокса ---
+        if (!checkBox.checked) {
+            showMessage("Подтвердите, что ознакомлены с предупреждением.", "danger");
+            return;
+        }
+
+        // --- Проверка наличия пароля в хранилище ---
+        if (!storedPass) {
+            showMessage("Пароль не найден. Зарегистрируйтесь заново.", "danger");
+            return;
+        }
+
+        // --- Проверка введённого пароля ---
+        if (!inputPass) {
+            showMessage("Введите пароль для входа.", "danger");
+            return;
+        }
+
+        if (inputPass !== storedPass) {
+            showMessage("Неверный пароль. Попробуйте снова.", "danger");
+            return;
+        }
+
+        // --- Успешный вход ---
+        showMessage("Вход выполнен успешно!", "success");
+
+        // пример перенаправления после входа
+        setTimeout(() => {
+            window.location.href = "/pages/Профиль/profile.html";
+        }, 1000);
+    });
+
+    // --- Функция вывода сообщений ---
+    function showMessage(text, type = "info") {
+        status.innerHTML = `<div class="text-${type}" style="margin-top:10px;">${text}</div>`;
+    }
+});
+</script>
+
 
 <div id="agreement_modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
