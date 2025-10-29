@@ -58,7 +58,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
             ; var lang = 'ru'; var controller = 'subject';    
     </script> -->
 </head>
-<body style="">
+<body >
 
 <!-- BEGIN WRAP -->
 <div class="wrap">
@@ -104,7 +104,96 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                 </li></ul>
             </div>
         </div>
+    </div><div id="navbar-main" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand big-screen-element" href="">АИИС ЭГЗ</a>
+            </div>
+            <div id="main-nav" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav"><li><a href="/pages/Профиль/profile.html">Главная</a></li><li><a href="">Справка</a></li><li class="dropdown"><a data-id="181" href="" class="dropdown-toggle" data-toggle="dropdown">Реестры <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Реестр жалоб</a></li><li><a href="">Реестр недобросовестных участников ГЗ</a></li><li><a href="">Реестр опытов работы</a></li><li><a href="">Реестр недобросовестных участников закупок</a></li><li><a href="">Реестр участников ГЗ </a></li><li><a href="">Планы ГЗ</a></li><li><a href="">Реестр договоров</a></li><li><a href="">Реестр квалифицированных поставщиков</a></li></ul></li><li class="dropdown"><a data-id="66" href="" class="dropdown-toggle" data-toggle="dropdown">Закупки <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="/pages/Поиск лотов/search_lots.html">Поиск лотов</a></li><li><a href="/pages/Поиск объявлений/search_announce.html">Поиск объявлений</a></li></ul></li><li><a href="">Тренажер</a></li></ul>
+                
+                                <ul class="nav navbar-nav navbar-right">
+                <li><a href="">Қаз</a></li>
+                <li><a href="">Рус</a></li>
+                    <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                        Фамилия Имя Отчество                    
+                        <b class="caret"></b>
+                    </a>
+                    
+                    <ul class="dropdown-menu">
+                        <li><a href="/pages/Профиль/profile.html">Кабинет</a></li>
+                        <li class="divider"></li>
+                        <li><a href="">Избранное</a></li>
+                        <li class="divider"></li>
+                        <li id="exit"><a href="">Выход</a></li>
+                        <script>
+                            document.querySelector("#exit").addEventListener('click', ()=>{
+                                localStorage.removeItem("userData")
+                                localStorage.removeItem("verifiEmail")
+                                localStorage.removeItem("userMember")
+                                localStorage.removeItem("userSchet")
+                                window.location.href = '/index.html'
+                            })
+                        </script>
+                    </ul>
+                </li></ul>
+                <ul id="navbar-notice" class="nav navbar-nav navbar-right">                        
+                    <li class="dropdown" id="mainNav">
+                            <a href="/pages/Страницы с навигации/Подключене тарифа/conn_rate_main.html" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown">
+                                <span class="label label-success"><i class="far fa-credit-card"></i> <span class="big-screen-element">Тариф активен</span></span></a>
+                            
+                            <ul class="dropdown-menu menu-sm" id="notify-container">
+                                <li><a href=""><strong>Сумма заявки на участие в закупке не будет превышать 1 миллиона тенге</strong></a>
+                                </li>
+                            </ul>
+                    </li>
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown"><span class="label label-danger"><i class="far fa-bell"></i></span>&nbsp;</a><ul class="dropdown-menu menu-sm" id="notify-container">
+                        <li><a href="">Все уведомления</a></li>
+                        <li><a href="">Управление уведомлениями</a></li>
+                    </ul>
+                </li></ul>
+            </div>
+        </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () =>{
+            const field = document.querySelector("#mainNav");
+            const schetFlag = localStorage.getItem("userSchet");
+            const memberFlag = localStorage.getItem("userMember");
+
+            field.innerHTML = ""
+
+            const schetIconTrue = `
+            <a href="/pages/Страницы с навигации/Подключене тарифа/conn_rate_main.html" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown">
+                                <span class="label label-success"><i class="far fa-credit-card"></i> <span class="big-screen-element">Тариф активен</span></span></a>
+                            
+                            <ul class="dropdown-menu menu-sm" id="notify-container">
+                                <li><a href=""><strong>Сумма заявки на участие в закупке не будет превышать 1 миллиона тенге</strong></a>
+                                </li>
+                            </ul>           
+            `
+            const schetIconFalse = `
+            <a href="https://v3bl.goszakup.gov.kz/ru/electronic_wallet/paid_services" class="fa-lg no-hover"><span class="label label-danger"><i class="far fa-credit-card"></i> Подключить тариф</span></a></li>
+            `
+
+            if (memberFlag !== 'false'){
+                if (schetFlag === 'false') {
+                    field.innerHTML = schetIconFalse;
+                } else {
+                    field.innerHTML = schetIconTrue;
+                }
+            }
+
+        })
+    </script>
     <!-- END NAVBAR -->
 
     <!-- BEGIN CONTAINER -->
@@ -159,8 +248,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <div id="requestResult">
 <div class="panel panel-info">
     <div class="panel-heading"><b>Данные сервиса ИНИС</b></div>
-    <form action="https://v3bl.goszakup.gov.kz/ru/subject/ajax_inis_request" method="post" accept-charset="utf-8" id="frm_agr_sign">    <div class="panel-body form-horizontal">
-        <!-- ИИН/БИН -->
+    <form  accept-charset="utf-8" id="frm_agr_sign">    <div class="panel-body form-horizontal">
                     <div class="form-group">
                 <label class="col-sm-2  control-label">БИН</label>
 
@@ -470,7 +558,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                 <script>$(function(){
                     $('.btn-add-signature[data-file-identifier="sign"]')[0].afterGenSignEvent = function(){saveAgreement();};
             });</script><div class="add_signature_block">
-        <button type="button" class="btn btn-success btn-add-signature" data-url="https://v3bl.goszakup.gov.kz/ru/subject/getAgreementText" data-form-id="frm_agr_sign" data-file-identifier="sign" onclick="helpers.sign_workaround.form_sign_helper.sign_uploaded_file(this)">
+        <button type="button" class="btn btn-success btn-add-signature" id="signBtn" data-form-id="frm_agr_sign" data-file-identifier="sign" >
         <span>
             Подписать        </span>
     </button>
@@ -500,6 +588,146 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         $("button.btn-add-signature[data-file-identifier='sign']").hide();
     }
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    // --- Элементы ---
+    const signBtn = document.getElementById("signBtn"); // кнопка "Подписать"
+    const selectBtn = document.getElementById("selectP12File"); // если нужно
+    const confirmFormBtn = document.getElementById("btn_subject_button_ok"); // "Подтверждаю данные"
+
+    const fileInput = document.createElement("input");
+    fileInput.type = "file";
+    fileInput.accept = ".txt";
+    fileInput.style.display = "none";
+
+    const fileName = document.createElement("p");
+    fileName.className = "text-muted";
+    fileName.style.marginTop = "10px";
+
+    const fileSuccess = document.createElement("p");
+    fileSuccess.className = "text-success";
+    fileSuccess.style.marginTop = "10px";
+    fileSuccess.textContent = "Файл успешно подписан ✔";
+
+    let isSigned = false;
+
+    // Вставляем элементы после кнопки "Подписать"
+    signBtn.insertAdjacentElement("afterend", fileInput);
+    signBtn.insertAdjacentElement("afterend", fileName);
+
+    // --- Модалка для пароля ---
+    const modalHTML = `
+        <div id="passwordModal" class="modal" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.4);">
+            <div class="modal-dialog" style="max-width:400px;margin:10% auto;background:#fff;border-radius:8px;overflow:hidden;">
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:10px 15px;border-bottom:1px solid #ddd;">
+                        <b>Подтверждение пароля</b>
+                        <span id="closeModal" style="float:right;cursor:pointer;">&times;</span>
+                    </div>
+                    <div class="modal-body text-center" style="padding:15px;">
+                        <p>Введите пароль для доступа к ключу:</p>
+                        <input type="password" id="keyPassword" class="form-control" placeholder="Пароль">
+                    </div>
+                    <div class="modal-footer text-center" style="padding:10px 15px;border-top:1px solid #ddd;">
+                        <button id="confirmPasswordBtn" class="btn btn-success">Подтвердить</button>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+    document.body.insertAdjacentHTML("beforeend", modalHTML);
+
+    const passwordModal = document.getElementById("passwordModal");
+    const closeModal = document.getElementById("closeModal");
+    const confirmPasswordBtn = document.getElementById("confirmPasswordBtn");
+    const keyPassword = document.getElementById("keyPassword");
+
+    // --- Открытие выбора файла ---
+    signBtn.addEventListener("click", () => {
+        fileInput.click();
+    });
+
+    // --- Когда выбран файл ---
+    fileInput.addEventListener("change", function() {
+        if (fileInput.files.length > 0) {
+            const file = fileInput.files[0];
+            if (!file.name.endsWith(".txt")) {
+                alert("Пожалуйста, выберите файл с расширением .txt");
+                fileInput.value = "";
+                return;
+            }
+
+            fileName.textContent = "Выбран файл: " + file.name;
+            passwordModal.style.display = "block";
+        }
+    });
+
+    // --- Закрытие модалки ---
+    closeModal.addEventListener("click", () => {
+        passwordModal.style.display = "none";
+        keyPassword.value = "";
+    });
+    window.addEventListener("click", (e) => {
+        if (e.target === passwordModal) passwordModal.style.display = "none";
+    });
+
+    // --- Подтверждение пароля ---
+    confirmPasswordBtn.addEventListener("click", () => {
+        const pass = keyPassword.value.trim();
+        if (pass !== "Aa12345!") {
+            alert("Неверный пароль для ключа.");
+            return;
+        }
+
+        passwordModal.style.display = "none";
+        keyPassword.value = "";
+        isSigned = true;
+        fileName.insertAdjacentElement("afterend", fileSuccess);
+    });
+
+    // --- Проверка формы ---
+    confirmFormBtn.addEventListener("click", function() {
+        let errors = [];
+
+        const leaderJob = document.querySelector("input[name='leader_job']");
+        const declarantJob = document.querySelector("input[name='declarant_job']");
+        const email = document.querySelector("input[name='email']");
+        const phone = document.querySelector("input[name='phone']");
+        const sector = document.getElementById("kse");
+
+        const cbNational = document.querySelector("input[name='mark_national_company']");
+        const cbMonopoly = document.querySelector("input[name='mark_state_monopoly']");
+
+        if (!leaderJob.value.trim()) errors.push("Заполните должность руководителя");
+        if (!declarantJob.value.trim()) errors.push("Заполните должность заявителя");
+
+        if (!email.value.trim()) errors.push("Укажите адрес электронной почты");
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) errors.push("Неверный формат email");
+
+        if (!phone.value.trim()) errors.push("Укажите контактный телефон");
+        else if (!/^[\d\+\-\s\(\)]{5,}$/.test(phone.value)) errors.push("Неверный формат телефона");
+
+        if (!sector.value.trim()) errors.push("Выберите сектор экономики");
+
+        if (!isSigned) errors.push("Не выполнена подпись ЭЦП");
+
+        
+
+        const alertBox = document.getElementById("form_ajax_alert");
+        if (errors.length > 0) {
+            alertBox.innerHTML = `<div class="alert alert-danger"><b>Ошибка:</b><br>${errors.join("<br>")}</div>`;
+            alertBox.scrollIntoView({ behavior: "smooth" });
+        } else {
+            alertBox.innerHTML = `<div class="alert alert-success"><b>Все данные корректны.</b><br>Форма готова к отправке.</div>`;
+            alertBox.scrollIntoView({ behavior: "smooth" });
+            localStorage.setItem("userMember", "true")
+            window.location.href = "/pages/Профиль/profile.html"
+        }
+    });
+});
+</script>
+
+
 </div>
 </div>
 </div>
