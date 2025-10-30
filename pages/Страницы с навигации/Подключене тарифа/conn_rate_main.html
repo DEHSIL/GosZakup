@@ -36,12 +36,12 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <script src="src/confirmation.js.загрузка"></script>
     
     
-    <script type="text/javascript" src="src/bootstrap.datepicker.js.загрузка" charset="utf-8"></script>
+    <!-- <script type="text/javascript" src="src/bootstrap.datepicker.js.загрузка" charset="utf-8"></script>
     <script type="text/javascript" src="src/bootstrap-datepicker.ru.js.загрузка" charset="utf-8"></script>
     <script type="text/javascript" src="src/helpers.js.загрузка" charset="utf-8"></script>
     <script type="text/javascript" src="src/bootstrap-dialog.min.js.загрузка" charset="utf-8"></script>
     <script type="text/javascript" src="src/jquery.isloading.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/ew.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="src/ew.js.загрузка" charset="utf-8"></script> -->
 
     <!-- <script>
             var user_id = 1563337;
@@ -233,9 +233,95 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <div class="panel-heading">
         <strong><i class="far fa-credit-card"></i> Информация о лицевом счете</strong>
     </div>
-            <div class="alert alert-danger" id="ew_error_msg" style="display: none"></div>
-        <div class="alert alert-warning">У вас нет созданных лицевых счетов</div>
-        <button class="btn btn-warning create_electronic_wallet">Создать лицевой счет</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            const field = document.getElementById("field2")
+            const tableField = document.getElementById("table_field")
+            const schetFlag = localStorage.getItem("userSchet")
+            field.innerHTML = ""
+
+            const schet = `
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th>№599811</th>
+                    </tr>
+                    <tr>
+                        <td><b>Сумма: </b><br>
+                            0.00 KZT                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Заблокированная сумма </b><br>
+                            0.00 KZT                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Доступная сумма: </b><br>
+                            0.00 KZT                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            `
+
+            const neSchet = `
+                        <div class="alert alert-danger" id="ew_error_msg" style="display: none"></div>
+                    <div class="alert alert-warning">У вас нет созданных лицевых счетов</div>
+                    <a href="/pages/Страницы с навигации/Подключене тарифа/Форма подкюбчения тарифа/paid_service.html"> <button class="btn btn-warning create_electronic_wallet">Создать лицевой счет</button></a>
+            `
+
+
+            const table =`
+                <tr>
+                    <td class="text-center">1273536</td>
+                    <td>Услуга по использованию (доступу) веб-портала государственных закупок</td>
+                    <td>
+                                                    Договор-оферта                                            </td>
+                    <td>Проект</td>
+                    <td>
+                                                32451312<br>
+                                            </td>
+                                        <td>3 932.00</td>
+                    <td>Черновик</td>
+                    <td>с 2025-10-30<br> по 2025-12-31 23:59:59</td>
+                    <td class="text-center">Не активен</td>
+                    <td class="text-center">
+                                                                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="src/hamburger.png">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                                                            <li>
+                                            <a href="/pages/Страницы с навигации/Подключене тарифа/Форма подкюбчения тарифа/После подтверждения/Акт услуги/Второе/act_tariff_succes.html">Посмотреть договор</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="/pages/Страницы с навигации/Подключене тарифа/Форма подкюбчения тарифа/После подтверждения/show_tariff.html">Посмотреть акт</a>
+                                        </li>
+                                                                            <li>
+                                            <a onclick='localStorage.setItem("userSchet", "false")'>Удалить договор</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="/pages/Страницы с навигации/Подключене тарифа/Форма подкюбчения тарифа/После подтверждения/Счет/account_tariff.html">Посмотреть счет на оплату</a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                                            </td>
+                </tr>
+            `
+            
+
+
+            if (schetFlag === "false") {
+                field.innerHTML = neSchet
+            } else {
+                tableField.innerHTML = table
+                field.innerHTML = schet
+            }
+        })
+    </script>
+    <div id="field2"></div>
+            
+       
     </div>
     
 <div class="panel panel-default">
@@ -367,7 +453,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
             <button class="btn btn-success btn-sm" name="smb">Найти</button>            <button class="btn btn-default btn-sm"  name="reset" value="Y">Отменить</button>        </div>
     </div>
 </form>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 $(function(){
     $('.date-picker').datepicker({
         format: 'dd.mm.yyyy',
@@ -375,8 +461,11 @@ $(function(){
         autoclose: true
     });
 });
-</script>
-    <button class="btn btn-warning create_electronic_wallet">Создать лицевой счет</button>
+</script> -->
+<a href="/pages/Страницы с навигации/Подключене тарифа/Форма подкюбчения тарифа/paid_service.html">
+    <button class="btn btn-warning create_electronic_wallet" >Создать лицевой счет</button>
+</a>
+    
 <br>&nbsp;
 <div class="panel panel-default">
     <div class="panel-heading">
@@ -398,7 +487,7 @@ $(function(){
             <th>Доступные действия</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody id="table_field">
             </tbody>
 </table>
 </div>
