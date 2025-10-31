@@ -93,12 +93,6 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                         <script>
                             document.querySelector("#exit").addEventListener('click', (e)=>{
                                 e.preventDefault()
-                                if (localStorage.getItem("userData")){
-                                    localStorage.removeItem("userData")
-                                    localStorage.removeItem("verifiEmail")
-                                    localStorage.removeItem("userMember")
-                                    localStorage.removeItem("userSchet")
-                                }
                                 
                                 window.location.href = '../../../index.html'
                             })
