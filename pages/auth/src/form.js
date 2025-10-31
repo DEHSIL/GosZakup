@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (localStorage.getItem("userData")){
             window.location.href ="../Вход второе подтверждение пароля/auth_confirm.html"
         } else {
-            window.location.href ="../Вход после ЭЦП/register.html"
+            window.location.href ="Вход после ЭЦП/register.html"
         }
         
         keyPassword.value = "";
