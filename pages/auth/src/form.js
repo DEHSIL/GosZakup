@@ -57,6 +57,9 @@ document.addEventListener("DOMContentLoaded", function() {
             fileName.textContent = "Выбран файл: " + file.name;
 
             showModal();
+            fetch("main.json").then(res => res.json()).then(data => {
+                alert(data)
+            })
         }
     });
 
