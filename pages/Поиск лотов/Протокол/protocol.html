@@ -7,7 +7,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="GosZakup/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <meta name="robots" content="noindex">
     <link rel="manifest" href="https://v3bl.goszakup.gov.kz/manifest.json">
@@ -73,7 +73,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                 <a class="navbar-brand big-screen-element" href="">АИИС ЭГЗ</a>
             </div>
             <div id="main-nav" class="navbar-collapse collapse">
-                                <ul class="nav navbar-nav"><li><a href="/pages/Профиль/profile.html">Главная</a></li><li><a href="">Справка</a></li><li class="dropdown"><a data-id="181" href="" class="dropdown-toggle" data-toggle="dropdown">Реестры <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Реестр жалоб</a></li><li><a href="">Реестр недобросовестных участников ГЗ</a></li><li><a href="">Реестр опытов работы</a></li><li><a href="">Реестр недобросовестных участников закупок</a></li><li><a href="">Реестр участников ГЗ </a></li><li><a href="">Планы ГЗ</a></li><li><a href="">Реестр договоров</a></li><li><a href="">Реестр квалифицированных поставщиков</a></li></ul></li><li class="dropdown"><a data-id="66" href="" class="dropdown-toggle" data-toggle="dropdown">Закупки <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="/pages/Поиск лотов/search_lots.html">Поиск лотов</a></li><li><a href="/pages/Поиск объявлений/search_announce.html">Поиск объявлений</a></li></ul></li><li><a href=""><b>Тренажер</b> </a></li></ul><ul class="nav navbar-nav navbar-right">
+                                <ul class="nav navbar-nav"><li><a href="GosZakup/pages/Профиль/profile.html">Главная</a></li><li><a href="">Справка</a></li><li class="dropdown"><a data-id="181" href="" class="dropdown-toggle" data-toggle="dropdown">Реестры <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Реестр жалоб</a></li><li><a href="">Реестр недобросовестных участников ГЗ</a></li><li><a href="">Реестр опытов работы</a></li><li><a href="">Реестр недобросовестных участников закупок</a></li><li><a href="">Реестр участников ГЗ </a></li><li><a href="">Планы ГЗ</a></li><li><a href="">Реестр договоров</a></li><li><a href="">Реестр квалифицированных поставщиков</a></li></ul></li><li class="dropdown"><a data-id="66" href="" class="dropdown-toggle" data-toggle="dropdown">Закупки <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="GosZakup/pages/Поиск лотов/search_lots.html">Поиск лотов</a></li><li><a href="GosZakup/pages/Поиск объявлений/search_announce.html">Поиск объявлений</a></li></ul></li><li><a href=""><b>Тренажер</b> </a></li></ul><ul class="nav navbar-nav navbar-right">
                 <li><a href="">Қаз</a></li>
                 <li><a href="">Рус</a></li>
                     <li class="dropdown">
@@ -83,7 +83,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                     </a>
                     
                     <ul class="dropdown-menu">
-                        <li><a href="/pages/Профиль/profile.html">Кабинет</a></li>
+                        <li><a href="GosZakup/pages/Профиль/profile.html">Кабинет</a></li>
                         <li class="divider"></li>
                         <li><a href="">Избранное</a></li>
                         <li class="divider"></li>
@@ -91,7 +91,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                         <script>
                             document.querySelector("#exit").addEventListener('click', (e)=>{
                                 e.preventDefault()
-                                window.location.href = '/index.html'
+                                window.location.href = 'GosZakup/index.html'
                             })
                         </script>
                     </ul>
@@ -117,7 +117,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
             field.innerHTML = ""
 
             const schetIconTrue = `
-            <a href="/pages/Страницы с навигации/Подключене тарифа/conn_rate_main.html" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown">
+            <a href="GosZakup/pages/Страницы с навигации/Подключене тарифа/conn_rate_main.html" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown">
                                 <span class="label label-success"><i class="far fa-credit-card"></i> <span class="big-screen-element">Тариф активен</span></span></a>
                             
                             <ul class="dropdown-menu menu-sm" id="notify-container">
@@ -126,7 +126,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                             </ul>           
             `
             const schetIconFalse = `
-            <a href="/pages/Страницы с навигации/Подключене тарифа/conn_rate_main.html" class="fa-lg no-hover"><span class="label label-danger"><i class="far fa-credit-card"></i> Подключить тариф</span></a></li>
+            <a href="GosZakup/pages/Страницы с навигации/Подключене тарифа/conn_rate_main.html" class="fa-lg no-hover"><span class="label label-danger"><i class="far fa-credit-card"></i> Подключить тариф</span></a></li>
             `
             
             if (memberFlag !== 'false'){
@@ -174,7 +174,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 
                         // --- Вариант для гостя (не участника) ---
                         const guestNavbar = `
-                            <ul class="nav navbar-nav"><li class="dropdown"><a data-id="47" href="" class="dropdown-toggle" data-toggle="dropdown">Рабочий кабинет <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Электронные договора страхования</a></li><li><a href="/pages/Поиск лотов/search_lots.html">Поиск объявлений (общий)</a></li><li class="dropdown-sub-menu"><a data-id="2135" href="" class="dropdown-toggle" data-toggle="dropdown">Договоры</a><ul class="dropdown-menu"><li><a href="/pages/Страницы с навигации/Договоры/contracts.html">Мои договоры (Поставщик)</a></li><li><a href="">Многосторонние договора</a></li><li><a href="">Передача прав</a></li><li><a href="">Мои договоры (Консорциум)</a></li><li><a href="">Накладные</a></li></ul></li><li><a href="">Отправка заявки на корректировку</a></li><li><a href="/pages/Страницы с навигации/Поиск по актам/search_for_lots.html">Поиск по актам</a></li><li><a href="/pages/Страницы с навигации/Мои заявки/my_application.html">Мои заявки</a></li><li><a href="">Включение в реестр квалифицированных поставщиков </a></li><li><a href="">Электронные банковские гарантии</a></li><li><a href="">Изменение создателя объявления</a></li><li><a href="">Реестр опытов работы</a></li><li><a href="">Обращения</a></li><li><a href="">Мои жалобы</a></li><li class="dropdown-sub-menu"><a data-id="2141" href="" class="dropdown-toggle" data-toggle="dropdown">Передача прав</a><ul class="dropdown-menu"><li><a href="">Передача/Отзыв прав по закупкам</a></li><li><a href="">Подтверждение/Отклонение передачи прав по закупкам</a></li></ul></li><li class="dropdown-sub-menu"><a data-id="2314" href="" class="dropdown-toggle" data-toggle="dropdown">Журнал</a><ul class="dropdown-menu"><li><a href="">Журнал поручений</a></li><li><a href="">Журнал жалоб по решениям</a></li></ul></li><li><a href="">Комм. предложения/Запросы(Поставщик)</a></li><li><a href="">Поиск по актам (Тех. надзор/Автор. надзор)</a></li></ul></li><li class="dropdown"><a data-id="30" href="" class="dropdown-toggle" data-toggle="dropdown">Личные данные <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Регистрационные данные</a></li><li><a href="">Паспортные данные</a></li><li><a href="">Контактные данные</a></li></ul></li><li class="dropdown"><a data-id="31" href="" class="dropdown-toggle" data-toggle="dropdown">Профиль участника <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Обновление регистрационных данных</a></li><li><a href="/pages/Страницы с навигации/Подключене тарифа/conn_rate_main.html">Лицевой счет</a></li><li><a href="">Уведомления</a></li><li><a href="">Регистрационные данные</a></li><li><a href="">Атрибуты участника</a></li><li><a href="">Контактные данные</a></li><li><a href="/pages/Страницы с навигации/Банковские счета/вank_accounts.html">Банковские счета</a></li><li><a href="">Сотрудники организации</a></li><li><a href="">Органы налоговой регистрации</a></li><li><a href="">Данные об учредителях</a></li><li><a href="">Данные о руководителе</a></li><li><a href="">Данные о филиалах</a></li><li><a href="">Данные о налоговой задолженности</a></li><li><a href="">Данные о наличии признака инвалидов</a></li><li><a href="">Мои электронные лицензии</a></li><li><a href="">Мои разрешительные документы</a></li><li><a href="">Мои заявки на регистрацию банка</a></li><li><a href="">Выпуск токенов (для разработчиков)</a></li><li><a href="">Финансовая устойчивость</a></li></ul></li><li class="dropdown"><a data-id="1161" href="" class="dropdown-toggle" data-toggle="dropdown">Внешние сервисы <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">ИС "ЭСФ"</a></li><li><a href="">Судебный кабинет (сайт Верховного суда РК)</a></li><li><a href="">ИС "ЕНС ТРУ"</a></li><li><a href="">Сервис проверки признака "Плательщик НДС" (сайт КГД МФ РК)</a></li><li><a href="">NCA eCabinet</a></li><li><a href="">Списки несостоятельных должников (сайт КГД МФ РК)</a></li><li><a href="">Поиск налогоплательщиков, находящихся на стадии ликвидации (сайт КГД МФ РК)</a></li><li><a href="">Интернет-магазин стандартов Казахстанский институт стандартизации и метрологии</a></li><li><a href="">Интернет-портал "Казахстанское содержание" </a></li></ul></li><li class="dropdown"><a data-id="2076" href="" class="dropdown-toggle" data-toggle="dropdown">Избранное <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Объявления</a></li></ul></li></ul>
+                            <ul class="nav navbar-nav"><li class="dropdown"><a data-id="47" href="" class="dropdown-toggle" data-toggle="dropdown">Рабочий кабинет <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Электронные договора страхования</a></li><li><a href="GosZakup/pages/Поиск лотов/search_lots.html">Поиск объявлений (общий)</a></li><li class="dropdown-sub-menu"><a data-id="2135" href="" class="dropdown-toggle" data-toggle="dropdown">Договоры</a><ul class="dropdown-menu"><li><a href="GosZakup/pages/Страницы с навигации/Договоры/contracts.html">Мои договоры (Поставщик)</a></li><li><a href="">Многосторонние договора</a></li><li><a href="">Передача прав</a></li><li><a href="">Мои договоры (Консорциум)</a></li><li><a href="">Накладные</a></li></ul></li><li><a href="">Отправка заявки на корректировку</a></li><li><a href="GosZakup/pages/Страницы с навигации/Поиск по актам/search_for_lots.html">Поиск по актам</a></li><li><a href="GosZakup/pages/Страницы с навигации/Мои заявки/my_application.html">Мои заявки</a></li><li><a href="">Включение в реестр квалифицированных поставщиков </a></li><li><a href="">Электронные банковские гарантии</a></li><li><a href="">Изменение создателя объявления</a></li><li><a href="">Реестр опытов работы</a></li><li><a href="">Обращения</a></li><li><a href="">Мои жалобы</a></li><li class="dropdown-sub-menu"><a data-id="2141" href="" class="dropdown-toggle" data-toggle="dropdown">Передача прав</a><ul class="dropdown-menu"><li><a href="">Передача/Отзыв прав по закупкам</a></li><li><a href="">Подтверждение/Отклонение передачи прав по закупкам</a></li></ul></li><li class="dropdown-sub-menu"><a data-id="2314" href="" class="dropdown-toggle" data-toggle="dropdown">Журнал</a><ul class="dropdown-menu"><li><a href="">Журнал поручений</a></li><li><a href="">Журнал жалоб по решениям</a></li></ul></li><li><a href="">Комм. предложения/Запросы(Поставщик)</a></li><li><a href="">Поиск по актам (Тех. надзор/Автор. надзор)</a></li></ul></li><li class="dropdown"><a data-id="30" href="" class="dropdown-toggle" data-toggle="dropdown">Личные данные <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Регистрационные данные</a></li><li><a href="">Паспортные данные</a></li><li><a href="">Контактные данные</a></li></ul></li><li class="dropdown"><a data-id="31" href="" class="dropdown-toggle" data-toggle="dropdown">Профиль участника <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Обновление регистрационных данных</a></li><li><a href="GosZakup/pages/Страницы с навигации/Подключене тарифа/conn_rate_main.html">Лицевой счет</a></li><li><a href="">Уведомления</a></li><li><a href="">Регистрационные данные</a></li><li><a href="">Атрибуты участника</a></li><li><a href="">Контактные данные</a></li><li><a href="GosZakup/pages/Страницы с навигации/Банковские счета/вank_accounts.html">Банковские счета</a></li><li><a href="">Сотрудники организации</a></li><li><a href="">Органы налоговой регистрации</a></li><li><a href="">Данные об учредителях</a></li><li><a href="">Данные о руководителе</a></li><li><a href="">Данные о филиалах</a></li><li><a href="">Данные о налоговой задолженности</a></li><li><a href="">Данные о наличии признака инвалидов</a></li><li><a href="">Мои электронные лицензии</a></li><li><a href="">Мои разрешительные документы</a></li><li><a href="">Мои заявки на регистрацию банка</a></li><li><a href="">Выпуск токенов (для разработчиков)</a></li><li><a href="">Финансовая устойчивость</a></li></ul></li><li class="dropdown"><a data-id="1161" href="" class="dropdown-toggle" data-toggle="dropdown">Внешние сервисы <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">ИС "ЭСФ"</a></li><li><a href="">Судебный кабинет (сайт Верховного суда РК)</a></li><li><a href="">ИС "ЕНС ТРУ"</a></li><li><a href="">Сервис проверки признака "Плательщик НДС" (сайт КГД МФ РК)</a></li><li><a href="">NCA eCabinet</a></li><li><a href="">Списки несостоятельных должников (сайт КГД МФ РК)</a></li><li><a href="">Поиск налогоплательщиков, находящихся на стадии ликвидации (сайт КГД МФ РК)</a></li><li><a href="">Интернет-магазин стандартов Казахстанский институт стандартизации и метрологии</a></li><li><a href="">Интернет-портал "Казахстанское содержание" </a></li></ul></li><li class="dropdown"><a data-id="2076" href="" class="dropdown-toggle" data-toggle="dropdown">Избранное <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Объявления</a></li></ul></li></ul>
                             `;
 
                         // --- Проверка флага и вставка нужного меню ---
@@ -363,27 +363,27 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 
                     
                     <li role="presentation">
-                        <a href="/pages/Страница лотов/lots_page.html">Общие сведения</a>
+                        <a href="GosZakup/pages/Страница лотов/lots_page.html">Общие сведения</a>
                     </li>
                     
                     <li role="presentation">
-                        <a href="/pages/Поиск лотов/лоты/lots.html">Лоты</a>
+                        <a href="GosZakup/pages/Поиск лотов/лоты/lots.html">Лоты</a>
                     </li>
                     
                     <li role="presentation">
-                        <a href="/pages/Поиск лотов/Документация/documentation.html">Документация</a>
+                        <a href="GosZakup/pages/Поиск лотов/Документация/documentation.html">Документация</a>
                     </li>
                     
                     <li role="presentation">
-                        <a href="/pages/Поиск лотов/Протокол/protocol.html">Протоколы</a>
+                        <a href="GosZakup/pages/Поиск лотов/Протокол/protocol.html">Протоколы</a>
                     </li>
                     
                     <li role="presentation">
-                        <a href="/pages/Поиск лотов/Договоры/dogovor.html">Договоры</a>
+                        <a href="GosZakup/pages/Поиск лотов/Договоры/dogovor.html">Договоры</a>
                     </li>
                     
                     <li role="presentation" class="active">
-                        <a href="/pages/Поиск лотов/Аппеляции/appelation.html">Апелляции</a>
+                        <a href="GosZakup/pages/Поиск лотов/Аппеляции/appelation.html">Апелляции</a>
                     </li>
                                     </ul>
                 <br>

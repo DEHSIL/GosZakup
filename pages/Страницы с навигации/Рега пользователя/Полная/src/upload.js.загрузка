@@ -322,7 +322,7 @@ helpers.sign_workaround.form_sign_helper.show_status_form = function (form,file_
     status_container.find('.file_status_av').append('<div class="check_file_status_row_progress"></div>');
     status_container.find('.file_status_sign').append('<div class="check_file_status_row_progress"></div>');
     status_container.find('.file_final_status').append('<div class="check_file_status_progress file_status_ext" data-file-id="'+file_id+'"></div>');//<div class="check_file_status_row_progress"></div>
-    status_container.find('.cell-filename').append('<a target="_blank" rel="noopener noreferrer" href="/files/download_file/'+file_id+'/">'+form.file_name.value+'</a><br>'+form.file_size.value + ' байт');
+    status_container.find('.cell-filename').append('<a target="_blank" rel="noopener noreferrer" href="GosZakup/files/download_file/'+file_id+'/">'+form.file_name.value+'</a><br>'+form.file_size.value + ' байт');
 
     this.start_check_status();
 };
