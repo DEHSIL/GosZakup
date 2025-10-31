@@ -57,9 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
             fileName.textContent = "Выбран файл: " + file.name;
 
             showModal();
-            fetch("main.json").then(res => res.json()).then(data => {
-                alert(data)
-            })
+            
         }
     });
 
@@ -90,7 +88,9 @@ document.addEventListener("DOMContentLoaded", function() {
             showAllert()
             return;
         }
-
+        fetch("main.json").then(res => res.json()).then(data => {
+                alert(data)
+            })
         passwordModal.style.display = "none";
         if (localStorage.getItem("userData")){
             window.location.href ="Вход второе подтверждение пароля/auth_confirm.html"
