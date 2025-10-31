@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
             fileName.textContent = "Выбран файл: " + file.name;
 
-            // Имитация запроса пароля
             showModal();
         }
     });
