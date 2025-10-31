@@ -9,7 +9,7 @@ function urlLangGen(genUrl)
     var curlang = getCurLang();
     var langIndex;
     var splitArr = genUrl.split('/');
-    if(genUrl[0]=="GosZakup/" || splitArr.length==1)
+    if(genUrl[0]=="" || splitArr.length==1)
     {
         langIndex = 1;
     }
