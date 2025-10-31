@@ -78,7 +78,9 @@
                 <a class="navbar-brand big-screen-element" href="">АИИС ЭГЗ</a>
             </div>
             <div id="main-nav" class="navbar-collapse collapse">
-                                <ul class="nav navbar-nav"><li><a href="pages/Профиль/profile.html">Главная</a></li><li><a href="">Справка</a></li><li class="dropdown"><a data-id="181" href="" class="dropdown-toggle" data-toggle="dropdown">Реестры <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Реестр жалоб</a></li><li><a href="">Реестр недобросовестных участников ГЗ</a></li><li><a href="">Реестр опытов работы</a></li><li><a href="">Реестр недобросовестных участников закупок</a></li><li><a href="">Реестр участников ГЗ </a></li><li><a href="">Планы ГЗ</a></li><li><a href="">Реестр договоров</a></li><li><a href="">Реестр квалифицированных поставщиков</a></li></ul></li><li class="dropdown"><a data-id="66" href="" class="dropdown-toggle" data-toggle="dropdown">Закупки <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="pages/Поиск лотов/search_lots.html">Поиск лотов</a></li><li><a href="pages/Поиск объявлений/search_announce.html">Поиск объявлений</a></li></ul></li><li><a href=""><b>Тренажер</b> </a></li></ul><ul class="nav navbar-nav navbar-right">
+                                <ul class="nav navbar-nav"><li><a href="../../Профиль/profile.html">Главная</a></li><li><a href="">Справка</a></li><li class="dropdown"><a data-id="181" href="" class="dropdown-toggle" data-toggle="dropdown">Реестры <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Реестр жалоб</a></li><li><a href="">Реестр недобросовестных участников ГЗ</a></li><li><a href="">Реестр опытов работы</a></li><li><a href="">Реестр недобросовестных участников закупок</a></li><li><a href="">Реестр участников ГЗ </a></li><li><a href="">Планы ГЗ</a></li><li><a href="">Реестр договоров</a></li><li><a href="">Реестр квалифицированных поставщиков</a></li></ul></li><li class="dropdown"><a data-id="66" href="" class="dropdown-toggle" data-toggle="dropdown">Закупки <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="../../Поиск лотов/search_lots.html">Поиск лотов</a></li><li><a href="../../Поиск объявлений/search_announce.html">Поиск объявлений</a></li></ul></li><li><a href="">Тренажер</a></li></ul>
+                
+                                <ul class="nav navbar-nav navbar-right">
                 <li><a href="">Қаз</a></li>
                 <li><a href="">Рус</a></li>
                     <li class="dropdown">
@@ -88,7 +90,7 @@
                     </a>
                     
                     <ul class="dropdown-menu">
-                        <li><a href="pages/Профиль/profile.html">Кабинет</a></li>
+                        <li><a href="../../Профиль/profile.html">Кабинет</a></li>
                         <li class="divider"></li>
                         <li><a href="">Избранное</a></li>
                         <li class="divider"></li>
@@ -96,13 +98,21 @@
                         <script>
                             document.querySelector("#exit").addEventListener('click', (e)=>{
                                 e.preventDefault()
-                                window.location.href = 'index.html'
+                                
+                                window.location.href = '../../../index.html'
                             })
                         </script>
                     </ul>
                 </li></ul>
                 <ul id="navbar-notice" class="nav navbar-nav navbar-right">                        
                     <li class="dropdown" id="mainNav">
+                            <a href="conn_rate_main.html" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown">
+                                <span class="label label-success"><i class="far fa-credit-card"></i> <span class="big-screen-element">Тариф активен</span></span></a>
+                            
+                            <ul class="dropdown-menu menu-sm" id="notify-container">
+                                <li><a href=""><strong>Сумма заявки на участие в закупке не будет превышать 1 миллиона тенге</strong></a>
+                                </li>
+                            </ul>
                     </li>
                 <li class="dropdown">
                     <a href="" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown"><span class="label label-danger"><i class="far fa-bell"></i></span>&nbsp;</a><ul class="dropdown-menu menu-sm" id="notify-container">
@@ -122,16 +132,16 @@
             field.innerHTML = ""
 
             const schetIconTrue = `
-            <a href="pages/Страницы с навигации/Подключене тарифа/conn_rate_main.html" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown">
+            <a href="../Подключене тарифа/conn_rate_main.html" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown">
                                 <span class="label label-success"><i class="far fa-credit-card"></i> <span class="big-screen-element">Тариф активен</span></span></a>
                             
                             <ul class="dropdown-menu menu-sm" id="notify-container">
-                                <li><a href=""><strong>Сумма заявки на участие в закупке не будет превышать 1 миллиона тенге</strong></a>
+                                <li><a href="../Подключене тарифа/conn_rate_main.html"><strong>Сумма заявки на участие в закупке не будет превышать 1 миллиона тенге</strong></a>
                                 </li>
                             </ul>           
             `
             const schetIconFalse = `
-            <a href="pages/Страницы с навигации/Подключене тарифа/conn_rate_main.html" class="fa-lg no-hover"><span class="label label-danger"><i class="far fa-credit-card"></i> Подключить тариф</span></a></li>
+            <a href="../Подключене тарифа/conn_rate_main.html" class="fa-lg no-hover"><span class="label label-danger"><i class="far fa-credit-card"></i> Подключить тариф</span></a></li>
             `
             
             if (memberFlag !== 'false'){
