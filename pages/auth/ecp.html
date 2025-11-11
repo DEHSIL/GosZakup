@@ -145,81 +145,6 @@
                 </select>
             </div>
             <div id="applet_storage">
-
-<!-- <script language="JavaScript" type="text/javascript">
-
-    function sign_xml(sdata, after_sign_callback) {
-        sign_collback = {};
-        sign_collback.error = function (result) {
-            $('#applet_storage').unblock();
-            $('#ajaxresult').removeClass().addClass('bg-danger').html(form_sign_helper.get_error_text(result));
-        };
-        sign_collback.select_file = function () {
-            $('#ajaxresult').removeClass().addClass('bg-success').html('Выберите хранилище сертификата');
-        };
-        sign_collback.input_password = function () {
-            $('#ajaxresult').removeClass().addClass('bg-success').html('Введите пароль');
-        };
-        sign_collback.user_interaction = function (result) {
-            $('#applet_storage').unblock();
-            $('#ajaxresult').removeClass().addClass('bg-danger').html(form_sign_helper.get_error_text(result.action));
-        };
-        sign_collback.data_signed = function (result) {
-            $('#applet_storage').unblock();
-            after_sign_callback(result);
-        };
-
-        $('#applet_storage').block({message: '<h3>Пожалуйста подождите....</h3>'});
-        sign_collback.data_signed_callback = sign_collback.data_signed;
-        sign_collback.source = 'local';
-        helpers.sign_workaround.form_sign_helper.sign_raw(sign_collback,'xml',sdata);
-    }
-
-    function selectP12File() {
-        $.ajax({
-            type: "POST",
-            url: "https://v3bl.goszakup.gov.kz/ru/user/sendkey/kz",
-            data: [],
-            success: function (data, status) {
-                var xml = '\<\?xml version="1.0" encoding="UTF-8"\?\><root><key>' + data + '</key></root>';
-                sign_xml(xml, function (result) {
-                    var send_data = {sign: result};
-                    $.ajax({
-                        type: "POST",
-                        url: "/user/sendsign/kz",
-                        data: send_data,
-                        success: function (data, status) {
-                            $('#ajaxresult').html(data);
-                        },
-                        error: function (jqXHR, textStatus, errorThrown) {
-                            $('#ajaxresult').html('Ошибка сервера [' + errorThrown + ']');
-                            // updateAjaxResult('Ошибка сервера [' + errorThrown + ']');
-                        }
-                    });
-                })
-            },
-            error: function (e, textStatus, errorThrown) {
-                // updateAjaxResult(e.responseText);
-                $('#ajaxresult').html('Ошибка сервера [' + errorThrown + ']');
-            }
-        });
-    }
-
-    function updateStatusSpan(str, data) {
-
-        if (data != null || data != '') {
-            $("#status").html("");
-            $("#status").html(str + "<b><i>" + data + "</i></b>");
-        }
-    }
-
-    function sendSignature(signature) {
-
-
-    }
-
-</script> -->
-
 <div class="text-center">
     <br>
     <input class="btn btn-primary" name="selectP12File" id="selectP12File" value="Выберите ключ" onclick="" type="button">
@@ -266,11 +191,7 @@
         </div>
     </div>
 </div>
-<!-- <script>
-    function set_applet(fl) {
-        document.location.href = 'https://v3bl.goszakup.gov.kz/ru/user/login/' + fl;
-    }
-</script> -->
+
 </div>
         <div class="clearfix"></div>
         
@@ -292,7 +213,7 @@
     </div>
     <p class="text-center text-muted">
         Техническая поддержка пользователей портала (7/7 с 09:00 до 21:00): 8(7172) 73 55 15, +7 705 956 53 88 (в соответствие с тарифами оператора связи), 
-        <a href="mailto:support@ecc.kz">support@ecc.kz</a>
+        <a href="">support@ecc.kz</a>
     </p>
 </footer>
 <!-- END FOOTER -->
