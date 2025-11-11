@@ -46,7 +46,7 @@
     if (!value.startsWith(basePath)) {
       // удаляем все ../ и ./ в начале пути
       const cleanPath = value.replace(/^(\.\/|\.\.\/)*/g, '');
-      el.setAttribute(attr, basePath + cleanPath);
+      el.setAttribute(attr, basePath + "GosZakup" + cleanPath);
     }
   });
 })();
