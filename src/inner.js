@@ -50,4 +50,5 @@ function create_routs() {
     }
   });
 };
+
 document.addEventListener('DOMContentLoaded', create_routs)
