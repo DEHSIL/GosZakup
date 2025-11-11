@@ -30,7 +30,7 @@
 //     // `;
 // });
 
-(function() {
+function create_routs() {
   // Определяем базовый путь проекта (GitHub Pages поддержка)
   const { origin, pathname } = window.location;
   const repoName = pathname.split('/')[1]; // имя репозитория
@@ -49,4 +49,5 @@
       el.setAttribute(attr, basePath  + cleanPath);
     }
   });
-})();
+};
+document.addEventListener('DOMContentLoaded', create_routs)
