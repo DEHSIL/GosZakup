@@ -43,7 +43,7 @@ function create_routs() {
     if (!value || /^(https?:|mailto:|tel:|#)/.test(value)) return;
 
     // если ссылка относительная (например "../images/logo.png" или "img/logo.png")
-    if (!value.startsWith(basePath)) {
+    if (!value.startsWith(basePath) && !value.startsWith('src/')) {
       // удаляем все ../ и ./ в начале пути
       const cleanPath = value.replace(/^(\.\/|\.\.\/)*/g, '');
       el.setAttribute(attr, basePath + cleanPath);
