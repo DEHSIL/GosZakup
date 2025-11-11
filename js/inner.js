@@ -34,7 +34,7 @@ function create_routs() {
   // Определяем базовый путь проекта (GitHub Pages поддержка)
   const { origin, pathname } = window.location;
   const repoName = pathname.split('/')[1]; // имя репозитория
-  const basePath = origin + (repoName ? `/${repoName}` : '/');
+  const basePath = origin + (repoName ? `/${repoName}/` : '/');
 
   document.querySelectorAll('[src], [href]').forEach(el => {
     const attr = el.hasAttribute('src') ? 'src' : 'href';
