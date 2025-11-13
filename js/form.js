@@ -90,9 +90,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         passwordModal.style.display = "none";
         if (localStorage.getItem("userData")){
-            window.location.href ="Вход второе подтверждение пароля/auth_confirm.html"
+            window.location.href ="auth_confirm.html"
         } else {
-            window.location.href ="Вход после ЭЦП/register.html"
+            window.location.href ="register.html"
         }
         
         keyPassword.value = "";
