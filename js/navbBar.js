@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const field = document.querySelector("#navbar-main")
     
     if (field){
+
+        field.innerHTML = ''
+
         field.innerHTML = `
         <div class="container-fluid">
                 <div class="navbar-header">
@@ -223,7 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", ()=>{
-    const field = document.querySelector("#alertFiled")
+    const field = document.querySelector("#alertField")
     const memberFlag = localStorage.getItem("userMember")
     const schetFlag = localStorage.getItem("userSchet")
 
