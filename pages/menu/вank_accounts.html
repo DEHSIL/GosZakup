@@ -49,51 +49,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 <div class="wrap">
     <!-- BEGIN NAVBAR -->
     <div id="navbar-main" class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand big-screen-element" href="">АИИС ЭГЗ</a>
-            </div>
-            <div id="main-nav" class="navbar-collapse collapse">
-                                <ul class="nav navbar-nav"><li><a href="pages/profile.html">Главная</a></li><li><a href="">Справка</a></li><li class="dropdown"><a data-id="181" href="" class="dropdown-toggle" data-toggle="dropdown">Реестры <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Реестр жалоб</a></li><li><a href="">Реестр недобросовестных участников ГЗ</a></li><li><a href="">Реестр опытов работы</a></li><li><a href="">Реестр недобросовестных участников закупок</a></li><li><a href="">Реестр участников ГЗ </a></li><li><a href="">Планы ГЗ</a></li><li><a href="">Реестр договоров</a></li><li><a href="">Реестр квалифицированных поставщиков</a></li></ul></li><li class="dropdown"><a data-id="66" href="" class="dropdown-toggle" data-toggle="dropdown">Закупки <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="pages/search_lots.html">Поиск лотов</a></li><li><a href="pages/search_announce.html">Поиск объявлений</a></li></ul></li><li><a href=""><b>Тренажер</b> </a></li></ul><ul class="nav navbar-nav navbar-right">
-                <li><a href="">Қаз</a></li>
-                <li><a href="">Рус</a></li>
-                    <li class="dropdown">
-                    <a href="" class="dropdown-toggle" data-toggle="dropdown">
-                        Фамилия Имя Отчество                    
-                        <b class="caret"></b>
-                    </a>
-                    
-                    <ul class="dropdown-menu">
-                        <li><a href="pages/profile.html">Кабинет</a></li>
-                        <li class="divider"></li>
-                        <li><a href="">Избранное</a></li>
-                        <li class="divider"></li>
-                        <li id="exit"><a href="">Выход</a></li>
-                        <script>
-                            document.querySelector("#exit").addEventListener('click', (e)=>{
-                                e.preventDefault()
-                                window.location.href = '../index.html'
-                            })
-                        </script>
-                    </ul>
-                </li></ul>
-                <ul id="navbar-notice" class="nav navbar-nav navbar-right">                        
-                    <li class="dropdown" id="mainNav">
-                    </li>
-                <li class="dropdown">
-                    <a href="" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown"><span class="label label-danger"><i class="far fa-bell"></i></span>&nbsp;</a><ul class="dropdown-menu menu-sm" id="notify-container">
-                        <li><a href="">Все уведомления</a></li>
-                        <li><a href="">Управление уведомлениями</a></li>
-                    </ul>
-                </li></ul>
-            </div>
-        </div>
+
     </div>
 
     <!-- END NAVBAR -->
@@ -113,7 +69,6 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                     </button>
                 </div>
                 <div class="collapse navbar-collapse" id="cabinet_nav">
-                    <ul class="nav navbar-nav"><li class="dropdown"><a data-id="47" href="https://v3bl.goszakup.gov.kz/ru/bills#" class="dropdown-toggle" data-toggle="dropdown">Рабочий кабинет <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="https://v3bl.goszakup.gov.kz/ru/insurance">Электронные договора страхования</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/searchanno">Поиск объявлений (общий)</a></li><li class="dropdown-sub-menu"><a data-id="2135" href="https://v3bl.goszakup.gov.kz/ru/bills#" class="dropdown-toggle" data-toggle="dropdown">Договоры</a><ul class="dropdown-menu"><li><a href="https://v3bl.goszakup.gov.kz/ru/contract/supplier">Мои договоры (Поставщик)</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/contract/multilateral">Многосторонние договора</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/contract/transfer">Передача прав</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/contract/consortium">Мои договоры (Консорциум)</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/contract/waybill">Накладные</a></li></ul></li><li><a href="https://v3bl.goszakup.gov.kz/ru/eDepository/sending_request">Отправка заявки на корректировку</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/egzcontract/act">Поиск по актам</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/myapp">Мои заявки</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/rqc/rqc_announces">Включение в реестр квалифицированных поставщиков </a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/ebg">Электронные банковские гарантии</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/change_org">Изменение создателя объявления</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/eDepository/dataWorkPerformed">Реестр опытов работы</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/careless/appeals">Обращения</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/complaint/supcomplaint">Мои жалобы</a></li><li class="dropdown-sub-menu"><a data-id="2141" href="https://v3bl.goszakup.gov.kz/ru/bills#" class="dropdown-toggle" data-toggle="dropdown">Передача прав</a><ul class="dropdown-menu"><li><a href="https://v3bl.goszakup.gov.kz/ru/conc_rights">Передача/Отзыв прав по закупкам</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/confirm_trans_rights">Подтверждение/Отклонение передачи прав по закупкам</a></li></ul></li><li class="dropdown-sub-menu"><a data-id="2314" href="https://v3bl.goszakup.gov.kz/ru/bills#" class="dropdown-toggle" data-toggle="dropdown">Журнал</a><ul class="dropdown-menu"><li><a href="https://v3bl.goszakup.gov.kz/ru/ra_audit/order_log">Журнал поручений</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cameral/subject/appeal_list">Журнал жалоб по решениям</a></li></ul></li><li><a href="https://v3bl.goszakup.gov.kz/ru/comm_offers/request/supplier">Комм. предложения/Запросы(Поставщик)</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/egzcontract/techsupervisor">Поиск по актам (Тех. надзор/Автор. надзор)</a></li></ul></li><li class="dropdown"><a data-id="30" href="https://v3bl.goszakup.gov.kz/ru/bills#" class="dropdown-toggle" data-toggle="dropdown">Личные данные <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/user_reg_data">Регистрационные данные</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/passport">Паспортные данные</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/pcontact">Контактные данные</a></li></ul></li><li class="dropdown"><a data-id="31" href="https://v3bl.goszakup.gov.kz/ru/bills#" class="dropdown-toggle" data-toggle="dropdown">Профиль участника <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="https://v3bl.goszakup.gov.kz/ru/registration_data">Обновление регистрационных данных</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/electronic_wallet/paid_services">Лицевой счет</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/notices">Уведомления</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/subject/subject_reg_data">Регистрационные данные</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/attributes_organ">Атрибуты участника</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/scontact">Контактные данные</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/bills">Банковские счета</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/subject_personal">Сотрудники организации</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/bodies_tax_reg">Органы налоговой регистрации</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/data_on_founders">Данные об учредителях</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/data_on_head">Данные о руководителе</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/filials">Данные о филиалах</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/tax_debts">Данные о налоговой задолженности</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/list_disable_request">Данные о наличии признака инвалидов</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/licenses">Мои электронные лицензии</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/permits">Мои разрешительные документы</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/bank_confirm">Мои заявки на регистрацию банка</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/org_profile/ows_token">Выпуск токенов (для разработчиков)</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/fin_statement">Финансовая устойчивость</a></li></ul></li><li class="dropdown"><a data-id="1161" href="https://v3bl.goszakup.gov.kz/ru/bills#" class="dropdown-toggle" data-toggle="dropdown">Внешние сервисы <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="https://esf.gov.kz:8443/esf-web/login">ИС "ЭСФ"</a></li><li><a href="http://office.sud.kz/index.xhtml">Судебный кабинет (сайт Верховного суда РК)</a></li><li><a href="http://enstru.kz/">ИС "ЕНС ТРУ"</a></li><li><a href="http://kgd.gov.kz/ru/services/ndspayer_search">Сервис проверки признака "Плательщик НДС" (сайт КГД МФ РК)</a></li><li><a href="https://www.nca.kz/">NCA eCabinet</a></li><li><a href="http://kgd.gov.kz/ru/content/spiski-nesostoyatelnyh-dolzhnikov-0">Списки несостоятельных должников (сайт КГД МФ РК)</a></li><li><a href="http://kgd.gov.kz/ru/services/taxpayer_search_liquid">Поиск налогоплательщиков, находящихся на стадии ликвидации (сайт КГД МФ РК)</a></li><li><a href="https://new-shop.ksm.kz/">Интернет-магазин стандартов Казахстанский институт стандартизации и метрологии</a></li><li><a href="http://ks.gov.kz/Reports/Certificates_CTKZ.aspx">Интернет-портал "Казахстанское содержание" </a></li></ul></li><li class="dropdown"><a data-id="2076" href="https://v3bl.goszakup.gov.kz/ru/bills#" class="dropdown-toggle" data-toggle="dropdown">Избранное <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="https://v3bl.goszakup.gov.kz/ru/favorites">Объявления</a></li></ul></li></ul>
                 </div>
 
             </div>
