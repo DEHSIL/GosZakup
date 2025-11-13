@@ -1,3 +1,52 @@
+document.addEventListener("DOMContentLoaded", ()=>{
+    const field = document.querySelector("#navbar-main")
+    
+    if (field){
+        field.innerHTML = `
+        <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand big-screen-element" href="">АИИС ЭГЗ</a>
+                </div>
+                <div id="main-nav" class="navbar-collapse collapse">
+                                    <ul class="nav navbar-nav"><li><a href="pages/profile.html">Главная</a></li><li><a href="">Справка</a></li><li class="dropdown"><a data-id="181" href="" class="dropdown-toggle" data-toggle="dropdown">Реестры <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Реестр жалоб</a></li><li><a href="">Реестр недобросовестных участников ГЗ</a></li><li><a href="">Реестр опытов работы</a></li><li><a href="">Реестр недобросовестных участников закупок</a></li><li><a href="">Реестр участников ГЗ </a></li><li><a href="">Планы ГЗ</a></li><li><a href="">Реестр договоров</a></li><li><a href="">Реестр квалифицированных поставщиков</a></li></ul></li><li class="dropdown"><a data-id="66" href="" class="dropdown-toggle" data-toggle="dropdown">Закупки <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="pages/search_lots.html">Поиск лотов</a></li><li><a href="pages/search_announce.html">Поиск объявлений</a></li></ul></li><li><a href=""><b>Тренажер</b> </a></li></ul><ul class="nav navbar-nav navbar-right">
+                    <li><a href="">Қаз</a></li>
+                    <li><a href="">Рус</a></li>
+                        <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                            Фамилия Имя Отчество                    
+                            <b class="caret"></b>
+                        </a>
+                        
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/profile.html">Кабинет</a></li>
+                            <li class="divider"></li>
+                            <li><a href="">Избранное</a></li>
+                            <li class="divider"></li>
+                            <li><a href="index.html">Выход</a></li>
+
+                        </ul>
+                    </li></ul>
+                    <ul id="navbar-notice" class="nav navbar-nav navbar-right">                        
+                        <li class="dropdown" id="mainNav">
+                        </li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown"><span class="label label-danger"><i class="far fa-bell"></i></span>&nbsp;</a><ul class="dropdown-menu menu-sm" id="notify-container">
+                            <li><a href="">Все уведомления</a></li>
+                            <li><a href="">Управление уведомлениями</a></li>
+                        </ul>
+                    </li></ul>
+                </div>
+            </div>
+        `
+    }
+})
+
 document.addEventListener("DOMContentLoaded", function () {
     const field = document.querySelector("#cabinet_nav");
     const memberFlag = localStorage.getItem("userMember");
@@ -172,54 +221,6 @@ document.addEventListener("DOMContentLoaded", () => {
    
 });
 
-document.addEventListener("DOMContentLoaded", ()=>{
-    const field = document.querySelector("#navbar-main")
-    
-    if (field){
-        field.innerHTML = `
-        <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand big-screen-element" href="">АИИС ЭГЗ</a>
-                </div>
-                <div id="main-nav" class="navbar-collapse collapse">
-                                    <ul class="nav navbar-nav"><li><a href="pages/profile.html">Главная</a></li><li><a href="">Справка</a></li><li class="dropdown"><a data-id="181" href="" class="dropdown-toggle" data-toggle="dropdown">Реестры <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Реестр жалоб</a></li><li><a href="">Реестр недобросовестных участников ГЗ</a></li><li><a href="">Реестр опытов работы</a></li><li><a href="">Реестр недобросовестных участников закупок</a></li><li><a href="">Реестр участников ГЗ </a></li><li><a href="">Планы ГЗ</a></li><li><a href="">Реестр договоров</a></li><li><a href="">Реестр квалифицированных поставщиков</a></li></ul></li><li class="dropdown"><a data-id="66" href="" class="dropdown-toggle" data-toggle="dropdown">Закупки <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="pages/search_lots.html">Поиск лотов</a></li><li><a href="pages/search_announce.html">Поиск объявлений</a></li></ul></li><li><a href=""><b>Тренажер</b> </a></li></ul><ul class="nav navbar-nav navbar-right">
-                    <li><a href="">Қаз</a></li>
-                    <li><a href="">Рус</a></li>
-                        <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">
-                            Фамилия Имя Отчество                    
-                            <b class="caret"></b>
-                        </a>
-                        
-                        <ul class="dropdown-menu">
-                            <li><a href="pages/profile.html">Кабинет</a></li>
-                            <li class="divider"></li>
-                            <li><a href="">Избранное</a></li>
-                            <li class="divider"></li>
-                            <li><a href="index.html">Выход</a></li>
-
-                        </ul>
-                    </li></ul>
-                    <ul id="navbar-notice" class="nav navbar-nav navbar-right">                        
-                        <li class="dropdown" id="mainNav">
-                        </li>
-                    <li class="dropdown">
-                        <a href="" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown"><span class="label label-danger"><i class="far fa-bell"></i></span>&nbsp;</a><ul class="dropdown-menu menu-sm" id="notify-container">
-                            <li><a href="">Все уведомления</a></li>
-                            <li><a href="">Управление уведомлениями</a></li>
-                        </ul>
-                    </li></ul>
-                </div>
-            </div>
-        `
-    }
-})
 
 document.addEventListener("DOMContentLoaded", ()=>{
     const field = document.querySelector("#alertFiled")
