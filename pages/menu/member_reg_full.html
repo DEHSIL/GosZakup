@@ -3,7 +3,7 @@
 <html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
 body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
 </style>
-    
+    <script src="../../js/inner.js"></script>
     <title>Портал государственных закупок Республики Казахстан</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,37 +26,25 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <link rel="icon" type="image/png" sizes="32x32" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-16x16.png">
-    <link href="src/bootstrap.min.css" rel="stylesheet">
-    <link href="src/all.min.css" rel="stylesheet">
-    <link href="src/style.css" rel="stylesheet">
-    <link href="src/datepicker.css" rel="stylesheet">
-    <link href="src/upload.css" rel="stylesheet">
+    <link href="style/bootstrap.min.css" rel="stylesheet">
+    <link href="style/all.min.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/datepicker.css" rel="stylesheet">
+    <link href="style/upload.css" rel="stylesheet">
 
-    <!-- <script src="src/jquery.js.загрузка"></script>
-    <script src="src/bootstrap.min.js.загрузка"></script>
-    <script src="src/confirmation.js.загрузка"></script>
+    <!-- <script src="../../js/jquery.js.загрузка"></script>
+    <script src="../../js/bootstrap.min.js.загрузка"></script>
+    <script src="../../js/confirmation.js.загрузка"></script>
     
     
-    <script type="text/javascript" src="src/bootstrap.datepicker.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/bootstrap-datepicker.ru.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/helpers.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/subject.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/bootstrap-filestyle.min.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/upload.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/jquery.blockUI.js.загрузка" charset="utf-8"></script> -->
+    <script type="text/javascript" src="../../js/bootstrap.datepicker.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/bootstrap-datepicker.ru.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/helpers.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/subject.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/bootstrap-filestyle.min.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/upload.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/jquery.blockUI.js.загрузка" charset="utf-8"></script> -->
 
-    <!-- <script>
-            var user_id = 1563337;
-            window.lang_key = "ru";
-            window.current_controller_url = "https://v3bl.goszakup.gov.kz/ru/subject";
-            
-            window.current_directory = "";
-            window.current_controller = "subject";
-            window.current_method = "register";
-
-            window.url_params = [];
-            ; var lang = 'ru'; var controller = 'subject';    
-    </script> -->
 </head>
 <body >
 
@@ -72,53 +60,10 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand big-screen-element" href="https://v3bl.goszakup.gov.kz/">АИИС ЭГЗ</a>
-            </div>
-            <div id="main-nav" class="navbar-collapse collapse">
-                                <ul class="nav navbar-nav"><li><a href="">Главная</a></li><li><a href="https://wiki.goszakup.gov.kz/">Справка</a></li><li class="dropdown"><a data-id="181" href="https://v3bl.goszakup.gov.kz/ru/subject/register#" class="dropdown-toggle" data-toggle="dropdown">Реестры <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="https://v3bl.goszakup.gov.kz/ru/complaint/reestrcomplaint">Реестр жалоб</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/careless/reestr">Реестр недобросовестных участников ГЗ</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/eDepository/dataWorkPerformed">Реестр опытов работы</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/careless/reestr/index_quasi">Реестр недобросовестных участников закупок</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/register/supplierreg">Реестр участников ГЗ </a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/register/plansreg">Планы ГЗ</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/egzcontract/cpublic">Реестр договоров</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/rqc/registry">Реестр квалифицированных поставщиков</a></li></ul></li><li class="dropdown"><a data-id="66" href="https://v3bl.goszakup.gov.kz/ru/subject/register#" class="dropdown-toggle" data-toggle="dropdown">Закупки <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="https://v3bl.goszakup.gov.kz/ru/search/lots">Поиск лотов</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/searchanno">Поиск объявлений</a></li></ul></li></ul>
-                <ul class="nav navbar-nav navbar-right">
-                <li><a href="">Қаз</a></li>
-                <li><a href="">Рус</a></li>
-              
-                    <li class="dropdown">
-                    <a href="" class="dropdown-toggle" data-toggle="dropdown">
-                    <span class="glyphicon glyphicon-user online" id="online-status"></span>
-                        Фамилия Имя Отчество                    
-                        <b class="caret"></b>
-                    </a>
-                    
-                    <ul class="dropdown-menu">
-                        <li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/profile">Кабинет</a></li>
-                        <li class="divider"></li>
-                        <li><a href="https://v3bl.goszakup.gov.kz/ru/favorites">Избранное</a></li>
-                        <li class="divider"></li>
-                        <li><a href="https://v3bl.goszakup.gov.kz/ru/user/sso_logout">Выход</a></li>
-                    </ul>
-                </li></ul>
-                <ul id="navbar-notice" class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown"><span class="label label-success"><i class="far fa-bell"></i></span>&nbsp;</a><ul class="dropdown-menu menu-sm" id="notify-container">
-                        <li><a href="">Все уведомления</a></li>
-                        
-                    </ul>
-                </li></ul>
-            </div>
-        </div>
-    </div><div id="navbar-main" class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 <a class="navbar-brand big-screen-element" href="">АИИС ЭГЗ</a>
             </div>
             <div id="main-nav" class="navbar-collapse collapse">
-                                <ul class="nav navbar-nav"><li><a href="../../../Профиль/profile.html">Главная</a></li><li><a href="">Справка</a></li><li class="dropdown"><a data-id="181" href="" class="dropdown-toggle" data-toggle="dropdown">Реестры <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Реестр жалоб</a></li><li><a href="">Реестр недобросовестных участников ГЗ</a></li><li><a href="">Реестр опытов работы</a></li><li><a href="">Реестр недобросовестных участников закупок</a></li><li><a href="">Реестр участников ГЗ </a></li><li><a href="">Планы ГЗ</a></li><li><a href="">Реестр договоров</a></li><li><a href="">Реестр квалифицированных поставщиков</a></li></ul></li><li class="dropdown"><a data-id="66" href="" class="dropdown-toggle" data-toggle="dropdown">Закупки <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="../../../Поиск лотов/search_lots.html">Поиск лотов</a></li><li><a href="../../../Поиск объявлений/search_announce.html">Поиск объявлений</a></li></ul></li><li><a href="">Тренажер</a></li></ul>
-                
-                                <ul class="nav navbar-nav navbar-right">
+                                <ul class="nav navbar-nav"><li><a href="pages/profile.html">Главная</a></li><li><a href="">Справка</a></li><li class="dropdown"><a data-id="181" href="" class="dropdown-toggle" data-toggle="dropdown">Реестры <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Реестр жалоб</a></li><li><a href="">Реестр недобросовестных участников ГЗ</a></li><li><a href="">Реестр опытов работы</a></li><li><a href="">Реестр недобросовестных участников закупок</a></li><li><a href="">Реестр участников ГЗ </a></li><li><a href="">Планы ГЗ</a></li><li><a href="">Реестр договоров</a></li><li><a href="">Реестр квалифицированных поставщиков</a></li></ul></li><li class="dropdown"><a data-id="66" href="" class="dropdown-toggle" data-toggle="dropdown">Закупки <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="pages/search_lots.html">Поиск лотов</a></li><li><a href="pages/search_announce.html">Поиск объявлений</a></li></ul></li><li><a href=""><b>Тренажер</b> </a></li></ul><ul class="nav navbar-nav navbar-right">
                 <li><a href="">Қаз</a></li>
                 <li><a href="">Рус</a></li>
                     <li class="dropdown">
@@ -128,24 +73,22 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                     </a>
                     
                     <ul class="dropdown-menu">
-                        <li><a href="../../../Профиль/profile.html">Кабинет</a></li>
+                        <li><a href="pages/profile.html">Кабинет</a></li>
                         <li class="divider"></li>
                         <li><a href="">Избранное</a></li>
                         <li class="divider"></li>
                         <li id="exit"><a href="">Выход</a></li>
                         <script>
-                            document.querySelector("#exit").addEventListener('click', ()=>{
-                                localStorage.removeItem("userData")
-                                localStorage.removeItem("verifiEmail")
-                                localStorage.removeItem("userMember")
-                                localStorage.removeItem("userSchet")
-                                window.location.href = '../../../../index.html'
+                            document.querySelector("#exit").addEventListener('click', (e)=>{
+                                e.preventDefault()
+                                window.location.href = '../index.html'
                             })
                         </script>
                     </ul>
                 </li></ul>
                 <ul id="navbar-notice" class="nav navbar-nav navbar-right">                        
-                    
+                    <li class="dropdown" id="mainNav">
+                    </li>
                 <li class="dropdown">
                     <a href="" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown"><span class="label label-danger"><i class="far fa-bell"></i></span>&nbsp;</a><ul class="dropdown-menu menu-sm" id="notify-container">
                         <li><a href="">Все уведомления</a></li>
@@ -199,7 +142,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
             </div>
             <div class="panel-body row">
                 <div class="col-sm-3">
-                    <a href="../../../Профиль/profile.html" class="btn btn-default">
+                    <a href="pages/profile.html" class="btn btn-default">
                         Вернуться назад                    </a>
                 </div>
             </div>
@@ -683,7 +626,7 @@ document.addEventListener("DOMContentLoaded", function() {
             alertBox.innerHTML = `<div class="alert alert-success"><b>Все данные корректны.</b><br>Форма готова к отправке.</div>`;
             alertBox.scrollIntoView({ behavior: "smooth" });
             localStorage.setItem("userMember", "true")
-            window.location.href ="../../../Профиль/profile.html"
+            window.location.href ="../profile.html"
         }
     });
 });
