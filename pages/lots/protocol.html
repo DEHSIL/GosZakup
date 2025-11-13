@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-
-<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+<html lang="ru"><head>
+    <script src="../../js/inner.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
 body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
 </style>
     
@@ -26,36 +27,25 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <link rel="icon" type="image/png" sizes="32x32" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-16x16.png">
-    <link href="src/bootstrap.min.css" rel="stylesheet">
-    <link href="src/all.min.css" rel="stylesheet">
-    <link href="src/style.css" rel="stylesheet">
-    <link href="src/datepicker.css" rel="stylesheet">
-    <link href="src/jquery.countdown.css" rel="stylesheet">
+    <link href="style/bootstrap.min.css" rel="stylesheet">
+    <link href="style/all.min.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/datepicker.css" rel="stylesheet">
+    <link href="style/jquery.countdown.css" rel="stylesheet">
 
-    <script src="src/jquery.js.загрузка"></script>
-    <script src="src/bootstrap.min.js.загрузка"></script>
-    <script src="src/confirmation.js.загрузка"></script>
+    <script src="../../js/jquery.js.загрузка"></script>
+    <script src="../../js/bootstrap.min.js.загрузка"></script>
+    <script src="../../js/confirmation.js.загрузка"></script>
     
     
-    <script type="text/javascript" src="src/bootstrap.datepicker.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/bootstrap-datepicker.ru.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/helpers.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/announce.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/jquery.plugin.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/jquery.countdown.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/jquery.countdown-ru.js.загрузка" charset="utf-8"></script>
-<!-- 
-    <script>
-            var user_id = 1563337;
-            window.lang_key = "ru";
-            window.current_controller_url = "https://v3bl.goszakup.gov.kz/ru/announce";
-            
-            window.current_directory = "";
-            window.current_controller = "announce";
-            window.current_method = "index";
+    <script type="text/javascript" src="../../js/bootstrap.datepicker.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/bootstrap-datepicker.ru.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/helpers.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/announce.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/jquery.plugin.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/jquery.countdown.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/jquery.countdown-ru.js.загрузка" charset="utf-8"></script>
 
-            window.url_params = ["15616558"];
-            ; var lang = 'ru'; var controller = 'announce'; var announce_id = 15616558;    </script> -->
 </head>
 <body>
 
@@ -216,7 +206,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                 <div class="content-block"><script>
     $(function () {
         var newYear = new Date('2025/11/03 09:05:00');
-        $('#asNeeded').countdown({until: newYear, layout: '{dn} {dl}, {hn} {hl}, {mn} {ml}, {sn} {sl}', serverSync: function () {return new Date('2025/10/30 08:45:15');}});
+        $('#asNeeded').countdown({until: newYear, layout: '{dn} {dl}, {hn} {hl}, {mn} {ml}, {sn} {sl}', serverSync: function () {return new Date('2025/10/30 08:44:52');}});
     });
 </script>
 
@@ -364,156 +354,34 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 
                     
                     <li role="presentation">
-                        <a href="pages/Страница лотов/lots_page.html">Общие сведения</a>
+                        <a href="pages/lots/lots_page.html">Общие сведения</a>
                     </li>
                     
                     <li role="presentation">
-                        <a href="pages/Поиск лотов/лоты/lots.html">Лоты</a>
+                        <a href="pages/lots/лоты/lots.html">Лоты</a>
                     </li>
                     
                     <li role="presentation">
-                        <a href="pages/Поиск лотов/Документация/documentation.html">Документация</a>
+                        <a href="pages/lots/documentation.html">Документация</a>
                     </li>
                     
                     <li role="presentation">
-                        <a href="pages/Поиск лотов/Протокол/protocol.html">Протоколы</a>
+                        <a href="pages/lots/protocol.html">Протоколы</a>
                     </li>
                     
                     <li role="presentation">
-                        <a href="pages/Поиск лотов/Договоры/dogovor.html">Договоры</a>
+                        <a href="pages/lots/dogovor.html">Договоры</a>
                     </li>
                     
                     <li role="presentation" class="active">
-                        <a href="pages/Поиск лотов/Аппеляции/appelation.html">Апелляции</a>
+                        <a href="pages/lots/appelation.html">Апелляции</a>
                     </li>
                                     </ul>
                 <br>
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active">
-                                <div class="panel panel-default">
-            <div class="table-responsive">
-                <table class="table table-bordered table-striped">
-                    <tbody><tr>
-                        <th colspan="8">
-                            <a href="javascript:void(0)" class="lot-links" data-anno="15616558" data-id="38543918" data-lang="ru" style="font-size: 13px">
-                                Лот №75443949-ЗЦП2: Услуги по страхованию гражданско-правовой ответственности владельцев автомобильного транспорта                            </a>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>Номер договора</th>
-                        <th>Статус договора</th>
-                        <th>Плановая сумма лота, тенге</th>
-                        <th>Сумма по предмету договора, тенге (Без учета НДС)</th>
-                        <th>Сумма предмета договора (лот) исполненная, фактическая, тенге (Без учета НДС)</th>
-                        <th>Наименование поставщика</th>
-                        <th>БИН/ИИН поставщика</th>
-                        <th>Статус победителя</th>
-                    </tr>
-                                            <tr>
-                            <td colspan="8">Информация по договорам отсутствует</td>
-                        </tr>
-                                        </tbody></table>
-            </div>
-        </div>
-        <div class="modal fade in modal-lot" tabindex="-1" role="dialog" aria-hidden="false">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content modal-lot-content">
-                <div class="modal-body modal-body-lot">
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-        <form id="formSaveContrSusp" class="margin-top-10">
-        </form>
-            
-        
-        <div class="modal fade" id="confirmSaveModal" tabindex="-1" role="dialog" aria-labelledby="confirmSaveModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
-                </button>
-                <h4 class="modal-title" id="confirmSaveModalLabel">Подтверждение</h4>
-</div>
-<div class="modal-body">
-    Настоящим уведомлением подтверждаю, что по итогам закупки №15616558-1 имеется судебный акт, предусматривающий приостановление процедур заключения договора до вынесения окончательного судебного решения.
-За предоставление недостоверных сведений предусмотрена персональная ответственность в соответствии с законодательством Республики Казахстан.</div>
-<div class="modal-footer">
-    <div id="error_save_msg" style="text-align: left;"></div>
-    <button type="button" class="btn btn-default" data-dismiss="modal">Отменить</button>
-    <button class="btn btn-success" type="button" data-loading-text="Идет проверка..." onclick="saveSuspensionFile(this);" data-anno="15616558">Подтверждаю</button>
-</div>
-</div>
-</div>
-</div>
-<script type="text/javascript">
-    $(function(){
-        $('.lot-links').on('click', function(){
-            var id_anno = $(this).data('anno');
-            var id_lot = $(this).data('id');
-            var lang = $(this).data('lang');
-
-            $.ajax({
-                type: "POST",
-                async: false,
-                cache: false,
-                url: "/"+lang+"/subpriceoffer/ajax_load_lot/" + id_anno,
-                data: {id: id_lot},
-                success: function (data) {
-                    $(".modal-body-lot").html(data);
-                    $(".modal-lot").modal("show");
-                },
-                error: function () {
-                    $('.modal-body-lot').html('<div class="alert alert-danger">Ошибка выполнения запроса, попробуйте позже</div>');
-                    $(".modal-lot").modal("show");
-                }
-            });
-            return false;
-        });
-    });
-
-    saveSuspensionFile = function (item){
-        $('#error_save_msg').empty();
-        var id_anno = $(item).data('anno');
-        var url = window.current_controller_url + '/upload_suspension_file/' + id_anno;
-        var form = $('#formSaveContrSusp');
-        if (typeof form_sign_helper != 'undefined') {
-            var check_files_status = form_sign_helper.check_statuses();
-            if (check_files_status == true) {
-                form_sign_helper.generate_input(form);
-            }
-        }
-        var $btn = $(item).button('loading');
-        var confirmSaveModal = $('#confirmSaveModal');
-
-        $.ajax({
-            type: "POST",
-            url: url,
-            dataType: 'json',
-            data: form.serialize(),
-            success: function (responseData) {
-                if (responseData.status == "ok") {
-                    confirmSaveModal.modal('toggle');
-                    location.reload(true);
-                }
-                else {
-                    $('#error_save_msg').html('<div class="alert alert-danger">' + responseData.message + '</div>');
-                }
-                $btn.button('reset');
-            },
-            error: function () {
-                $('#error_save_msg').html('<div class="alert alert-danger">Ошибка выполнения запроса</div>');
-                $btn.button('reset');
-            }
-        });
-    }
-
-</script>                    </div>
+                        
+                    </div>
                 </div>
             </div>
         </div>
