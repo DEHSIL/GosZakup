@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+    <script src="../js/inner.js"></script>
     <title>Портал государственных закупок Республики Казахстан</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,27 +23,27 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-16x16.png">
-    <link href="src/bootstrap.min.css" rel="stylesheet">
-    <link href="src/all.min.css" rel="stylesheet">
-    <link href="src/style.css" rel="stylesheet">
-    <link href="src/datepicker.css" rel="stylesheet">
-    <link href="src/select2.min.css" rel="stylesheet">
-    <link href="src/bootstrap-select.min.css" rel="stylesheet">
+    <link href="style/bootstrap.min.css" rel="stylesheet">
+    <link href="style/all.min.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/datepicker.css" rel="stylesheet">
+    <link href="style/select2.min.css" rel="stylesheet">
+    <link href="style/bootstrap-select.min.css" rel="stylesheet">
 
-    <script src="src/jquery.js"></script>
-    <script src="src/bootstrap.min.js"></script>  
-    <script src="src/confirmation.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>  
+    <script src="../js/confirmation.js"></script>
     
 
-    <script type="text/javascript" src="src/bootstrap.datepicker.js" charset="utf-8"></script>
-    <script type="text/javascript" src="src/bootstrap-datepicker.ru.js" charset="utf-8"></script>
-    <script type="text/javascript" src="src/helpers.js" charset="utf-8"></script>
-    <script type="text/javascript" src="src/select2.min.js" charset="utf-8"></script>
-    <script type="text/javascript" src="src/form-select2.js" charset="utf-8"></script> 
-    <script type="text/javascript" src="src/bootstrap-datepicker.js" charset="utf-8"></script> 
+    <script type="text/javascript" src="../js/bootstrap.datepicker.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/bootstrap-datepicker.ru.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/helpers.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/select2.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/form-select2.js" charset="utf-8"></script> 
+    <script type="text/javascript" src="../js/bootstrap-datepicker.js" charset="utf-8"></script> 
     <!-- <script type="text/javascript" src="src/bootstrap-select.js" charset="utf-8"></script> -->
-    <script type="text/javascript" src="src/defaults-ru_RU.js" charset="utf-8"></script>
-    <script type="text/javascript" src="src/ru.js" charset="utf-8"></script> 
+    <script type="text/javascript" src="../js/defaults-ru_RU.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/ru.js" charset="utf-8"></script> 
 
 
     <!-- <script>
@@ -73,10 +73,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand big-screen-element" href="profile.html">АИИС ЭГЗ</a>
+                <a class="navbar-brand big-screen-element" href="pages/profile.html">АИИС ЭГЗ</a>
             </div>
             <div id="main-nav" class="navbar-collapse collapse">
-                                <ul class="nav navbar-nav"><li><a href="profile.html">Главная</a></li><li><a href="">Справка</a></li><li class="dropdown"><a data-id="181" href="" class="dropdown-toggle" data-toggle="dropdown">Реестры <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Реестр жалоб</a></li><li><a href="">Реестр недобросовестных участников ГЗ</a></li><li><a href="">Реестр опытов работы</a></li><li><a href="">Реестр недобросовестных участников закупок</a></li><li><a href="">Реестр участников ГЗ </a></li><li><a href="">Планы ГЗ</a></li><li><a href="">Реестр договоров</a></li><li><a href="">Реестр квалифицированных поставщиков</a></li></ul></li><li class="dropdown"><a data-id="66" href="" class="dropdown-toggle" data-toggle="dropdown">Закупки <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="../Поиск лотов/search_lots.html">Поиск лотов</a></li><li><a href="../Поиск объявлений/search_announce.html">Поиск объявлений</a></li></ul></li><li><a href=""><b>Тренажер</b> </a></li></ul><ul class="nav navbar-nav navbar-right">
+                                <ul class="nav navbar-nav"><li><a href="pages/profile.html">Главная</a></li><li><a href="">Справка</a></li><li class="dropdown"><a data-id="181" href="" class="dropdown-toggle" data-toggle="dropdown">Реестры <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Реестр жалоб</a></li><li><a href="">Реестр недобросовестных участников ГЗ</a></li><li><a href="">Реестр опытов работы</a></li><li><a href="">Реестр недобросовестных участников закупок</a></li><li><a href="">Реестр участников ГЗ </a></li><li><a href="">Планы ГЗ</a></li><li><a href="">Реестр договоров</a></li><li><a href="">Реестр квалифицированных поставщиков</a></li></ul></li><li class="dropdown"><a data-id="66" href="" class="dropdown-toggle" data-toggle="dropdown">Закупки <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="pages/search_lots.html">Поиск лотов</a></li><li><a href="pages/search_announce.html">Поиск объявлений</a></li></ul></li><li><a href=""><b>Тренажер</b> </a></li></ul><ul class="nav navbar-nav navbar-right">
                 <li><a href="">Қаз</a></li>
                 <li><a href="">Рус</a></li>
                     <li class="dropdown">
@@ -86,7 +86,7 @@
                     </a>
                     
                     <ul class="dropdown-menu">
-                        <li><a href="profile.html">Кабинет</a></li>
+                        <li><a href="pages/profile.html">Кабинет</a></li>
                         <li class="divider"></li>
                         <li><a href="">Избранное</a></li>
                         <li class="divider"></li>
@@ -94,7 +94,7 @@
                         <script>
                             document.querySelector("#exit").addEventListener('click', (e)=>{
                                 e.preventDefault()
-                                window.location.href = '../../index.html'
+                                window.location.href = '../index.html'
                             })
                         </script>
                     </ul>
