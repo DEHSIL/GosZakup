@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+<html lang="ru"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>body {transition: opacity ease-in 0.2s; } 
 body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
 </style>
-    
+    <script src="../../js/inner.js"></script>
+
     <title>Портал государственных закупок Республики Казахстан</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,24 +27,24 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <link rel="icon" type="image/png" sizes="32x32" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-16x16.png">
-    <link href="src/bootstrap.min.css" rel="stylesheet">
-    <link href="src/all.min.css" rel="stylesheet">
-    <link href="src/style.css" rel="stylesheet">
-    <link href="src/datepicker.css" rel="stylesheet">
-    <link href="src/upload.css" rel="stylesheet">
+    <link href="style/bootstrap.min.css" rel="stylesheet">
+    <link href="style/all.min.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/datepicker.css" rel="stylesheet">
+    <link href="style/upload.css" rel="stylesheet">
 
-    <script src="src/jquery.js.загрузка"></script>
-    <script src="src/bootstrap.min.js.загрузка"></script>
-    <script src="src/confirmation.js.загрузка"></script>
+    <script src="js/jquery.js.загрузка"></script>
+    <script src="js/bootstrap.min.js.загрузка"></script>
+    <script src="js/confirmation.js.загрузка"></script>
     
     
-    <script type="text/javascript" src="src/bootstrap.datepicker.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/bootstrap-datepicker.ru.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/helpers.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="js/bootstrap.datepicker.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.ru.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="js/helpers.js.загрузка" charset="utf-8"></script>
     <!-- <script type="text/javascript" src="src/user.js.загрузка" charset="utf-8"></script> -->
-    <script type="text/javascript" src="src/bootstrap-filestyle.min.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="js/bootstrap-filestyle.min.js.загрузка" charset="utf-8"></script>
     <!-- <script type="text/javascript" src="src/upload.js.загрузка" charset="utf-8"></script> -->
-    <script type="text/javascript" src="src/jquery.blockUI.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="js/jquery.blockUI.js.загрузка" charset="utf-8"></script>
 
   <!--  <script>
             var user_id = 0;
@@ -70,10 +73,10 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand big-screen-element" href="../ecp.html">АИИС ЭГЗ</a>
+                <a class="navbar-brand big-screen-element" href="pages/auth/ecp.html">АИИС ЭГЗ</a>
             </div>
             <div id="main-nav" class="navbar-collapse collapse">
-                                <ul class="nav navbar-nav"><li><a href="../../../index.html">Главная</a></li><li><a href="">Справка</a></li></ul>
+                                <ul class="nav navbar-nav"><li><a href="index.html">Главная</a></li><li><a href="">Справка</a></li></ul>
                 <ul class="nav navbar-nav navbar-right">
                 <li><a href="">Қаз</a></li>
                 <li><a href="">Рус</a></li>
@@ -127,7 +130,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
             </div>
             <div class="panel-body row">
                 <div class="col-sm-3">
-                    <a href="../ecp.html">
+                    <a href="pages/auth/ecp.html">
                         Выбрать другой сертификат                    </a>
                 </div>
             </div>
@@ -485,7 +488,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         
         localStorage.setItem("userData", JSON.stringify(USER_DATA))
-        <!-- localStorage.setItem("verifiEmail", "false") -->
         localStorage.setItem("userMember", "false")
         localStorage.setItem("userSchet", "false")
     }
@@ -500,7 +502,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (!validateForm()) return;
         saveData()
-        window.location.href ="../../Профиль/profile.html"
+        window.location.href ="pages/profile.html"
     });
 });
 </script>
