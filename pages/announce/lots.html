@@ -2,7 +2,7 @@
 <html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
 body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
 </style>
-    
+    <script src="../../js/inner.js"></script>
     <title>Портал государственных закупок Республики Казахстан</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,39 +25,29 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <link rel="icon" type="image/png" sizes="32x32" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-16x16.png">
-    <link href="src/bootstrap.min.css" rel="stylesheet">
-    <link href="src/all.min.css" rel="stylesheet">
-    <link href="src/style.css" rel="stylesheet">
-    <link href="src/datepicker.css" rel="stylesheet">
-    <link href="src/jquery.countdown.css" rel="stylesheet">
+    <link href="style/bootstrap.min.css" rel="stylesheet">
+    <link href="style/all.min.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/datepicker.css" rel="stylesheet">
+    <link href="style/jquery.countdown.css" rel="stylesheet">
 
-    <script src="src/jquery.js.загрузка"></script>
-    <script src="src/bootstrap.min.js.загрузка"></script>
-    <script src="src/confirmation.js.загрузка"></script>
+    <script src="../../js/jquery.js.загрузка"></script>
+    <script src="../../js/bootstrap.min.js.загрузка"></script>
+    <script src="../../js/confirmation.js.загрузка"></script>
     
     
-    <script type="text/javascript" src="src/bootstrap.datepicker.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/bootstrap-datepicker.ru.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/helpers.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/announce.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/jquery.plugin.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/jquery.countdown.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/jquery.countdown-ru.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/bootstrap.datepicker.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/bootstrap-datepicker.ru.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/helpers.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/announce.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/jquery.plugin.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/jquery.countdown.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/jquery.countdown-ru.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/view.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/lots.js.загрузка" charset="utf-8"></script>
 
-    <!-- <script>
-            var user_id = 1563337;
-            window.lang_key = "ru";
-            window.current_controller_url = "https://v3bl.goszakup.gov.kz/ru/announce";
-            
-            window.current_directory = "";
-            window.current_controller = "announce";
-            window.current_method = "index";
-
-            window.url_params = ["15616558"];
-            ; var lang = 'ru'; var controller = 'announce'; var announce_id = 15616558;    
-    </script> -->
 </head>
-<body>
+<body >
 
 <!-- BEGIN WRAP -->
 <div class="wrap">
@@ -74,7 +64,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                 <a class="navbar-brand big-screen-element" href="">АИИС ЭГЗ</a>
             </div>
             <div id="main-nav" class="navbar-collapse collapse">
-                                <ul class="nav navbar-nav"><li><a href="pages/Профиль/profile.html">Главная</a></li><li><a href="">Справка</a></li><li class="dropdown"><a data-id="181" href="" class="dropdown-toggle" data-toggle="dropdown">Реестры <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Реестр жалоб</a></li><li><a href="">Реестр недобросовестных участников ГЗ</a></li><li><a href="">Реестр опытов работы</a></li><li><a href="">Реестр недобросовестных участников закупок</a></li><li><a href="">Реестр участников ГЗ </a></li><li><a href="">Планы ГЗ</a></li><li><a href="">Реестр договоров</a></li><li><a href="">Реестр квалифицированных поставщиков</a></li></ul></li><li class="dropdown"><a data-id="66" href="" class="dropdown-toggle" data-toggle="dropdown">Закупки <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="pages/Поиск лотов/search_lots.html">Поиск лотов</a></li><li><a href="pages/Поиск объявлений/search_announce.html">Поиск объявлений</a></li></ul></li><li><a href=""><b>Тренажер</b> </a></li></ul><ul class="nav navbar-nav navbar-right">
+                                <ul class="nav navbar-nav"><li><a href="pages/profile.html">Главная</a></li><li><a href="">Справка</a></li><li class="dropdown"><a data-id="181" href="" class="dropdown-toggle" data-toggle="dropdown">Реестры <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Реестр жалоб</a></li><li><a href="">Реестр недобросовестных участников ГЗ</a></li><li><a href="">Реестр опытов работы</a></li><li><a href="">Реестр недобросовестных участников закупок</a></li><li><a href="">Реестр участников ГЗ </a></li><li><a href="">Планы ГЗ</a></li><li><a href="">Реестр договоров</a></li><li><a href="">Реестр квалифицированных поставщиков</a></li></ul></li><li class="dropdown"><a data-id="66" href="" class="dropdown-toggle" data-toggle="dropdown">Закупки <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="pages/search_lots.html">Поиск лотов</a></li><li><a href="pages/search_announce.html">Поиск объявлений</a></li></ul></li><li><a href=""><b>Тренажер</b> </a></li></ul><ul class="nav navbar-nav navbar-right">
                 <li><a href="">Қаз</a></li>
                 <li><a href="">Рус</a></li>
                     <li class="dropdown">
@@ -84,7 +74,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                     </a>
                     
                     <ul class="dropdown-menu">
-                        <li><a href="pages/Профиль/profile.html">Кабинет</a></li>
+                        <li><a href="pages/profile.html">Кабинет</a></li>
                         <li class="divider"></li>
                         <li><a href="">Избранное</a></li>
                         <li class="divider"></li>
@@ -92,7 +82,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                         <script>
                             document.querySelector("#exit").addEventListener('click', (e)=>{
                                 e.preventDefault()
-                                window.location.href = 'index.html'
+                                window.location.href = '../index.html'
                             })
                         </script>
                     </ul>
@@ -215,8 +205,8 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 
                 <div class="content-block"><script>
     $(function () {
-        var newYear = new Date('2025/11/03 09:05:00');
-        $('#asNeeded').countdown({until: newYear, layout: '{dn} {dl}, {hn} {hl}, {mn} {ml}, {sn} {sl}', serverSync: function () {return new Date('2025/10/30 08:45:35');}});
+        var newYear = new Date('2025/11/03 09:00:19');
+        $('#asNeeded').countdown({until: newYear, layout: '{dn} {dl}, {hn} {hl}, {mn} {ml}, {sn} {sl}', serverSync: function () {return new Date('2025/10/30 08:46:43');}});
     });
 </script>
 
@@ -224,7 +214,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 <div class="panel panel-default">
     <div class="panel-heading">
         <div class="row">
-                            <h4 style="text-align: center">Просмотр объявления № 15616558-1</h4>
+                            <h4 style="text-align: center">Просмотр объявления № 15616578-1</h4>
                     </div>
     </div>
     <div class="panel-body">
@@ -237,7 +227,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                     <label class="col-sm-4 control-label">Номер объявления</label>
 
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" value="15616558-1" readonly="" wfd-id="id0">
+                        <input type="text" class="form-control" value="15616578-1" readonly="" wfd-id="id0">
                     </div>
                 </div>
                 <br> &nbsp;
@@ -245,7 +235,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                     <label class="col-sm-4 control-label">Наименование объявления</label>
 
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" value="Услуги по страхованию гражданско-правовой ответственности владельцев автомобильного транспорта" readonly="" wfd-id="id1">
+                        <input type="text" class="form-control" value="Услуги по страхованию гражданско-правовой ответственности перевозчиков" readonly="" wfd-id="id1">
                     </div>
                 </div>
                 <br> &nbsp;
@@ -253,7 +243,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                     <label class="col-sm-4 control-label">Статус объявления</label>
 
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" value="Опубликовано" readonly="" wfd-id="id2">
+                        <input type="text" class="form-control" value="Опубликовано (прием заявок)" readonly="" wfd-id="id2">
                     </div>
                 </div>
                 <br> &nbsp;
@@ -261,7 +251,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                     <label class="col-sm-4 control-label">Дата публикации объявления</label>
 
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" value="2025-10-30 08:29:41" readonly="" wfd-id="id3">
+                        <input type="text" class="form-control" value="2025-10-30 08:39:19" readonly="" wfd-id="id3">
                     </div>
                 </div>
                 <br> &nbsp;
@@ -270,18 +260,31 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                                 <div class="form-group">
                     <label class="col-sm-4 control-label">Срок начала приема заявок</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" value="2025-10-30 09:00:00" readonly="" wfd-id="id4">
+                        <input type="text" class="form-control" value="2025-10-30 08:39:19" readonly="" wfd-id="id4">
                     </div>
                 </div>
                 <br> &nbsp;
                 <div class="form-group">
                     <label class="col-sm-4 control-label">Срок окончания приема заявок</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" value="2025-11-03 09:05:00" readonly="" wfd-id="id5">
+                        <input type="text" class="form-control" value="2025-11-03 09:00:19" readonly="" wfd-id="id5">
                     </div>
                 </div>
                 <br>&nbsp;
-                                                                            </div>
+                                                                                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Оставшееся время</label>
+                        <div class="col-sm-8">
+                            <table>
+                                <tbody><tr>
+                                    <td>
+                                        <div id="asNeeded" class="is-countdown">4 Дня, 0 Часов, 13 Минут, 19 Секунд</div>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </div>
+                    </div>
+                    <br> &nbsp;
+                                </div>
                     </div>
     </div>
 </div>
@@ -364,56 +367,182 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 
                     
                     <li role="presentation">
-                        <a href="pages/Страница объявлений/announce_page.html">Общие сведения</a>
+                        <a href="pages/announce/announce_page.html">Общие сведения</a>
                     </li>
                     
                     <li role="presentation">
-                        <a href="pages/Поиск объявлений/Лоты/lots.html">Лоты</a>
+                        <a href="pages/announce/lots.html">Лоты</a>
                     </li>
                     
                     <li role="presentation">
-                        <a href="pages/Поиск объявлений/Документация/documentation.html">Документация</a>
+                        <a href="pages/announce/documentation.html">Документация</a>
                     </li>
                     
                     <li role="presentation">
-                        <a href="pages/Поиск объявлений/Протокол/protocol.html">Протоколы</a>
+                        <a href="pages/announce/protocol.html">Протоколы</a>
                     </li>
                     
                     <li role="presentation">
-                        <a href="pages/Поиск объявлений/Договоры/dogovor.html">Договоры</a>
+                        <a href="pages/announce/dogovor.html">Договоры</a>
                     </li>
                     
                     <li role="presentation" class="active">
-                        <a href="pages/Поиск объявлений/Аппеляции/appelation.html">Апелляции</a>
+                        <a href="pages/announce/appelation.html">Апелляции</a>
                     </li>
                                     </ul>
                 <br>
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active">
-                        <div class="panel panel-default">
-    <div class="panel-body">
-                <br>
-        <br>
-        <table class="table table-bordered">
-            <thead>
-            <tr>
-                <th>Номер апелляции</th>
-                <th>Дата подачи апелляции</th>
-                <th>Наименование организации инициатора</th>
-                <th>Статус апелляции</th>
-                <th>Дата вынесения решения</th>
-                <th>Файлы апелляции</th>
-            </tr>
-            </thead>
-            <tbody>
-                        </tbody>
-        </table>
-    </div>
-    <div class="panel-footer">
+                        <div class="col-md-12 col-lg-12 col-xs-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <b>Лоты </b>
+        </div>
+        <div class="panel-body">
 
+                <!-- <script>
+        function site_url_ct() {
+            var lang = 'ru';
+            var url = window.location.href.split('/');
+            var http = location.protocol;
+            var hostname = window.location.hostname;
+            var controller = url[4];
+
+            switch (url[3]) {
+                case 'kz':
+                case 'en':
+                    lang = url[3];
+                    break;
+                default:
+                    lang = 'ru';
+                    break;
+            }
+
+            return http + '//' + hostname + '/' + lang + '/' + controller + '/';
+        }
+
+        $(function () {
+            function getAnnoId()
+            {
+                var url = window.location.href.split('/');
+                return url[6];
+            }
+
+            $(".btn-select-lot").click(function () {
+                var lot_id = $(this).attr("data-lot-id");
+                $.ajax({
+                    type: "POST",
+                    async: false,
+                    cache: false,
+                    url: site_url_ct() + "ajax_load_lot/" + getAnnoId() + "/",
+                    data: {id: lot_id},
+                    success: function (data) {
+                        $(".modal-body-lot").html(data);
+                        $(".modal-lot").modal({show: true, backdrop: 'static'});
+                    },
+                    error: function () {
+                        $('.modal-body-lot').html('<div class="alert alert-danger">Ошибка выполнения запроса, попробуйте позже</div>');
+                        $(".modal-lot").modal({show: true, backdrop: 'static'});
+                    }
+                });
+            });
+        });
+    </script> -->
+            <p></p>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover table-striped" style="margin-bottom: 0;border-top: 0;">
+            <tbody><tr>
+                <th>№ п/п</th>
+                <th>Номер лота</th>
+                <th>Заказчик</th>
+                <th>Наименование</th>
+                <th>Дополнительная характеристика</th>
+                <th>Цена за ед.</th>
+                <th>Кол-во</th>
+                <th>Ед. изм.</th>
+                <th>Плановая сумма</th>
+                <th>Сумма 1 год</th>
+                <th>Сумма 2 год</th>
+                <th>Сумма 3 год</th>
+                <th>Статус лота</th>
+                                    <th>Изъятие из национального режима</th>
+                                                    <th>Пред. план </th>
+                            </tr>
+                                    <tr>
+                            <td>1</td>
+                            <td>
+                                <a href="" class="btn-select-lot" data-lot-id="80709101"> 80709101-ОИ3</a>
+                                <br>
+                                <p><a href="javascript:void(0)" class="btn-select-history" data-trb-buy="15616578" data-lot-id="38543989">
+                                    <small>
+                                        История                                    </small>
+                                </a></p>
+                            </td>
+                            <td>КГУ "Средняя школа имени Т. Хасенулы" отдела образования Жарминского района управления образования области Абай</td>
+                            <td>Услуги по страхованию гражданско-правовой ответственности владельцев автомобильного транспорта</td>
+                            <td>Услуги по страхованию гражданско-правовой ответственности владельцев автомобильного транспорта</td>
+                            <td>37 449.00</td>
+                            <td>1</td>
+                            <td>Одна услуга</td>
+                            <td>37 449.00</td>
+                            <td>37449</td>
+                            <td></td>
+                            <td></td>
+                            <td>Опубликован (прием заявок)</td>
+                                                            <td>
+                                                                            Нет                                                                    </td>
+                                                                                        <td><input type="checkbox" disabled="" wfd-id="id9"></td>
+                                                    </tr>
+                                                            <tr>
+                            <td>2</td>
+                            <td>
+                                <a href="" class="btn-select-lot" data-lot-id="80709087"> 80709087-ОИ3</a>
+                                <br>
+                                <p><a href="javascript:void(0)" class="btn-select-history" data-trb-buy="15616578" data-lot-id="38543991">
+                                    <small>
+                                        История                                    </small>
+                                </a></p>
+                            </td>
+                            <td>КГУ "Средняя школа имени Т. Хасенулы" отдела образования Жарминского района управления образования области Абай</td>
+                            <td>Услуги по страхованию гражданско-правовой ответственности владельцев автомобильного транспорта</td>
+                            <td>Услуги по страхованию гражданско-правовой ответственности владельцев автомобильного транспорта</td>
+                            <td>22 686.66</td>
+                            <td>1</td>
+                            <td>Одна услуга</td>
+                            <td>22 686.66</td>
+                            <td>22686.66</td>
+                            <td></td>
+                            <td></td>
+                            <td>Опубликован (прием заявок)</td>
+                                                            <td>
+                                                                            Нет                                                                    </td>
+                                                                                        <td><input type="checkbox" disabled="" wfd-id="id10"></td>
+                                                    </tr>
+                                                        </tbody></table>
+    </div>
+
+<script>
+
+</script>
+
+<p>
+    </p>
+
+        </div>
     </div>
 </div>
-                    </div>
+
+<div class="modal fade in modal-lot" tabindex="-1" role="dialog" aria-hidden="false" <div="">
+        <div class="modal-content modal-lot-content">
+            <div class="modal-body modal-body-lot">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>                    </div>
                 </div>
             </div>
         </div>
@@ -424,7 +553,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
             </div>
     <!-- END CONTAINER -->
 
-</div>
+
 <!-- END WRAP -->
 
 
