@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+    <script src="../../js/navBar.js"></script>
+    <script src="../../js/inner.js"></script>
+    <title>Портал государственных закупок Республики Казахстан</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="robots" content="noindex">
+    <link rel="manifest" href="https://v3bl.goszakup.gov.kz/manifest.json">
+    <link rel="shortcut icon" href="https://v3bl.goszakup.gov.kz/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://v3bl.goszakup.gov.kz/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-16x16.png">
+    <link href="style/bootstrap.min.css" rel="stylesheet">
+    <link href="style/all.min.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/datepicker.css" rel="stylesheet">
+
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/confirmation.js"></script>
+    
+    
+    <script type="text/javascript" src="../../js/bootstrap.datepicker.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/bootstrap-datepicker.ru.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/helpers.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/jquery.isloading.js" charset="utf-8"></script>
+    <!-- <script type="text/javascript" src="../../js/subscriber_pay.js" charset="utf-8"></script> -->
+</head>
+<body>
+
+<!-- BEGIN WRAP -->
+<div class="wrap">
+    <!-- BEGIN NAVBAR -->
+    <div id="navbar-main" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    </div>
+    <!-- END NAVBAR -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="container-full">
+        <div class="alert alert-danger" id="offline-message">
+            <strong>Внимание!</strong> Соединение с приложением прервано. Пожалуйста, авторизуйтесь заново.
+        </div>
+        
+        <div id="navbar-second" class="panel panel-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button data-toggle="collapse" class="navbar-toggle" type="button" data-target="#cabinet_nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="glyphicon glyphicon-arrow-down"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="cabinet_nav">
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div id="loading" class="alert alert-info" style="display: none">Подождите, идет загрузка данных</div>
+        
+        <div class="alert alert-danger"><p><b>Уважаемый участник!</b></p><p>Сообщаем, что в связи с необходимостью получения данных о банковских счетах участника от Комитета государственных доходов Министерства финансов Республики Казахстан (КГД МФ РК) и их передачу на Веб-портал государственных закупок Республики Казахстан, было обновлено соглашение об использовании веб-портала государственных закупок участником.<br>Для ознакомления и подписания данного соглашения необходимо <a href="">перейти по ссылке</a><br>В случае, неподписания участником обновленного соглашения, регистрационные данные участника не будут обновлены.</p></div>
+                            
+            <div class="alert alert-info">
+                <p><b>Уважаемые потенциальные поставщики!</b></p>
+                <p>
+                    В целях исключения случаев, ранее возникавших на веб-портале государственных закупок при шифровании ценовых предложений, таких как дублирование ценовых предложений, некорректное отображение ценовых предложений, указание цен ниже допустимого уровня демпинга, необходимо обновить криптосокет до последней версии.<br>
+
+                    Просим вас установить актуальную версию криптосокета, который можно скачать по ссылке для ОС Windows <a href="">(ссылка)</a>, для ОС Mac <a href="">(ссылка)</a>.                    <br>
+                    Использование устаревших версий может привести к некорректной подаче ценовых предложений и невозможности их дальнейшей расшифровки.<br>
+                    В связи с чем с 5 сентября 2025 года система будет блокировать подачу ценовых предложений в случае необновленной версии криптосокета.<br><br>
+                    На ОС Mac рекомендуется обновить ПО для стабильной работы CryptoSocket.                    <br>
+                    В случае если Mac на Apple Silicon, может потребоваться установка Rosetta -
+                                        также macOS предлагает это автоматически при первом запуске установки CryptoSocket.                    <br>
+                        Отмечаем, что вышеуказанные версии криптосокета не подходят для использования 
+                                в банковских организациях.                        <br>
+                        Для определения подходящего криптосокета следует обращаться в тот банк, 
+                                с которым вы сотрудничаете.                    Также ознакомиться с инструкцией по установке: для ПО на ОС Windows <a href="">(ссылка)</a>, для ПО на ОС Mac <a href="">(ссылка)</a>.<br>
+                </p>
+            </div>
+
+                <div class="content-block"><div class="alert alert-danger" id="error_msg" style="display: none">
+    </div>
+
+    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h4>Сведения о тарифе</h4>
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Наименование тарифа</th>
+                                <th>Сумма тарифа с НДС</th>
+                <th>Описание тарифа</th>
+                <th>Дата начала действия тарифа</th>
+                <th>Дата окончания действия тарифа</th>
+                <th>Статус тарифа</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Услуга по использованию (доступу) веб-портала государственных закупок</td>
+                                <td>3932</td>
+                <td>Сумма заявки на участие в закупке не будет превышать 1 миллиона тенге</td>
+                <td>2025-10-28 08:59:41</td>
+                <td>2025-10-28 08:59:41</td>
+                <td>Черновик</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h4>Сведения о основном договоре</h4>
+    </div>
+    <div class="panel-body">
+                    <table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Номер договора</th>
+        <th>Статус договора</th>
+        <th>Файл договора</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Договор-оферта</td>
+        <td>Проект</td>
+        <td><a href="">ps_contract_1269236.pdf</a></td>
+    </tr>
+    </tbody>
+</table>            </div>
+    <div class="panel-footer">
+        <a class="btn btn-default" href="pages/menu/conn_rate_main.html">Вернуться к услугам</a>
+                    <a class="btn btn-success" href="pages/menu/act_tariff.html">Акт оказанных услуг</a>
+                        <a class="btn btn-info" href="pages/menu/account_tariff.html" target="_blank" rel="noopener noreferrer">Счет на оплату</a>
+                    </div>
+</div></div>
+        <div class="clearfix"></div>
+        
+            </div>
+    <!-- END CONTAINER -->
+
+</div>
+<!-- END WRAP -->
+
+
+
+<!-- BEGIN FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <p class="pull-left">
+            АИИС ЭГЗ © 2025 | <a href="">Министерство финансов Республики Казахстан</a>
+        </p>
+        <p class="pull-right">
+            <span class="ecc">
+                <a href="">АО «Центр электронных финансов»</a>
+            </span>
+        </p>
+    </div>
+    <p class="text-center text-muted">
+        Техническая поддержка пользователей портала (7/7 с 09:00 до 21:00): 8(7172) 73 55 15, +7 705 956 53 88 (в соответствие с тарифами оператора связи), <a href="mailto:support@ecc.kz">support@ecc.kz</a>    </p>
+</footer>
+<!-- END FOOTER -->
+
+</body></html>

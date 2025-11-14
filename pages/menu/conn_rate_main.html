@@ -3,12 +3,13 @@
 <html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
 body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
 </style>
-    
+    <script src="../../js/navBar.js"></script>
+    <script src="../../js/inner.js"></script>
     <title>Портал государственных закупок Республики Казахстан</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="file:///D:/ms-icon-144x144.png">
+    <!-- <meta name="msapplication-TileImage" content="file:///D:/ms-icon-144x144.png"> -->
     <meta name="theme-color" content="#ffffff">
     <meta name="robots" content="noindex">
     <link rel="manifest" href="https://v3bl.goszakup.gov.kz/manifest.json">
@@ -26,35 +27,23 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <link rel="icon" type="image/png" sizes="32x32" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-16x16.png">
-    <link href="src/bootstrap.min.css" rel="stylesheet">
-    <link href="src/all.min.css" rel="stylesheet">
-    <link href="src/style.css" rel="stylesheet">
-    <link href="src/datepicker.css" rel="stylesheet">
+    <link href="style/bootstrap.min.css" rel="stylesheet">
+    <link href="style/all.min.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/datepicker.css" rel="stylesheet">
 
-    <script src="src/jquery.js.загрузка"></script>
-    <script src="src/bootstrap.min.js.загрузка"></script>
-    <script src="src/confirmation.js.загрузка"></script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/confirmation.js"></script>
     
     
-    <script type="text/javascript" src="src/bootstrap.datepicker.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/bootstrap-datepicker.ru.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/helpers.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/bootstrap-dialog.min.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/jquery.isloading.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/ew.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/bootstrap.datepicker.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/bootstrap-datepicker.ru.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/helpers.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/bootstrap-dialog.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/jquery.isloading.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/ew.js" charset="utf-8"></script>
 
-    <!-- <script>
-            var user_id = 1563337;
-            window.lang_key = "ru";
-            window.current_controller_url = "https://v3bl.goszakup.gov.kz/ru/electronic_wallet/paid_services";
-            
-            window.current_directory = "electronic_wallet/";
-            window.current_controller = "paid_services";
-            window.current_method = "index";
-
-            window.url_params = [];
-            ; var lang = 'ru'; var controller = 'paid_services';    
-    </script> -->
 </head>
 <body>
 
@@ -62,93 +51,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 <div class="wrap">
     <!-- BEGIN NAVBAR -->
     <div id="navbar-main" class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand big-screen-element" href="">АИИС ЭГЗ</a>
-            </div>
-            <div id="main-nav" class="navbar-collapse collapse">
-                                <ul class="nav navbar-nav"><li><a href="../../Профиль/profile.html">Главная</a></li><li><a href="">Справка</a></li><li class="dropdown"><a data-id="181" href="" class="dropdown-toggle" data-toggle="dropdown">Реестры <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Реестр жалоб</a></li><li><a href="">Реестр недобросовестных участников ГЗ</a></li><li><a href="">Реестр опытов работы</a></li><li><a href="">Реестр недобросовестных участников закупок</a></li><li><a href="">Реестр участников ГЗ </a></li><li><a href="">Планы ГЗ</a></li><li><a href="">Реестр договоров</a></li><li><a href="">Реестр квалифицированных поставщиков</a></li></ul></li><li class="dropdown"><a data-id="66" href="" class="dropdown-toggle" data-toggle="dropdown">Закупки <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="../../Поиск лотов/search_lots.html">Поиск лотов</a></li><li><a href="../../Поиск объявлений/search_announce.html">Поиск объявлений</a></li></ul></li><li><a href="">Тренажер</a></li></ul>
-                
-                                <ul class="nav navbar-nav navbar-right">
-                <li><a href="">Қаз</a></li>
-                <li><a href="">Рус</a></li>
-                    <li class="dropdown">
-                    <a href="" class="dropdown-toggle" data-toggle="dropdown">
-                        Фамилия Имя Отчество                    
-                        <b class="caret"></b>
-                    </a>
-                    
-                    <ul class="dropdown-menu">
-                        <li><a href="../../Профиль/profile.html">Кабинет</a></li>
-                        <li class="divider"></li>
-                        <li><a href="">Избранное</a></li>
-                        <li class="divider"></li>
-                        <li id="exit"><a href="">Выход</a></li>
-                        <script>
-                            document.querySelector("#exit").addEventListener('click', (e)=>{
-                                e.preventDefault()
-                                
-                                window.location.href = '../../../index.html'
-                            })
-                        </script>
-                    </ul>
-                </li></ul>
-                <ul id="navbar-notice" class="nav navbar-nav navbar-right">                        
-                    <li class="dropdown" id="mainNav">
-                            <a href="conn_rate_main.html" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown">
-                                <span class="label label-success"><i class="far fa-credit-card"></i> <span class="big-screen-element">Тариф активен</span></span></a>
-                            
-                            <ul class="dropdown-menu menu-sm" id="notify-container">
-                                <li><a href=""><strong>Сумма заявки на участие в закупке не будет превышать 1 миллиона тенге</strong></a>
-                                </li>
-                            </ul>
-                    </li>
-                <li class="dropdown">
-                    <a href="" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown"><span class="label label-danger"><i class="far fa-bell"></i></span>&nbsp;</a><ul class="dropdown-menu menu-sm" id="notify-container">
-                        <li><a href="">Все уведомления</a></li>
-                        <li><a href="">Управление уведомлениями</a></li>
-                    </ul>
-                </li></ul>
-            </div>
-        </div>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", () =>{
-            const field = document.querySelector("#mainNav");
-            const schetFlag = localStorage.getItem("userSchet");
-            const memberFlag = localStorage.getItem("userMember");
-
-            field.innerHTML = ""
-
-            const schetIconTrue = `
-            <a href="../Подключене тарифа/conn_rate_main.html" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown">
-                                <span class="label label-success"><i class="far fa-credit-card"></i> <span class="big-screen-element">Тариф активен</span></span></a>
-                            
-                            <ul class="dropdown-menu menu-sm" id="notify-container">
-                                <li><a href="../Подключене тарифа/conn_rate_main.html"><strong>Сумма заявки на участие в закупке не будет превышать 1 миллиона тенге</strong></a>
-                                </li>
-                            </ul>           
-            `
-            const schetIconFalse = `
-            <a href="../Подключене тарифа/conn_rate_main.html" class="fa-lg no-hover"><span class="label label-danger"><i class="far fa-credit-card"></i> Подключить тариф</span></a></li>
-            `
-            
-            if (memberFlag !== 'false'){
-                if (schetFlag === 'false') {
-                    field.innerHTML = schetIconFalse;
-                } else {
-                    field.innerHTML = schetIconTrue;
-                }
-            }
-
-        })
-    </script>
     <!-- END NAVBAR -->
 
     <!-- BEGIN CONTAINER -->
@@ -167,34 +70,6 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                 </div>
                 <div class="collapse navbar-collapse" id="cabinet_nav">
                 </div>
-                <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    
-                        const field = document.querySelector("#cabinet_nav");
-                        const memberFlag = localStorage.getItem("userMember");
-                        
-
-                        // очищаем контейнер перед вставкой
-                        field.innerHTML = "";
-
-                        // --- Вариант для зарегистрированного пользователя ---
-                        const memberNavbar = `
-                            <ul class="nav navbar-nav"><li class="dropdown"><a data-id="30" href="" class="dropdown-toggle" data-toggle="dropdown">Личные данные <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Регистрационные данные</a></li><li><a href="">Паспортные данные</a></li><li><a href="">Контактные данные</a></li></ul></li><li class="dropdown"><a data-id="2076" href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Избранное <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Объявления</a></li></ul></li></ul>
-                            `;
-
-                        // --- Вариант для гостя (не участника) ---
-                        const guestNavbar = `
-                            <ul class="nav navbar-nav"><li class="dropdown"><a data-id="47" href="" class="dropdown-toggle" data-toggle="dropdown">Рабочий кабинет <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Электронные договора страхования</a></li><li><a href="../../Поиск лотов/search_lots.html">Поиск объявлений (общий)</a></li><li class="dropdown-sub-menu"><a data-id="2135" href="" class="dropdown-toggle" data-toggle="dropdown">Договоры</a><ul class="dropdown-menu"><li><a href="../Договоры/contracts.html">Мои договоры (Поставщик)</a></li><li><a href="">Многосторонние договора</a></li><li><a href="">Передача прав</a></li><li><a href="">Мои договоры (Консорциум)</a></li><li><a href="">Накладные</a></li></ul></li><li><a href="">Отправка заявки на корректировку</a></li><li><a href="../Поиск по актам/search_for_lots.html">Поиск по актам</a></li><li><a href="../Мои заявки/my_application.html">Мои заявки</a></li><li><a href="">Включение в реестр квалифицированных поставщиков </a></li><li><a href="">Электронные банковские гарантии</a></li><li><a href="">Изменение создателя объявления</a></li><li><a href="">Реестр опытов работы</a></li><li><a href="">Обращения</a></li><li><a href="">Мои жалобы</a></li><li class="dropdown-sub-menu"><a data-id="2141" href="" class="dropdown-toggle" data-toggle="dropdown">Передача прав</a><ul class="dropdown-menu"><li><a href="">Передача/Отзыв прав по закупкам</a></li><li><a href="">Подтверждение/Отклонение передачи прав по закупкам</a></li></ul></li><li class="dropdown-sub-menu"><a data-id="2314" href="" class="dropdown-toggle" data-toggle="dropdown">Журнал</a><ul class="dropdown-menu"><li><a href="">Журнал поручений</a></li><li><a href="">Журнал жалоб по решениям</a></li></ul></li><li><a href="">Комм. предложения/Запросы(Поставщик)</a></li><li><a href="">Поиск по актам (Тех. надзор/Автор. надзор)</a></li></ul></li><li class="dropdown"><a data-id="30" href="" class="dropdown-toggle" data-toggle="dropdown">Личные данные <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Регистрационные данные</a></li><li><a href="">Паспортные данные</a></li><li><a href="">Контактные данные</a></li></ul></li><li class="dropdown"><a data-id="31" href="" class="dropdown-toggle" data-toggle="dropdown">Профиль участника <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Обновление регистрационных данных</a></li><li><a href="../Подключене тарифа/conn_rate_main.html">Лицевой счет</a></li><li><a href="">Уведомления</a></li><li><a href="">Регистрационные данные</a></li><li><a href="">Атрибуты участника</a></li><li><a href="">Контактные данные</a></li><li><a href="../Банковские счета/вank_accounts.html">Банковские счета</a></li><li><a href="">Сотрудники организации</a></li><li><a href="">Органы налоговой регистрации</a></li><li><a href="">Данные об учредителях</a></li><li><a href="">Данные о руководителе</a></li><li><a href="">Данные о филиалах</a></li><li><a href="">Данные о налоговой задолженности</a></li><li><a href="">Данные о наличии признака инвалидов</a></li><li><a href="">Мои электронные лицензии</a></li><li><a href="">Мои разрешительные документы</a></li><li><a href="">Мои заявки на регистрацию банка</a></li><li><a href="">Выпуск токенов (для разработчиков)</a></li><li><a href="">Финансовая устойчивость</a></li></ul></li><li class="dropdown"><a data-id="1161" href="" class="dropdown-toggle" data-toggle="dropdown">Внешние сервисы <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">ИС "ЭСФ"</a></li><li><a href="">Судебный кабинет (сайт Верховного суда РК)</a></li><li><a href="">ИС "ЕНС ТРУ"</a></li><li><a href="">Сервис проверки признака "Плательщик НДС" (сайт КГД МФ РК)</a></li><li><a href="">NCA eCabinet</a></li><li><a href="">Списки несостоятельных должников (сайт КГД МФ РК)</a></li><li><a href="">Поиск налогоплательщиков, находящихся на стадии ликвидации (сайт КГД МФ РК)</a></li><li><a href="">Интернет-магазин стандартов Казахстанский институт стандартизации и метрологии</a></li><li><a href="">Интернет-портал "Казахстанское содержание" </a></li></ul></li><li class="dropdown"><a data-id="2076" href="" class="dropdown-toggle" data-toggle="dropdown">Избранное <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Объявления</a></li></ul></li></ul>
-                            `;
-
-                        // --- Проверка флага и вставка нужного меню ---
-                        if (memberFlag === 'false') {
-                            field.innerHTML = memberNavbar;
-                        } else {
-                            field.innerHTML = guestNavbar;
-                        }
-                }); 
-                </script>
             </div>
         </div>
         
@@ -232,6 +107,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
             const field = document.getElementById("field2")
             const tableField = document.getElementById("table_field")
             const schetFlag = localStorage.getItem("userSchet")
+
             field.innerHTML = ""
 
             const schet = `
@@ -260,7 +136,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
             const neSchet = `
                         <div class="alert alert-danger" id="ew_error_msg" style="display: none"></div>
                     <div class="alert alert-warning">У вас нет созданных лицевых счетов</div>
-                    <a href="Форма подкюбчения тарифа/paid_service.html"> <button class="btn btn-warning create_electronic_wallet">Создать лицевой счет</button></a>
+                    <a href="pages/menu/paid_service.html"> <button class="btn btn-warning create_electronic_wallet">Создать лицевой счет</button></a>
             `
 
 
@@ -286,16 +162,16 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                                 </button>
                                 <ul class="dropdown-menu pull-right" role="menu">
                                                                             <li>
-                                            <a href="Форма подкюбчения тарифа/После подтверждения/Акт услуги/Второе/act_tariff_succes.html">Посмотреть договор</a>
+                                            <a href="pages/menu/act_tariff_succes.html">Посмотреть договор</a>
                                         </li>
                                                                             <li>
-                                            <a href="Форма подкюбчения тарифа/После подтверждения/show_tariff.html">Посмотреть акт</a>
+                                            <a href="pages/menu/show_tariff.html">Посмотреть акт</a>
                                         </li>
                                                                             <li>
                                             <a onclick='localStorage.setItem("userSchet", "false")'>Удалить договор</a>
                                         </li>
                                                                             <li>
-                                            <a href="Форма подкюбчения тарифа/После подтверждения/Счет/account_tariff.html">Посмотреть счет на оплату</a>
+                                            <a href="pages/menu/account_tariff.html">Посмотреть счет на оплату</a>
                                         </li>
                                                                     </ul>
                             </div>
@@ -456,7 +332,7 @@ $(function(){
     });
 });
 </script> -->
-<a href="Форма подкюбчения тарифа/paid_service.html">
+<a href="paid_service.html">
     <button class="btn btn-warning " >Создать лицевой счет</button>
 </a>
     
