@@ -40,9 +40,9 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <script type="text/javascript" src="../../js/bootstrap-datepicker.ru.js" charset="utf-8"></script>
     <script type="text/javascript" src="../../js/helpers.js" charset="utf-8"></script>
     <script type="text/javascript" src="../../js/bills.js" charset="utf-8"></script>
-    <script type="text/javascript" src="../../js/banksSearchModal.plugin.js" charset="utf-8"></script>
+    <!-- <script type="text/javascript" src="../../js/banksSearchModal.plugin.js" charset="utf-8"></script>
     <script type="text/javascript" src="../../js/banksAddModal.plugin.js" charset="utf-8"></script>
-    <script type="text/javascript" src="../../js/katoSelectModal.plugin.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/katoSelectModal.plugin.js" charset="utf-8"></script> -->
 
 
 </head>
@@ -51,7 +51,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 <!-- BEGIN WRAP -->
 <div class="wrap">
     <!-- BEGIN NAVBAR -->
-    <<div id="navbar-main" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div id="navbar-main" class="navbar navbar-default navbar-fixed-top" role="navigation">
     </div>
     <!-- END NAVBAR -->
 
@@ -123,19 +123,18 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <div class="panel-body">
                 <div class="col-md-8">
             <form method="post">
-                <table class="table table-bordered">
+         <table class="table table-bordered">
                     <tbody><tr>
                         <th></th>
                         <td>
-                                                            <input type="checkbox" name="sign_old_format" value="1" class="checkbox-inline" wfd-id="id0">                                &nbsp;Признак счета старого формата                                                    </td>
+                                                            <input type="checkbox" name="sign_old_format" value="1" class=                        <th>Номер счета</th>"                        <td><input type="text" name="iik" id="iik" value="" class="form-control input-sm" wfd-id="id1"></td>                     </tr>ата                                                    </td>
                     </tr>
                     <tr>
-                        <th>Номер счета</th>
-                        <td><input type="text" name="iik" id="iik" value="" class="form-control input-sm" wfd-id="id1"></td>
+                                               <th>КБе</th>                         <td><                            <select name="kse" class="form-control input-sm kbe_data">"<option value="11">11 - Центральное Правительство</option>l input-sm" wfd-id="id1"></td>
                     </tr>
                     <tr>
                         <th>КБе</th>
-                        <td>
+                       </select> <td>
                             <select name="kse" class="form-control input-sm kbe_data">
 <option value="11">11 - Центральное Правительство</option>
 <option value="12">12 - Региональные и местные органы управления</option>
@@ -144,25 +143,17 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 <option value="15">15 - Другие финансовые организации</option>
 <option value="16">16 - Государственные нефинансовые организации</option>
 <option value="17">17 - Негосударственные нефинансовые организации</option>
-<option value="18">18 - Некоммерческие организации, обслуживающие домашние хозяйства</option>
-<option value="19">19 - Домашние хозяйства</option>
-</select>                        </td>
-                    </tr>
-                    <tr>
-                        <th class="col-md-4">Наименование банка</th>
+<option value="18">18 - Некоммерческие орг                            <div class="input-group">о                                <input type="text" name="bank_name" class="form-control input-sm" id="bank_name" value="" placeholder="Наименование банка" aria-describedby="bank_name" readonly="" wfd-id="id2">>                                <span class="input-group-btn" id="bank_name">                                     <button type="button" id="showRefBank" class="btn btn-primary input-sm">t                                        Выбрать банк                                    </button>                                    th class="col-md-4">Наименование банка</th>
                         <td class="col-md-8">
                             <div class="input-group">
-                                <input type="text" name="bank_name" class="form-control input-sm" id="bank_name" value="" placeholder="Наименование банка" aria-describedby="bank_name" readonly="" wfd-id="id2">
+                                <input type="text" name="bank_name" class="f                            </div>" aria-describedby="bank_name" readonly="" wfd-id="id2">
                                 <span class="input-group-btn" id="bank_name">
                                     <button type="button" id="showRefBank" class="btn btn-primary input-sm">
-                                        Выбрать банк                                    </button>                                    
+<input type="hidden" name="ref_banks_id" id="ref_banks_id" value="" wfd-id="id3">                                           </button>                                    
                                 </span>
                             </div>
                             
-<input type="hidden" name="ref_banks_id" id="ref_banks_id" value="" wfd-id="id3">
-                            
-<input type="hidden" name="rezident" id="rezident" value="" wfd-id="id4">
-                        </td>
+<input type="hidden" name="ref_banks_id" id="ref_ba                    </tr>>                    <tr>                         <th>Тип счета</select></th>                         <td>-                            <select name="bills_type" class="form-control input-sm">      </td>
                     </tr>
                     <tr>
                         <th>Тип счета</th>
@@ -238,5 +229,437 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         Техническая поддержка пользователей портала (7/7 с 09:00 до 21:00): 8(7172) 73 55 15, +7 705 956 53 88 (в соответствие с тарифами оператора связи), <a href="mailto:support@ecc.kz">support@ecc.kz</a>    </p>
 </footer>
 <!-- END FOOTER -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.getElementById("bankNameModal");
+        const showBtn = document.getElementById("showRefBank");
+
+        // Ensure modal starts hidden via style
+        modal.style.display = "none";
+        modal.classList.remove("in");
+        modal.setAttribute("aria-hidden", "true");
+
+        function openModal() {
+            modal.style.display = "block";
+            modal.classList.add("in");
+            modal.setAttribute("aria-hidden", "false");
+            document.body.classList.add("modal-open"); // optional: prevent body scroll
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+            modal.classList.remove("in");
+            modal.setAttribute("aria-hidden", "true");
+            document.body.classList.remove("modal-open");
+        }
+
+        // Open on button click
+        if (showBtn) {
+            showBtn.addEventListener("click", function(e){
+                e.preventDefault();
+                openModal();
+            });
+        }
+
+        // Close on elements with data-dismiss="modal" inside modal (including close btn)
+        modal.querySelectorAll('[data-dismiss="modal"]').forEach(function(btn){
+            btn.addEventListener("click", function(e){
+                e.preventDefault();
+                closeModal();
+            });
+        });
+
+        // Close when clicking backdrop (click on modal outer element)
+        modal.addEventListener("click", function(e){
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close on Escape
+        document.addEventListener("keydown", function(e){
+            if (e.key === "Escape" && modal.style.display === "block") {
+                closeModal();
+            }
+        });
+
+        // Handle selection of bank items inside the modal (delegated)
+        modal.addEventListener('click', function(e){
+            const el = e.target.closest('.select_bank');
+            if (!el) return;
+            e.preventDefault();
+
+            // read data attributes (support both dataset and getAttribute)
+            const bankName = el.dataset.bankName || el.getAttribute('data-bank-name') || '';
+            const bankId = el.dataset.bankId || el.getAttribute('data-bank-id') || '';
+            const bankBik = el.dataset.bankBik || el.getAttribute('data-bank-bik') || '';
+            const bankRez = el.dataset.bankRezident || el.getAttribute('data-bank-rezident') || '';
+
+            // set form fields
+            const bankInput = document.querySelector('input[name="bank_name"]');
+            if (bankInput) bankInput.value = bankName;
+
+            const refInput = document.getElementById('ref_banks_id');
+            if (refInput) refInput.value = bankId;
+
+            const rezInput = document.getElementById('rezident');
+            if (rezInput) rezInput.value = bankRez;
+
+            const bikElem = document.getElementById('bik_bank');
+            if (bikElem) bikElem.textContent = bankBik;
+
+            // close modal
+            closeModal();
+
+            // optional: focus next field (iik)
+            const iik = document.getElementById('iik');
+            if (iik) iik.focus();
+        });
+
+    });
+</script>
+
+<div id="bankNameModal" class="modal fade" tabindex="-1" role="dialog" style="display: none;">
+    <div class="modal-dialog" style="width:80%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4>Поиск банков</h4>
+            </div>
+            <div class="modal-body" id="bankNameInfo"><div id="search_form_bank_render" class="table-responsive">
+    <form id="search_form_bank_set">
+        <table class="table">
+            <tbody><tr>
+                <th class="col-md-2">Наименование банка</th>
+                <td class="col-md-4"><input type="text" name="name_bank" id="name_bank" value="" class="form-control input-sm"></td>
+                <th class="col-md-2">Страна</th>
+                <td class="col-md-4"><select name="country_bank" class="form-control input-sm">
+<option value="" selected=""></option><option value="004">004 АФГАНИСТАН</option>
+<option value="008">008 АЛБАНИЯ</option>
+<option value="010">010 АНТАРКТИДА</option>
+<option value="012">012 АЛЖИР</option>
+<option value="016">016 АМЕРИКАНСКОЕ САМОА</option>
+<option value="020">020 АНДОРРА</option>
+<option value="024">024 АНГОЛА</option>
+<option value="028">028 АНТИГУА И БАРБУДА</option>
+<option value="031">031 АЗЕРБАЙДЖАН</option>
+<option value="032">032 АРГЕНТИНА</option>
+<option value="036">036 АВСТРАЛИЯ</option>
+<option value="040">040 АВСТРИЯ</option>
+<option value="044">044 БАГАМЫ</option>
+<option value="048">048 БАХРЕЙН</option>
+<option value="050">050 БАНГЛАДЕШ</option>
+<option value="051">051 АРМЕНИЯ</option>
+<option value="052">052 БАРБАДОС</option>
+<option value="056">056 БЕЛЬГИЯ</option>
+<option value="060">060 БЕРМУДЫ</option>
+<option value="064">064 БУТАН</option>
+<option value="068">068 БОЛИВИЯ</option>
+<option value="070">070 БОСНИЯ И ГЕРЦЕГОВИНА</option>
+<option value="072">072 БОТСВАНА</option>
+<option value="074">074 ОСТРОВ БУВЕ</option>
+<option value="076">076 БРАЗИЛИЯ</option>
+<option value="084">084 БЕЛИЗ</option>
+<option value="086">086 БРИТАНСКАЯ ТЕРРИТОРИЯ В ИНДИЙСКОМ ОКЕАНЕ</option>
+<option value="090">090 СОЛОМОНОВЫ ОСТРОВА</option>
+<option value="092">092 ВИРГИНСКИЕ ОСТРОВА (БРИТ.)</option>
+<option value="096">096 БРУНЕЙ-ДАРУССАЛАМ</option>
+<option value="100">100 БОЛГАРИЯ</option>
+<option value="104">104 МЬЯНМА</option>
+<option value="108">108 БУРУНДИ</option>
+<option value="112">112 БЕЛАРУСЬ</option>
+<option value="116">116 КАМБОДЖА</option>
+<option value="120">120 КАМЕРУН</option>
+<option value="124">124 КАНАДА</option>
+<option value="132">132 КАБО-ВЕРДЕ</option>
+<option value="136">136 ОСТРОВА КАЙМАН</option>
+<option value="140">140 ЦЕНТРАЛЬНО-АФРИКАНСКАЯ РЕСПУБЛИКА</option>
+<option value="144">144 ШРИ-ЛАНКА</option>
+<option value="148">148 ЧАД</option>
+<option value="152">152 ЧИЛИ</option>
+<option value="156">156 КИТАЙ</option>
+<option value="158">158 КИТАЙСКАЯ РЕСПУБЛИКА</option>
+<option value="162">162 ОСТРОВ РОЖДЕСТВА</option>
+<option value="166">166 КОКОСОВЫЕ ОСТРОВА</option>
+<option value="170">170 КОЛУМБИЯ</option>
+<option value="174">174 КОМОРЫ </option>
+<option value="175">175 МАЙОТТА</option>
+<option value="178">178 КОНГО </option>
+<option value="180">180 ДЕМОКРАТИЧЕСКАЯ РЕСПУБЛИКА КОНГО </option>
+<option value="184">184 ОСТРОВА КУКА</option>
+<option value="188">188 КОСТА-РИКА</option>
+<option value="191">191 ХОРВАТИЯ</option>
+<option value="192">192 КУБА</option>
+<option value="196">196 КИПР</option>
+<option value="203">203 ЧЕШСКАЯ РЕСПУБЛИКА</option>
+<option value="204">204 БЕНИН</option>
+<option value="208">208 ДАНИЯ</option>
+<option value="212">212 ДОМИНИКА</option>
+<option value="214">214 ДОМИНИКАНСКАЯ РЕСПУБЛИКА</option>
+<option value="218">218 ЭКВАДОР</option>
+<option value="222">222 ЭЛЬ-САЛЬВАДОР  </option>
+<option value="226">226 ЭКВАТОРИАЛЬНАЯ ГВИНЕЯ</option>
+<option value="231">231 ЭФИОПИЯ</option>
+<option value="232">232 ЭРИТРЕЯ</option>
+<option value="233">233 ЭСТОНИЯ</option>
+<option value="234">234 ФАРЕРСКИЕ ОСТРОВА </option>
+<option value="238">238 ФОЛКЛЕНДСКИЕ (МАЛЬВИНСКИЕ) ОСТРОВА</option>
+<option value="239">239 ЮЖНАЯ ГЕОРГИЯ И ЮЖНЫЕ САНДВИЧЕВЫ ОСТРОВА</option>
+<option value="242">242 ФИДЖИ  </option>
+<option value="246">246 ФИНЛЯНДИЯ</option>
+<option value="248">248 АЛАНДСКИЕ ОСТРОВА</option>
+<option value="250">250 ФРАНЦИЯ</option>
+<option value="254">254 ФРАНЦУЗСКАЯ ГВИАНА </option>
+<option value="258">258 ФРАНЦУЗСКАЯ ПОЛИНЕЗИЯ </option>
+<option value="260">260 ФРАНЦУЗСКИЕ ЮЖНЫЕ И АНТАРКТИЧЕСКИЕ ТЕРРИТОРИИ</option>
+<option value="262">262 ДЖИБУТИ</option>
+<option value="266">266 ГАБОН</option>
+<option value="268">268 ГРУЗИЯ</option>
+<option value="270">270 ГАМБИЯ</option>
+<option value="275">275 ПАЛЕСТИНСКАЯ ТЕРРИТОРИЯ, ОККУПИРОВАННАЯ</option>
+<option value="276">276 ГЕРМАНИЯ</option>
+<option value="280">280 ГЕРМАНИЯ</option>
+<option value="288">288 ГАНА</option>
+<option value="292">292 ГИБРАЛТАР (БРИТ.)</option>
+<option value="296">296 КИРИБАТИ</option>
+<option value="300">300 ГРЕЦИЯ</option>
+<option value="304">304 ГРЕНЛАНДИЯ</option>
+<option value="308">308 ГРЕНАДА</option>
+<option value="312">312 ГВАДЕЛУПА (ФР.)</option>
+<option value="316">316 ГУАМ (США)</option>
+<option value="320">320 ГВАТЕМАЛА</option>
+<option value="324">324 ГВИНЕЯ</option>
+<option value="328">328 ГАЙАНА</option>
+<option value="332">332 ГАИТИ</option>
+<option value="334">334 ХЕРД
+<option value="492">492 МОНАКО</option>
+<option value="496">496 МОНГОЛИЯ</option>
+<option value="498">498 МОЛДОВА, РЕСПУБЛИКА</option>
+<option value="499">499 ЧЕРНОГОРИЯ</option>
+<option value="500">500 МОНТСЕРРАТ(БРИТ.)</option>
+<option value="504">504 МАРОККО</option>
+<option value="508">508 МОЗАМБИК</option>
+<option value="512">512 ОМАН</option>
+<option value="516">516 НАМИБИЯ</option>
+<option value="520">520 НАУРУ</option>
+<option value="524">524 НЕПАЛ</option>
+<option value="528">528 НИДЕРЛАНДЫ</option>
+<option value="530">530 НИДЕРЛАНДСКИЕ АНТИЛЫ</option>
+<option value="531">531 КЮРАСАО</option>
+<option value="533">533 АРУБА</option>
+<option value="534">534 СИНТ-МАРТЕН</option>
+<option value="535">535 БОНЭЙР, СИНТ-ЭСТАТИУС И САБА</option>
+<option value="540">540 НОВАЯ КАЛЕДОНИЯ (ФР.)</option>
+<option value="548">548 ВАНУАТУ</option>
+<option value="554">554 НОВАЯ ЗЕЛАНДИЯ</option>
+<option value="558">558 НИКАРАГУА</option>
+<option value="562">562 НИГЕР</option>
+<option value="566">566 НИГЕРИЯ</option>
+<option value="570">570 НИУЭ</option>
+<option value="574">574 ОСТРОВ НОРФОЛК</option>
+<option value="578">578 НОРВЕГИЯ</option>
+<option value="580">580 СЕВЕРНЫЕ МАРИАНСКИЕ ОСТРОВА (США)</option>
+<option value="581">581 ВНЕШНИЕ МАЛЫЕ ОСТРОВА (США)</option>
+<option value="583">583 МИКРОНЕЗИЯ, ФЕДЕРАТИВНЫЕ ШТАТЫ</option>
+<option value="584">584 МАРШАЛЛОВЫ ОСТРОВА</option>
+<option value="585">585 ПАЛАУ(США)</option>
+<option value="586">586 ПАКИСТАН</option>
+<option value="591">591 ПАНАМА</option>
+<option value="598">598 ПАПУА-НОВАЯ ГВИНЕЯ</option>
+<option value="600">600 ПАРАГВАЙ</option>
+<option value="604">604 ПЕРУ</option>
+<option value="608">608 ФИЛИППИНЫ</option>
+<option value="612">612 ПИТКЭРН (БРИТ.)</option>
+<option value="616">616 ПОЛЬША</option>
+<option value="620">620 ПОРТУГАЛИЯ</option>
+<option value="624">624 ГВИНЕЯ-БИСАУ</option>
+<option value="626">626 ТИМОР-ЛЕСТЕ</option>
+<option value="630">630 ПУЭРТО-РИКО</option>
+<option value="634">634 КАТАР</option>
+<option value="638">638 РЕЮНЬОН (ФР.)</option>
+<option value="642">642 РУМЫНИЯ</option>
+<option value="643">643 РОССИЯ</option>
+<option value="646">646 РУАНДА</option>
+<option value="652">652 СЕН-БАРТЕЛЕМИ</option>
+<option value="654">654 ОСТРОВ СВЯТОЙ ЕЛЕНЫ</option>
+<option value="659">659 СЕНТ-КИТС И НЕВИС</option>
+<option value="660">660 АНГИЛЬЯ (БРИТ.)</option>
+<option value="662">662 СЕНТ-ЛЮСИЯ</option>
+<option value="663">663 СЕН-МАРТЕН</option>
+<option value="666">666 СЕНТ-ПЬЕР И МИКЕЛОН</option>
+<option value="670">670 СЕНТ-ВИНСЕНТ И ГРЕНАДИНЫ</option>
+<option value="674">674 САН-МАРИНО</option>
+<option value="678">678 САН-ТОМЕ И ПРИНСИПИ</option>
+<option value="682">682 САУДОВСКАЯ АРАВИЯ</option>
+<option value="686">686 СЕНЕГАЛ</option>
+<option value="688">688 СЕРБИЯ</option>
+<option value="690">690 СЕЙШЕЛЫ</option>
+<option value="694">694 СЬЕРРА-ЛЕОНЕ</option>
+<option value="702">702 СИНГАПУР</option>
+<option value="703">703 СЛОВАКИЯ</option>
+<option value="704">704 ВЬЕТНАМ</option>
+<option value="705">705 СЛОВЕНИЯ</option>
+<option value="706">706 СОМАЛИ</option>
+<option value="710">710 ЮЖНАЯ АФРИКА </option>
+<option value="716">716 ЗИМБАБВЕ</option>
+<option value="724">724 ИСПАНИЯ</option>
+<option value="728">728 ЮЖНЫЙ СУДАН</option>
+<option value="729">729 СУДАН</option>
+<option value="732">732 ЗАПАДНАЯ САХАРА</option>
+<option value="740">740 СУРИНАМ</option>
+<option value="744">744 ШПИЦБЕРГЕН И ЯН-МАЙЕН</option>
+<option value="748">748 СВАЗИЛЕНД</option>
+<option value="752">752 ШВЕЦИЯ</option>
+<option value="756">756 ШВЕЙЦАРИЯ</option>
+<option value="760">760 СИРИЙСКАЯ АРАБСКАЯ РЕСПУБЛИКА</option>
+<option value="762">762 ТАДЖИКИСТАН</option>
+<option value="764">764 ТАИЛАНД</option>
+<option value="768">768 ТОГО</option>
+<option value="772">772 ТОКЕЛАУ (ЮНИОН) (Н.ЗЕЛ.)</option>
+<option value="776">776 ТОНГА</option>
+<option value="780">780 ТРИНИДАД И ТОБАГО</option>
+<option value="784">784 ОБЪЕДИНЕННЫЕ АРАБСКИЕ ЭМИРАТЫ</option>
+<option value="788">788 ТУНИС</option>
+<option value="792">792 ТУРЦИЯ</option>
+<option value="795">795 ТУРКМЕНИСТАН</option>
+<option value="796">796 ОСТРОВА ТЕРКС И КАЙКОС</option>
+<option value="798">798 ТУВАЛУ</option>
+<option value="800">800 УГАНДА</option>
+<option value="804">804 УКРАИНА</option>
+<option value="807">807 МАКЕДОНИЯ</option>
+<option value="810">810 СССР (ДО СЕНТЯБРЯ 1992 ГОДА)</option>
+<option value="818">818 ЕГИПЕТ</option>
+<option value="826">826 СОЕДИНЕННОЕ КОРОЛЕВСТВО</option>
+<option value="830">830 НОРМАНДСКИЕ ОСТРОВА</option>
+<option value="831">831 ГЕРНСИ</option>
+<option value="832">832 ДЖЕРСИ</option>
+<option value="833">833 О-В МЕН</option>
+<option value="834">834 ТАНЗАНИЯ, ОБЪЕДИНЕННАЯ РЕСПУБЛИКА</option>
+<option value="840">840 СОЕДИНЕННЫЕ ШТАТЫ АМЕРИКИ </option>
+<option value="850">850 ВИРГИНСКИЕ ОСТРОВА, США</option>
+<option value="854">854 БУРКИНА-ФАСО</option>
+<option value="858">858 УРУГВАЙ</option>
+<option value="860">860 УЗБЕКИСТАН</option>
+<option value="862">862 ВЕНЕСУЭЛА</option>
+<option value="876">876 УОЛЛИС И ФУТУНА</option>
+<option value="882">882 САМОА</option>
+<option value="887">887 ЙЕМЕН</option>
+<option value="894">894 ЗАМБИЯ</option>
+<option value="896">896 ТЕРРИТОРИИ, НЕ УКАЗАННЫЕ В ДРУГИХ МЕСТАХ</option>
+<option value="898">898 НЕУКАЗАННЫЕ ТЕРРИТОРИИ</option>
+</select></td>
+            </tr>
+            <tr>
+                <th>Банковский код (БИК)</th>
+                <td><input type="text" name="code_bank" id="code_bank" value="" class="form-control input-sm"></td>
+                <th>Полный адрес</th>
+                <td><input type="text" name="address_bank" id="address_bank" value="" class="form-control input-sm"></td>
+            </tr>
+            <tr>
+                <th>КАТО</th>
+                <td>
+                    <input type="text" name="kato_bank" id="kato_bank" value="" class="form-control input-sm">                </td>
+                <th></th>
+                <td>
+                    <button type="button" id="bank_search" class="btn btn-sm btn-primary">Поиск</button>
+                    <button type="button" id="bank_search_reset" class="btn btn-sm btn-primary">Сбросить поиск</button>
+                </td>
+            </tr>
+        </tbody></table>
+    </form>
+</div>
+<div id="ajax_search_bank_result">
+    
+</div>
+<div class="text-right">
+    <button class="btn btn-sm btn-primary" id="btnAddBank" type="button" style="display: none;">Добавить новый банк</button>
+</div>
+<p></p><div style="position: relative;">
+    <div id="spanimg_bank"></div>
+</div>
+
+<div id="ajax_result_mess"></div>
+<div id="bank_data_render">
+
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <tbody><tr>
+                <th class="col-md-1">BIK</th>
+                <th class="col-md-5">Наименование</th>
+                <th>Адрес</th>
+            </tr>
+                            <tr>
+                    <td>ISBKTRIS</td>
+                    <td><a href="" class="select_bank" onclick="return false;" data-bank-name="Турецкий бизнес-банк MITHATPASHA" data-bank-id="800" data-bank-bik="ISBKTRIS" data-bank-rezident="N">Турецкий бизнес-банк MITHATPASHA</a></td>
+                    <td>улица Зия Гёкалп, дом 21A</td>
+                </tr>
+                            <tr>
+                    <td>LBRTGЕ22</td>
+                    <td><a href="" class="select_bank" onclick="return false;" data-bank-name="АО «Либерти Банк»" data-bank-id="799" data-bank-bik="LBRTGЕ22" data-bank-rezident="N">АО «Либерти Банк»</a></td>
+                    <td>Проспект Чавчавадзе №74, 0162 Тбилиси, Грузия</td>
+                </tr>
+                            <tr>
+                    <td>FFVBDEFFXXX</td>
+                    <td><a href="" class="select_bank" onclick="return false;" data-bank-name="FRANKFURTER VOLKSBANK RHEIN-MAIN EG" data-bank-id="798" data-bank-bik="FFVBDEFFXXX" data-bank-rezident="N">FRANKFURTER VOLKSBANK RHEIN-MAIN EG</a></td>
+                    <td>Франфуркт на Майне Савиньштрассе 49</td>
+                </tr>
+                            <tr>
+                    <td>018073401</td>
+                    <td><a href="" class="select_bank" onclick="return false;" data-bank-name="УФК по Республике Башкортостан" data-bank-id="797" data-bank-bik="018073401" data-bank-rezident="N">УФК по Республике Башкортостан</a></td>
+                    <td>Ленина 3, г.Уфа</td>
+                </tr>
+                            <tr>
+                    <td>026009593</td>
+                    <td><a href="" class="select_bank" onclick="return false;" data-bank-name="Bank of America" data-bank-id="796" data-bank-bik="026009593" data-bank-rezident="N">Bank of America</a></td>
+                    <td>111 River Street</td>
+                </tr>
+                            <tr>
+                    <td>ZABAHR2X</td>
+                    <td><a href="" class="select_bank" onclick="return false;" data-bank-name="Zagrebačka banka d.d." data-bank-id="795" data-bank-bik="ZABAHR2X" data-bank-rezident="N">Zagrebačka banka d.d.</a></td>
+                    <td>TRG BANA JOSIPA JELACICA 10</td>
+                </tr>
+                            <tr>
+                    <td>ICBKCNBJ</td>
+                    <td><a href="" class="select_bank" onclick="return false;" data-bank-name="THE INDUSTRIAL AND COMMERCIAL BANK OF CHINA SICHUAN BR. CHENGDU ( CHINA)" data-bank-id="794" data-bank-bik="ICBKCNBJ" data-bank-rezident="N">THE INDUSTRIAL AND COMMERCIAL BANK OF CHINA SICHUAN BR. CHENGDU ( CHINA)</a></td>
+                    <td>256 SHAWAN ROAD, JINNIU DISTRICT, CHENGDU, SICHUAN PROVINCE, CHINA</td>
+                </tr>
+                            <tr>
+                    <td>CHENGDU</td>
+                    <td><a href="" class="select_bank" onclick="return false;" data-bank-name="THE INDUSTRIAL AND COMMERCIAL BANK OF CHINA SICHUAN BR. CHENGDU (CHINA)" data-bank-id="793" data-bank-bik="CHENGDU" data-bank-rezident="N">THE INDUSTRIAL AND COMMERCIAL BANK OF CHINA SICHUAN BR. CHENGDU (CHINA)</a></td>
+                    <td>город CHENGDU, улица 60 SHUWA THIRD NORTH</td>
+                </tr>
+                            <tr>
+                    <td>COBADEFF370</td>
+                    <td><a href="" class="select_bank" onclick="return false;" data-bank-name="COMMERZBANK AG" data-bank-id="792" data-bank-bik="COBADEFF370" data-bank-rezident="N">COMMERZBANK AG</a></td>
+                    <td>FoodPLUS GmbH</td>
+                </tr>
+                            <tr>
+                    <td>ARMIAM22</td>
+                    <td><a href="" class="select_bank" onclick="return false;" data-bank-name="AMERIABANK" data-bank-id="791" data-bank-bik="ARMIAM22" data-bank-rezident="N">AMERIABANK</a></td>
+                    <td>ул. Вазгена Саргсяна, 2, Ереван 0010, Республика Армения</td>
+                </tr>
+                    </tbody></table>
+    </div>
+    <ul class="pagination"><li class="active"><a>1</a></li><li><a class="pagingcontrol" href="">2</a></li><li><a class="pagingcontrol" href="">3</a></li><li><a class="pagingcontrol" href="">4</a></li><li><a class="pagingcontrol" href="">5</a></li><li><a class="pagingcontrol" href="">6</a></li><li><a class="pagingcontrol" href="">7</a></li><li><a class="pagingcontrol" href="">8</a></li><li><a class="pagingcontrol" href="">9</a></li><li><a class="pagingcontrol" href="">10</a></li><li><a class="pagingcontrol" href="">11</a></li><li><a class="pagingcontrol" href="">&gt;</a></li><li><a class="pagingcontrol" href="">&gt;&gt;</a></li></ul></div>
+
+
+</div>
+                    <div class="modal-footer"><button class="btn btn-default btn-sm" data-dismiss="modal">Закрыть</button></div>
+                </div>
+            </div>
+           </div><div id="bankNameAddModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4>Добавление банка</h4>
+                    </div>
+                    <div class="modal-body" id="bankNameAddInfo"></div>
+                    <div class="modal-footer">
+                        <button class="btn btn-success btn-sm" id="_send_new_bank" style="display:none;">Отправить на утверждение</button>
+                        <button class="btn btn-default btn-sm" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
 
         </body></html>
