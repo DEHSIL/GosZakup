@@ -202,7 +202,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                 <hr>
 
                 <a role="button" class="btn btn-default" href="">← Вернуться в список счетов</a>
-                <button id="save" class="btn btn-default" name="save" value="Y">Сохранить →</button>
+                <button id="save" class="btn btn-default">Сохранить →</button>
             </form>
         </div>
     </div>
@@ -319,7 +319,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         });
 
         
-        const burron = document.querySelector('#save');
+        const button = document.querySelector('#save');
         const iikInput = document.getElementById("iik");
         const bankNameInput = document.querySelector('input[name="bank_name"]');
         const billsTypeSelect = document.querySelector('select[name="bills_type"]');
@@ -340,7 +340,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
             }
         }
 
-        form.addEventListener("click", function (e) {
+        button.addEventListener("click", function (e) {
             let valid = true;
 
             // ---- Проверка ИИК ----
