@@ -2,7 +2,8 @@
 <html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
 body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
 </style>
-    
+    <script src="../../js/navBar.js"></script>
+    <script src="../../js/inner.js"></script>
     <title>Портал государственных закупок Республики Казахстан</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +11,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <meta name="robots" content="noindex">
-    <link rel="manifest" href="https://v3bl.goszakup.gov.kz/manifest.json">
+    <!-- <link rel="manifest" href="https://v3bl.goszakup.gov.kz/manifest.json"> -->
     <link rel="shortcut icon" href="https://v3bl.goszakup.gov.kz/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="57x57" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://v3bl.goszakup.gov.kz/images/favicon/apple-icon-60x60.png">
@@ -25,135 +26,33 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <link rel="icon" type="image/png" sizes="32x32" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://v3bl.goszakup.gov.kz/images/favicon/favicon-16x16.png">
-    <link href="src/bootstrap.min.css" rel="stylesheet">
-    <link href="src/all.min.css" rel="stylesheet">
-    <link href="src/style.css" rel="stylesheet">
-    <link href="src/datepicker.css" rel="stylesheet">
+    <link href="style/bootstrap.min.css" rel="stylesheet">
+    <link href="style/all.min.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/datepicker.css" rel="stylesheet">
 
-    <script src="src/jquery.js.загрузка"></script>
-    <script src="src/bootstrap.min.js.загрузка"></script>
-    <script src="src/confirmation.js.загрузка"></script>
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/confirmation.js"></script>
     
     
-    <script type="text/javascript" src="src/bootstrap.datepicker.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/bootstrap-datepicker.ru.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/helpers.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/bills.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/banksSearchModal.plugin.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/banksAddModal.plugin.js.загрузка" charset="utf-8"></script>
-    <script type="text/javascript" src="src/katoSelectModal.plugin.js.загрузка" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/bootstrap.datepicker.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/bootstrap-datepicker.ru.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/helpers.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/bills.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/banksSearchModal.plugin.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/banksAddModal.plugin.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/katoSelectModal.plugin.js" charset="utf-8"></script>
 
 
-
-    
-    <!-- <script>
-            var user_id = 1563337;
-            window.lang_key = "ru";
-            window.current_controller_url = "https://v3bl.goszakup.gov.kz/ru/bills";
-            
-            window.current_directory = "";
-            window.current_controller = "bills";
-            window.current_method = "add";
-
-            window.url_params = [];
-            ; var lang = 'ru'; var controller = 'bills';    
-    </script> -->
 </head>
-<body style="">
+<body>
 
 <!-- BEGIN WRAP -->
 <div class="wrap">
     <!-- BEGIN NAVBAR -->
     <<div id="navbar-main" class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand big-screen-element" href="">АИИС ЭГЗ</a>
-            </div>
-            <div id="main-nav" class="navbar-collapse collapse">
-                                <ul class="nav navbar-nav"><li><a href="pages/Профиль/profile.html">Главная</a></li><li><a href="">Справка</a></li><li class="dropdown"><a data-id="181" href="" class="dropdown-toggle" data-toggle="dropdown">Реестры <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Реестр жалоб</a></li><li><a href="">Реестр недобросовестных участников ГЗ</a></li><li><a href="">Реестр опытов работы</a></li><li><a href="">Реестр недобросовестных участников закупок</a></li><li><a href="">Реестр участников ГЗ </a></li><li><a href="">Планы ГЗ</a></li><li><a href="">Реестр договоров</a></li><li><a href="">Реестр квалифицированных поставщиков</a></li></ul></li><li class="dropdown"><a data-id="66" href="" class="dropdown-toggle" data-toggle="dropdown">Закупки <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="pages/Поиск лотов/search_lots.html">Поиск лотов</a></li><li><a href="pages/Поиск объявлений/search_announce.html">Поиск объявлений</a></li></ul></li><li><a href="">Тренажер</a></li></ul>
-                
-                                <ul class="nav navbar-nav navbar-right">
-                <li><a href="">Қаз</a></li>
-                <li><a href="">Рус</a></li>
-                    <li class="dropdown">
-                    <a href="" class="dropdown-toggle" data-toggle="dropdown">
-                        Фамилия Имя Отчество                    
-                        <b class="caret"></b>
-                    </a>
-                    
-                    <ul class="dropdown-menu">
-                        <li><a href="pages/Профиль/profile.html">Кабинет</a></li>
-                        <li class="divider"></li>
-                        <li><a href="">Избранное</a></li>
-                        <li class="divider"></li>
-                        <li id="exit"><a href="">Выход</a></li>
-                        <script>
-                            document.querySelector("#exit").addEventListener('click', ()=>{
-                                localStorage.removeItem("userData")
-                                localStorage.removeItem("verifiEmail")
-                                localStorage.removeItem("userMember")
-                                localStorage.removeItem("userSchet")
-                                window.location.href = 'index.html'
-                            })
-                        </script>
-                    </ul>
-                </li></ul>
-                <ul id="navbar-notice" class="nav navbar-nav navbar-right">                        
-                    <li class="dropdown" id="mainNav">
-                            <a href="pages/Страницы с навигации/Подключене тарифа/conn_rate_main.html" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown">
-                                <span class="label label-success"><i class="far fa-credit-card"></i> <span class="big-screen-element">Тариф активен</span></span></a>
-                            
-                            <ul class="dropdown-menu menu-sm" id="notify-container">
-                                <li><a href=""><strong>Сумма заявки на участие в закупке не будет превышать 1 миллиона тенге</strong></a>
-                                </li>
-                            </ul>
-                    </li>
-                <li class="dropdown">
-                    <a href="" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown"><span class="label label-danger"><i class="far fa-bell"></i></span>&nbsp;</a><ul class="dropdown-menu menu-sm" id="notify-container">
-                        <li><a href="">Все уведомления</a></li>
-                        <li><a href="">Управление уведомлениями</a></li>
-                    </ul>
-                </li></ul>
-            </div>
-        </div>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", () =>{
-            const field = document.querySelector("#mainNav");
-            const schetFlag = localStorage.getItem("userSchet");
-            const memberFlag = localStorage.getItem("userMember");
-
-            field.innerHTML = ""
-
-            const schetIconTrue = `
-            <a href="pages/Страницы с навигации/Подключене тарифа/conn_rate_main.html" class="dropdown-toggle no-hover fa-lg" data-toggle="dropdown">
-                                <span class="label label-success"><i class="far fa-credit-card"></i> <span class="big-screen-element">Тариф активен</span></span></a>
-                            
-                            <ul class="dropdown-menu menu-sm" id="notify-container">
-                                <li><a href=""><strong>Сумма заявки на участие в закупке не будет превышать 1 миллиона тенге</strong></a>
-                                </li>
-                            </ul>           
-            `
-            const schetIconFalse = `
-            <a href="https://v3bl.goszakup.gov.kz/ru/electronic_wallet/paid_services" class="fa-lg no-hover"><span class="label label-danger"><i class="far fa-credit-card"></i> Подключить тариф</span></a></li>
-            `
-            
-            if (memberFlag !== 'false'){
-                if (schetFlag === 'false') {
-                    field.innerHTML = schetIconFalse;
-                } else {
-                    field.innerHTML = schetIconTrue;
-                }
-            }
-
-        })
-    </script>
     <!-- END NAVBAR -->
 
     <!-- BEGIN CONTAINER -->
@@ -171,36 +70,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                     </button>
                 </div>
                 <div class="collapse navbar-collapse" id="cabinet_nav">
-                    <ul class="nav navbar-nav"><li class="dropdown"><a data-id="47" href="https://v3bl.goszakup.gov.kz/ru/bills/add#" class="dropdown-toggle" data-toggle="dropdown">Рабочий кабинет <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="https://v3bl.goszakup.gov.kz/ru/insurance">Электронные договора страхования</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/searchanno">Поиск объявлений (общий)</a></li><li class="dropdown-sub-menu"><a data-id="2135" href="" class="dropdown-toggle" data-toggle="dropdown">Договоры</a><ul class="dropdown-menu"><li><a href="">Мои договоры (Поставщик)</a></li><li><a href="">Многосторонние договора</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/contract/transfer">Передача прав</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/contract/consortium">Мои договоры (Консорциум)</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/contract/waybill">Накладные</a></li></ul></li><li><a href="https://v3bl.goszakup.gov.kz/ru/eDepository/sending_request">Отправка заявки на корректировку</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/egzcontract/act">Поиск по актам</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/myapp">Мои заявки</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/rqc/rqc_announces">Включение в реестр квалифицированных поставщиков </a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/ebg">Электронные банковские гарантии</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/change_org">Изменение создателя объявления</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/eDepository/dataWorkPerformed">Реестр опытов работы</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/careless/appeals">Обращения</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/complaint/supcomplaint">Мои жалобы</a></li><li class="dropdown-sub-menu"><a data-id="2141" href="https://v3bl.goszakup.gov.kz/ru/bills/add#" class="dropdown-toggle" data-toggle="dropdown">Передача прав</a><ul class="dropdown-menu"><li><a href="https://v3bl.goszakup.gov.kz/ru/conc_rights">Передача/Отзыв прав по закупкам</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/confirm_trans_rights">Подтверждение/Отклонение передачи прав по закупкам</a></li></ul></li><li class="dropdown-sub-menu"><a data-id="2314" href="https://v3bl.goszakup.gov.kz/ru/bills/add#" class="dropdown-toggle" data-toggle="dropdown">Журнал</a><ul class="dropdown-menu"><li><a href="https://v3bl.goszakup.gov.kz/ru/ra_audit/order_log">Журнал поручений</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cameral/subject/appeal_list">Журнал жалоб по решениям</a></li></ul></li><li><a href="https://v3bl.goszakup.gov.kz/ru/comm_offers/request/supplier">Комм. предложения/Запросы(Поставщик)</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/egzcontract/techsupervisor">Поиск по актам (Тех. надзор/Автор. надзор)</a></li></ul></li><li class="dropdown"><a data-id="30" href="https://v3bl.goszakup.gov.kz/ru/bills/add#" class="dropdown-toggle" data-toggle="dropdown">Личные данные <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/user_reg_data">Регистрационные данные</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/passport">Паспортные данные</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/pcontact">Контактные данные</a></li></ul></li><li class="dropdown"><a data-id="31" href="https://v3bl.goszakup.gov.kz/ru/bills/add#" class="dropdown-toggle" data-toggle="dropdown">Профиль участника <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="https://v3bl.goszakup.gov.kz/ru/registration_data">Обновление регистрационных данных</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/electronic_wallet/paid_services">Лицевой счет</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/notices">Уведомления</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/subject/subject_reg_data">Регистрационные данные</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/attributes_organ">Атрибуты участника</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/scontact">Контактные данные</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/bills">Банковские счета</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/subject_personal">Сотрудники организации</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/bodies_tax_reg">Органы налоговой регистрации</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/data_on_founders">Данные об учредителях</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/data_on_head">Данные о руководителе</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/filials">Данные о филиалах</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/tax_debts">Данные о налоговой задолженности</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/list_disable_request">Данные о наличии признака инвалидов</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/licenses">Мои электронные лицензии</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/permits">Мои разрешительные документы</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/bank_confirm">Мои заявки на регистрацию банка</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/org_profile/ows_token">Выпуск токенов (для разработчиков)</a></li><li><a href="https://v3bl.goszakup.gov.kz/ru/cabinet/fin_statement">Финансовая устойчивость</a></li></ul></li><li class="dropdown"><a data-id="1161" href="https://v3bl.goszakup.gov.kz/ru/bills/add#" class="dropdown-toggle" data-toggle="dropdown">Внешние сервисы <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="https://esf.gov.kz:8443/esf-web/login">ИС "ЭСФ"</a></li><li><a href="http://office.sud.kz/index.xhtml">Судебный кабинет (сайт Верховного суда РК)</a></li><li><a href="http://enstru.kz/">ИС "ЕНС ТРУ"</a></li><li><a href="http://kgd.gov.kz/ru/services/ndspayer_search">Сервис проверки признака "Плательщик НДС" (сайт КГД МФ РК)</a></li><li><a href="https://www.nca.kz/">NCA eCabinet</a></li><li><a href="http://kgd.gov.kz/ru/content/spiski-nesostoyatelnyh-dolzhnikov-0">Списки несостоятельных должников (сайт КГД МФ РК)</a></li><li><a href="http://kgd.gov.kz/ru/services/taxpayer_search_liquid">Поиск налогоплательщиков, находящихся на стадии ликвидации (сайт КГД МФ РК)</a></li><li><a href="https://new-shop.ksm.kz/">Интернет-магазин стандартов Казахстанский институт стандартизации и метрологии</a></li><li><a href="http://ks.gov.kz/Reports/Certificates_CTKZ.aspx">Интернет-портал "Казахстанское содержание" </a></li></ul></li><li class="dropdown"><a data-id="2076" href="https://v3bl.goszakup.gov.kz/ru/bills/add#" class="dropdown-toggle" data-toggle="dropdown">Избранное <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="https://v3bl.goszakup.gov.kz/ru/favorites">Объявления</a></li></ul></li></ul>
                 </div>
-                <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    
-                        const field = document.querySelector("#cabinet_nav");
-                        const memberFlag = localStorage.getItem("userMember");
-                        
-
-                        // очищаем контейнер перед вставкой
-                        field.innerHTML = "";
-
-                        // --- Вариант для зарегистрированного пользователя ---
-                        const memberNavbar = `
-                            <ul class="nav navbar-nav"><li class="dropdown"><a data-id="30" href="" class="dropdown-toggle" data-toggle="dropdown">Личные данные <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Регистрационные данные</a></li><li><a href="">Паспортные данные</a></li><li><a href="">Контактные данные</a></li></ul></li><li class="dropdown"><a data-id="2076" href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Избранное <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Объявления</a></li></ul></li></ul>
-                            `;
-
-                        // --- Вариант для гостя (не участника) ---
-                        const guestNavbar = `
-                            <ul class="nav navbar-nav"><li class="dropdown"><a data-id="47" href="" class="dropdown-toggle" data-toggle="dropdown">Рабочий кабинет <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Электронные договора страхования</a></li><li><a href="pages/Поиск лотов/search_lots.html">Поиск объявлений (общий)</a></li><li class="dropdown-sub-menu"><a data-id="2135" href="" class="dropdown-toggle" data-toggle="dropdown">Договоры</a><ul class="dropdown-menu"><li><a href="pages/Страницы с навигации/Договоры/contracts.html">Мои договоры (Поставщик)</a></li><li><a href="">Многосторонние договора</a></li><li><a href="">Передача прав</a></li><li><a href="">Мои договоры (Консорциум)</a></li><li><a href="">Накладные</a></li></ul></li><li><a href="">Отправка заявки на корректировку</a></li><li><a href="pages/Страницы с навигации/Поиск по актам/search_for_lots.html">Поиск по актам</a></li><li><a href="pages/Страницы с навигации/Мои заявки/my_application.html">Мои заявки</a></li><li><a href="">Включение в реестр квалифицированных поставщиков </a></li><li><a href="">Электронные банковские гарантии</a></li><li><a href="">Изменение создателя объявления</a></li><li><a href="">Реестр опытов работы</a></li><li><a href="">Обращения</a></li><li><a href="">Мои жалобы</a></li><li class="dropdown-sub-menu"><a data-id="2141" href="" class="dropdown-toggle" data-toggle="dropdown">Передача прав</a><ul class="dropdown-menu"><li><a href="">Передача/Отзыв прав по закупкам</a></li><li><a href="">Подтверждение/Отклонение передачи прав по закупкам</a></li></ul></li><li class="dropdown-sub-menu"><a data-id="2314" href="" class="dropdown-toggle" data-toggle="dropdown">Журнал</a><ul class="dropdown-menu"><li><a href="">Журнал поручений</a></li><li><a href="">Журнал жалоб по решениям</a></li></ul></li><li><a href="">Комм. предложения/Запросы(Поставщик)</a></li><li><a href="">Поиск по актам (Тех. надзор/Автор. надзор)</a></li></ul></li><li class="dropdown"><a data-id="30" href="" class="dropdown-toggle" data-toggle="dropdown">Личные данные <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Регистрационные данные</a></li><li><a href="">Паспортные данные</a></li><li><a href="">Контактные данные</a></li></ul></li><li class="dropdown"><a data-id="31" href="" class="dropdown-toggle" data-toggle="dropdown">Профиль участника <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Обновление регистрационных данных</a></li><li><a href="pages/Страницы с навигации/Подключене тарифа/conn_rate_main.html">Лицевой счет</a></li><li><a href="">Уведомления</a></li><li><a href="">Регистрационные данные</a></li><li><a href="">Атрибуты участника</a></li><li><a href="">Контактные данные</a></li><li><a href="pages/Страницы с навигации/Банковские счета/вank_accounts.html">Банковские счета</a></li><li><a href="">Сотрудники организации</a></li><li><a href="">Органы налоговой регистрации</a></li><li><a href="">Данные об учредителях</a></li><li><a href="">Данные о руководителе</a></li><li><a href="">Данные о филиалах</a></li><li><a href="">Данные о налоговой задолженности</a></li><li><a href="">Данные о наличии признака инвалидов</a></li><li><a href="">Мои электронные лицензии</a></li><li><a href="">Мои разрешительные документы</a></li><li><a href="">Мои заявки на регистрацию банка</a></li><li><a href="">Выпуск токенов (для разработчиков)</a></li><li><a href="">Финансовая устойчивость</a></li></ul></li><li class="dropdown"><a data-id="1161" href="" class="dropdown-toggle" data-toggle="dropdown">Внешние сервисы <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">ИС "ЭСФ"</a></li><li><a href="">Судебный кабинет (сайт Верховного суда РК)</a></li><li><a href="">ИС "ЕНС ТРУ"</a></li><li><a href="">Сервис проверки признака "Плательщик НДС" (сайт КГД МФ РК)</a></li><li><a href="">NCA eCabinet</a></li><li><a href="">Списки несостоятельных должников (сайт КГД МФ РК)</a></li><li><a href="">Поиск налогоплательщиков, находящихся на стадии ликвидации (сайт КГД МФ РК)</a></li><li><a href="">Интернет-магазин стандартов Казахстанский институт стандартизации и метрологии</a></li><li><a href="">Интернет-портал "Казахстанское содержание" </a></li></ul></li><li class="dropdown"><a data-id="2076" href="" class="dropdown-toggle" data-toggle="dropdown">Избранное <b class="caret"></b> </a><ul class="dropdown-menu"><li><a href="">Объявления</a></li></ul></li></ul>
-                            `;
-
-                        // --- Проверка флага и вставка нужного меню ---
-                        if (memberFlag === 'false') {
-                            field.innerHTML = memberNavbar;
-                        } else {
-                            field.innerHTML = guestNavbar;
-                        }
-                }); 
-                </script>
             </div>
         </div>
         
@@ -229,7 +99,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
             </div>
 
                 <div class="content-block">
-<script>
+<!-- <script>
     $(document).ready(function () {
         $('#showRefBank').banksSearchModal({
             btnAddBank: false,
@@ -244,7 +114,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
             url_load: "ajax_load_form_new_bank",
         });
     });
-</script>
+</script> -->
 
 <div class="panel panel-default">
     <div class="panel-heading">
@@ -711,58 +581,58 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
             </tr>
                             <tr>
                     <td>ISBKTRIS</td>
-                    <td><a href="https://v3bl.goszakup.gov.kz/ru/bills/add#" class="select_bank" onclick="return false;" data-bank-name="Турецкий бизнес-банк MITHATPASHA" data-bank-id="800" data-bank-bik="ISBKTRIS" data-bank-rezident="N">Турецкий бизнес-банк MITHATPASHA</a></td>
+                    <td><a href="" class="select_bank" onclick="return false;" data-bank-name="Турецкий бизнес-банк MITHATPASHA" data-bank-id="800" data-bank-bik="ISBKTRIS" data-bank-rezident="N">Турецкий бизнес-банк MITHATPASHA</a></td>
                     <td>улица Зия Гёкалп, дом 21A</td>
                 </tr>
                             <tr>
                     <td>LBRTGЕ22</td>
-                    <td><a href="https://v3bl.goszakup.gov.kz/ru/bills/add#" class="select_bank" onclick="return false;" data-bank-name="АО «Либерти Банк»" data-bank-id="799" data-bank-bik="LBRTGЕ22" data-bank-rezident="N">АО «Либерти Банк»</a></td>
+                    <td><a href="" class="select_bank" onclick="return false;" data-bank-name="АО «Либерти Банк»" data-bank-id="799" data-bank-bik="LBRTGЕ22" data-bank-rezident="N">АО «Либерти Банк»</a></td>
                     <td>Проспект Чавчавадзе №74, 0162 Тбилиси, Грузия</td>
                 </tr>
                             <tr>
                     <td>FFVBDEFFXXX</td>
-                    <td><a href="https://v3bl.goszakup.gov.kz/ru/bills/add#" class="select_bank" onclick="return false;" data-bank-name="FRANKFURTER VOLKSBANK RHEIN-MAIN EG" data-bank-id="798" data-bank-bik="FFVBDEFFXXX" data-bank-rezident="N">FRANKFURTER VOLKSBANK RHEIN-MAIN EG</a></td>
+                    <td><a href="" class="select_bank" onclick="return false;" data-bank-name="FRANKFURTER VOLKSBANK RHEIN-MAIN EG" data-bank-id="798" data-bank-bik="FFVBDEFFXXX" data-bank-rezident="N">FRANKFURTER VOLKSBANK RHEIN-MAIN EG</a></td>
                     <td>Франфуркт на Майне Савиньштрассе 49</td>
                 </tr>
                             <tr>
                     <td>018073401</td>
-                    <td><a href="https://v3bl.goszakup.gov.kz/ru/bills/add#" class="select_bank" onclick="return false;" data-bank-name="УФК по Республике Башкортостан" data-bank-id="797" data-bank-bik="018073401" data-bank-rezident="N">УФК по Республике Башкортостан</a></td>
+                    <td><a href="" class="select_bank" onclick="return false;" data-bank-name="УФК по Республике Башкортостан" data-bank-id="797" data-bank-bik="018073401" data-bank-rezident="N">УФК по Республике Башкортостан</a></td>
                     <td>Ленина 3, г.Уфа</td>
                 </tr>
                             <tr>
                     <td>026009593</td>
-                    <td><a href="https://v3bl.goszakup.gov.kz/ru/bills/add#" class="select_bank" onclick="return false;" data-bank-name="Bank of America" data-bank-id="796" data-bank-bik="026009593" data-bank-rezident="N">Bank of America</a></td>
+                    <td><a href="" class="select_bank" onclick="return false;" data-bank-name="Bank of America" data-bank-id="796" data-bank-bik="026009593" data-bank-rezident="N">Bank of America</a></td>
                     <td>111 River Street</td>
                 </tr>
                             <tr>
                     <td>ZABAHR2X</td>
-                    <td><a href="https://v3bl.goszakup.gov.kz/ru/bills/add#" class="select_bank" onclick="return false;" data-bank-name="Zagrebačka banka d.d." data-bank-id="795" data-bank-bik="ZABAHR2X" data-bank-rezident="N">Zagrebačka banka d.d.</a></td>
+                    <td><a href="" class="select_bank" onclick="return false;" data-bank-name="Zagrebačka banka d.d." data-bank-id="795" data-bank-bik="ZABAHR2X" data-bank-rezident="N">Zagrebačka banka d.d.</a></td>
                     <td>TRG BANA JOSIPA JELACICA 10</td>
                 </tr>
                             <tr>
                     <td>ICBKCNBJ</td>
-                    <td><a href="https://v3bl.goszakup.gov.kz/ru/bills/add#" class="select_bank" onclick="return false;" data-bank-name="THE INDUSTRIAL AND COMMERCIAL BANK OF CHINA SICHUAN BR. CHENGDU ( CHINA)" data-bank-id="794" data-bank-bik="ICBKCNBJ" data-bank-rezident="N">THE INDUSTRIAL AND COMMERCIAL BANK OF CHINA SICHUAN BR. CHENGDU ( CHINA)</a></td>
+                    <td><a href="" class="select_bank" onclick="return false;" data-bank-name="THE INDUSTRIAL AND COMMERCIAL BANK OF CHINA SICHUAN BR. CHENGDU ( CHINA)" data-bank-id="794" data-bank-bik="ICBKCNBJ" data-bank-rezident="N">THE INDUSTRIAL AND COMMERCIAL BANK OF CHINA SICHUAN BR. CHENGDU ( CHINA)</a></td>
                     <td>256 SHAWAN ROAD, JINNIU DISTRICT, CHENGDU, SICHUAN PROVINCE, CHINA</td>
                 </tr>
                             <tr>
                     <td>CHENGDU</td>
-                    <td><a href="https://v3bl.goszakup.gov.kz/ru/bills/add#" class="select_bank" onclick="return false;" data-bank-name="THE INDUSTRIAL AND COMMERCIAL BANK OF CHINA SICHUAN BR. CHENGDU (CHINA)" data-bank-id="793" data-bank-bik="CHENGDU" data-bank-rezident="N">THE INDUSTRIAL AND COMMERCIAL BANK OF CHINA SICHUAN BR. CHENGDU (CHINA)</a></td>
+                    <td><a href="" class="select_bank" onclick="return false;" data-bank-name="THE INDUSTRIAL AND COMMERCIAL BANK OF CHINA SICHUAN BR. CHENGDU (CHINA)" data-bank-id="793" data-bank-bik="CHENGDU" data-bank-rezident="N">THE INDUSTRIAL AND COMMERCIAL BANK OF CHINA SICHUAN BR. CHENGDU (CHINA)</a></td>
                     <td>город CHENGDU, улица 60 SHUWA THIRD NORTH</td>
                 </tr>
                             <tr>
                     <td>COBADEFF370</td>
-                    <td><a href="https://v3bl.goszakup.gov.kz/ru/bills/add#" class="select_bank" onclick="return false;" data-bank-name="COMMERZBANK AG" data-bank-id="792" data-bank-bik="COBADEFF370" data-bank-rezident="N">COMMERZBANK AG</a></td>
+                    <td><a href="" class="select_bank" onclick="return false;" data-bank-name="COMMERZBANK AG" data-bank-id="792" data-bank-bik="COBADEFF370" data-bank-rezident="N">COMMERZBANK AG</a></td>
                     <td>FoodPLUS GmbH</td>
                 </tr>
                             <tr>
                     <td>ARMIAM22</td>
-                    <td><a href="https://v3bl.goszakup.gov.kz/ru/bills/add#" class="select_bank" onclick="return false;" data-bank-name="AMERIABANK" data-bank-id="791" data-bank-bik="ARMIAM22" data-bank-rezident="N">AMERIABANK</a></td>
+                    <td><a href="" class="select_bank" onclick="return false;" data-bank-name="AMERIABANK" data-bank-id="791" data-bank-bik="ARMIAM22" data-bank-rezident="N">AMERIABANK</a></td>
                     <td>ул. Вазгена Саргсяна, 2, Ереван 0010, Республика Армения</td>
                 </tr>
                     </tbody></table>
     </div>
-    <ul class="pagination"><li class="active"><a>1</a></li><li><a class="pagingcontrol" href="https://v3bl.goszakup.gov.kz/ru/bills/ajax_load_banks?&amp;page=2">2</a></li><li><a class="pagingcontrol" href="https://v3bl.goszakup.gov.kz/ru/bills/ajax_load_banks?&amp;page=3">3</a></li><li><a class="pagingcontrol" href="https://v3bl.goszakup.gov.kz/ru/bills/ajax_load_banks?&amp;page=4">4</a></li><li><a class="pagingcontrol" href="https://v3bl.goszakup.gov.kz/ru/bills/ajax_load_banks?&amp;page=5">5</a></li><li><a class="pagingcontrol" href="https://v3bl.goszakup.gov.kz/ru/bills/ajax_load_banks?&amp;page=6">6</a></li><li><a class="pagingcontrol" href="https://v3bl.goszakup.gov.kz/ru/bills/ajax_load_banks?&amp;page=7">7</a></li><li><a class="pagingcontrol" href="https://v3bl.goszakup.gov.kz/ru/bills/ajax_load_banks?&amp;page=8">8</a></li><li><a class="pagingcontrol" href="https://v3bl.goszakup.gov.kz/ru/bills/ajax_load_banks?&amp;page=9">9</a></li><li><a class="pagingcontrol" href="https://v3bl.goszakup.gov.kz/ru/bills/ajax_load_banks?&amp;page=10">10</a></li><li><a class="pagingcontrol" href="https://v3bl.goszakup.gov.kz/ru/bills/ajax_load_banks?&amp;page=11">11</a></li><li><a class="pagingcontrol" href="https://v3bl.goszakup.gov.kz/ru/bills/ajax_load_banks?&amp;page=2">&gt;</a></li><li><a class="pagingcontrol" href="https://v3bl.goszakup.gov.kz/ru/bills/ajax_load_banks?&amp;page=12">&gt;&gt;</a></li></ul></div>
-<script>
+    <ul class="pagination"><li class="active"><a>1</a></li><li><a class="pagingcontrol" href="">2</a></li><li><a class="pagingcontrol" href="">3</a></li><li><a class="pagingcontrol" href="">4</a></li><li><a class="pagingcontrol" href="">5</a></li><li><a class="pagingcontrol" href="">6</a></li><li><a class="pagingcontrol" href="">7</a></li><li><a class="pagingcontrol" href="">8</a></li><li><a class="pagingcontrol" href="">9</a></li><li><a class="pagingcontrol" href="">10</a></li><li><a class="pagingcontrol" href="">11</a></li><li><a class="pagingcontrol" href="">&gt;</a></li><li><a class="pagingcontrol" href="">&gt;&gt;</a></li></ul></div>
+<!-- <script>
     $(function () {
         $(document).on('click', '.pagingcontrol', function ()
         {
@@ -783,7 +653,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
             return false;
         });
     });
-</script>
+</script> -->
 
 </div>
                     <div class="modal-footer"><button class="btn btn-default btn-sm" data-dismiss="modal">Закрыть</button></div>
