@@ -371,7 +371,10 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
             if (!valid) {
                 e.preventDefault();  // блокируем отправку
             } else {
-                alert(1)
+                e.preventDefault()
+                localStorage.setItem("userCard", 'true')
+                window.location.href = '../profile.html'
+
             }
         });
     });
