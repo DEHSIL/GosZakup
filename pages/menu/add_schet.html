@@ -316,6 +316,60 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
             if (iik) iik.focus();
         });
 
+        
+        const form = document.querySelector('form[method="post"]');
+        const iikInput = document.getElementById("iik");
+        const bankNameInput = document.querySelector('input[name="bank_name"]');
+        const billsTypeSelect = document.querySelector('select[name="bills_type"]');
+
+        function showError(elem, message) {
+            removeError(elem);
+            const error = document.createElement("div");
+            error.className = "text-danger small form-error";
+            error.style.marginTop = "3px";
+            error.textContent = message;
+            elem.insertAdjacentElement("afterend", error);
+        }
+
+        function removeError(elem) {
+            const next = elem.nextElementSibling;
+            if (next && next.classList.contains("form-error")) {
+                next.remove();
+            }
+        }
+
+        form.addEventListener("submit", function (e) {
+            let valid = true;
+
+            // ---- Проверка ИИК ----
+            const iik = iikInput.value.trim();
+            if (!/^\d{20}$/.test(iik)) {
+                showError(iikInput, "ИИК должен содержать 20 цифр");
+                valid = false;
+            } else {
+                removeError(iikInput);
+            }
+
+            // ---- Проверка банка ----
+            if (bankNameInput.value.trim() === "") {
+                showError(bankNameInput, "Выберите банк");
+                valid = false;
+            } else {
+                removeError(bankNameInput);
+            }
+
+            // ---- Проверка типа счета ----
+            if (!billsTypeSelect.value) {
+                showError(billsTypeSelect, "Выберите тип счёта");
+                valid = false;
+            } else {
+                removeError(billsTypeSelect);
+            }
+
+            if (!valid) {
+                e.preventDefault();  // блокируем отправку
+            }
+        });
     });
 </script>
 
