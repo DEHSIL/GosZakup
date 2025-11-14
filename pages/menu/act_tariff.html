@@ -42,9 +42,9 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <script type="text/javascript" src="../../js/bootstrap-datepicker.ru.js" charset="utf-8"></script>
     <script type="text/javascript" src="../../js/helpers.js" charset="utf-8"></script>
     <script type="text/javascript" src="../../js/jquery.isloading.js" charset="utf-8"></script>
-    <script type="text/javascript" src="../../js/subscriber_pay.js" charset="utf-8"></script>
+    <!-- <script type="text/javascript" src="../../js/subscriber_pay.js" charset="utf-8"></script> -->
     <script type="text/javascript" src="../../js/bootstrap-filestyle.min.js" charset="utf-8"></script>
-    <script type="text/javascript" src="../../js/upload.js" charset="utf-8"></script>
+    <!-- <script type="text/javascript" src="../../js/upload.js" charset="utf-8"></script> -->
     <script type="text/javascript" src="../../js/jquery.blockUI.js" charset="utf-8"></script>
     <!-- <script type="text/javascript" src="../../js/base64js.min.js" charset="utf-8"></script> -->
 
@@ -430,39 +430,6 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
             <input type="hidden" name="act_id" value="1143142" wfd-id="id1">
             <input type="hidden" name="ps_tariff_id" value="1272816" wfd-id="id2">
                     </div></form>
-                    <!-- <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const form = document.querySelector("form");
-    const approveRadios = form.querySelectorAll("input[name='customer_approver_id']");
-    const saveBtn = form.querySelector(".btn-success");
-
-    saveBtn.addEventListener("click", function(event) {
-        event.preventDefault(); // останавливаем переход по ссылке, пока не проверим
-
-        let selectedApprover = false;
-
-        approveRadios.forEach(radio => {
-            if (radio.checked) selectedApprover = true;
-        });
-
-        // Удаляем старые подсветки
-        approveRadios.forEach(radio => radio.parentElement.classList.remove("is-invalid"));
-
-        if (!selectedApprover) {
-            alert("Пожалуйста, выберите утверждающего акта перед сохранением.");
-            approveRadios.forEach(radio => radio.parentElement.classList.add("is-invalid"));
-        } else {
-            // Всё корректно — можно переходить по ссылке
-            const link = saveBtn.closest("a");
-            if (link) {
-                window.location.href = link.getAttribute("href");
-            } else {
-                form.submit();
-            }
-        }
-    });
-});
-</script> -->
 
 </div>
 
