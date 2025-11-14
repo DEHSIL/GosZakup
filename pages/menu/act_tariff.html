@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+<!-- saved from url=(0081)https://v3bl.goszakup.gov.kz/ru/electronic_wallet/subscriber_pay/show_act/1272816 -->
 <html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
 body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
 </style>
-    
+    <script src="../../js/navBar.js"></script>
+    <script src="../../js/inner.js"></script>
     <title>Портал государственных закупок Республики Казахстан</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,7 +32,6 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <link href="style/style.css" rel="stylesheet">
     <link href="style/datepicker.css" rel="stylesheet">
     <link href="style/upload.css" rel="stylesheet">
-    <link href="style/bootstrap-dialog.min.css" rel="stylesheet">
 
     <script src="../../js/jquery.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
@@ -43,10 +44,9 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <script type="text/javascript" src="../../js/jquery.isloading.js" charset="utf-8"></script>
     <script type="text/javascript" src="../../js/subscriber_pay.js" charset="utf-8"></script>
     <script type="text/javascript" src="../../js/bootstrap-filestyle.min.js" charset="utf-8"></script>
-    <!-- <script type="text/javascript" src="../../js/upload.js" charset="utf-8"></script> -->
+    <script type="text/javascript" src="../../js/upload.js" charset="utf-8"></script>
     <script type="text/javascript" src="../../js/jquery.blockUI.js" charset="utf-8"></script>
     <script type="text/javascript" src="../../js/base64js.min.js" charset="utf-8"></script>
-    <script type="text/javascript" src="../../js/bootstrap-dialog.min.js" charset="utf-8"></script>
 
 
 </head>
@@ -76,6 +76,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                 <div class="collapse navbar-collapse" id="cabinet_nav">
                 
                 </div>
+
             </div>
         </div>
         
@@ -316,7 +317,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <div class="panel-heading">
         <h4>Акт оказанных услуг № A0QJSJ/00/1</h4>
     </div>
-    <form action="" id="form_customer_approver" method="post" accept-charset="utf-8">    <div class="panel-body">
+    <form action=""  method="post" accept-charset="utf-8">    <div class="panel-body">
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <div class="panel panel-default">
@@ -368,7 +369,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                                             <td class="col-md-3">Договор-оферта</td>
                                     </tr>
                 <tr>
-                    <td>Дата выставления (отправки) акта Заказчику  2025-10-28 09:12:48 </td>
+                    <td>Дата выставления (отправки) акта Заказчику   </td>
                 </tr>
             </tbody>
         </table>
@@ -380,7 +381,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                 <tr>
                     <th>№</th>
                     <th>Наименование услуги</th>
-                    <th>Единица измерения</th>   
+                    <th>Единица измерения</th>
                     <th>Количество</th>
                     <th>Цена за единицу (тенге)</th>
                     <th>Сумма, в тенге</th>
@@ -424,66 +425,49 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
             </div>
                         </div>
     <div class="panel-footer">
-                    <button class="btn btn-success" id="save_customer_approver">Сохранить утверждающего акта</button>
+                    <a href="pages/menu/act_tariff_succes.html">
+                    <button class="btn btn-success">Сохранить утверждающего акта</button></a>
             <input type="hidden" name="act_id" value="1143142" wfd-id="id1">
             <input type="hidden" name="ps_tariff_id" value="1272816" wfd-id="id2">
                     </div></form>
+                    <!-- <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector("form");
+    const approveRadios = form.querySelectorAll("input[name='customer_approver_id']");
+    const saveBtn = form.querySelector(".btn-success");
+
+    saveBtn.addEventListener("click", function(event) {
+        event.preventDefault(); // останавливаем переход по ссылке, пока не проверим
+
+        let selectedApprover = false;
+
+        approveRadios.forEach(radio => {
+            if (radio.checked) selectedApprover = true;
+        });
+
+        // Удаляем старые подсветки
+        approveRadios.forEach(radio => radio.parentElement.classList.remove("is-invalid"));
+
+        if (!selectedApprover) {
+            alert("Пожалуйста, выберите утверждающего акта перед сохранением.");
+            approveRadios.forEach(radio => radio.parentElement.classList.add("is-invalid"));
+        } else {
+            // Всё корректно — можно переходить по ссылке
+            const link = saveBtn.closest("a");
+            if (link) {
+                window.location.href = link.getAttribute("href");
+            } else {
+                form.submit();
+            }
+        }
+    });
+});
+</script> -->
+
 </div>
 
-            <div class="panel panel-default">
-    <div class="panel-heading">
-        <h4>Согласование акта № A0QJSJ/00/1</h4>
-    </div>
-    <div class="panel-body">
-        <table class="table table-bordered table-striped">
-
-            <thead>
-                <tr>
-                    <th>Организация</th>
-                    <th>Представитель</th>
-                    <th>Должность</th>
-                    <th>Подпись</th>
-                    <th>Дата подписания</th>
-                </tr>
-            </thead>
-            <tbody>
-                                    <tr>
-                        <td>Товарищество с ограниченной ответственностью "Организация"</td>
-                        <td>Фамилия Имя Отчество</td>
-                        <td>Руководитель</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                                    <tr>
-                        <td>Акционерное общество "Центр электронных финансов"</td>
-                        <td>Свирский Денис Яковлевич</td>
-                        <td>Заместитель Председателя Правления</td>
-                        <td></td>
-                        <td>2025-10-28 09:12:48</td>
-                    </tr>
-                            </tbody>
-        </table>
-
-        
-            <form action="" id="form_approve_act" class="" method="post" accept-charset="utf-8">
-            
-<input type="hidden" name="act_id" id="act_id" value="1143142" wfd-id="id3">
-
-                                <input type="checkbox" id="agreement_conditions_check" wfd-id="id4"> С условиями Договора и тарифа ознакомлен и согласен            
-            </form>        
-            </div>
-
-    <div class="panel-footer">
-        
-                    
-            <button class="btn btn-success" id="approve_act" data-confirm="Y" data-tariff-id="36" data-act-id="1143142">Оплатить и подписать акт</button>
-        
-        
-                    <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-default">Скачать как pdf</a>
-        
-           </div>
-</div>    
-    <a class="btn btn-default" href="pages/profile.html">Вернуться к услугам</a>
+    
+    <a class="btn btn-default" href="pages/menu/conn_rate_main.html">Вернуться к услугам</a>
 </div>
         <div class="clearfix"></div>
         
@@ -511,5 +495,4 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         Техническая поддержка пользователей портала (7/7 с 09:00 до 21:00): 8(7172) 73 55 15, +7 705 956 53 88 (в соответствие с тарифами оператора связи), <a href="mailto:support@ecc.kz">support@ecc.kz</a>    </p>
 </footer>
 <!-- END FOOTER -->
-
 </body></html>
