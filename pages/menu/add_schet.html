@@ -99,113 +99,115 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
             </div>
 
                 <div class="content-block">
-<!-- <script>
-    $(document).ready(function () {
-        $('#showRefBank').banksSearchModal({
-            btnAddBank: false,
-            complete: function (value) {
-                $('#ref_banks_id').val(value.bank_id);
-                $('#bank_name').val(value.bank_name);
-                $('#bik_bank').text(value.bank_bik);
-                $('#rezident').val(value.bank_rezident)
-            }
-        });
-        $('#btnAddBanks').banksAddModal({
-            url_load: "ajax_load_form_new_bank",
-        });
-    });
-</script> -->
-
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4>Добавление счета</h4>
     </div>
     <div class="panel-body">
-                <div class="col-md-8">
+        <div class="col-md-8">
             <form method="post">
-         <table class="table table-bordered">
-                    <tbody><tr>
-                        <th></th>
-                        <td>
-                                                            <input type="checkbox" name="sign_old_format" value="1" class=                        <th>Номер счета</th>"                        <td><input type="text" name="iik" id="iik" value="" class="form-control input-sm" wfd-id="id1"></td>                     </tr>ата                                                    </td>
-                    </tr>
-                    <tr>
-                                               <th>КБе</th>                         <td><                            <select name="kse" class="form-control input-sm kbe_data">"<option value="11">11 - Центральное Правительство</option>l input-sm" wfd-id="id1"></td>
-                    </tr>
-                    <tr>
-                        <th>КБе</th>
-                       </select> <td>
-                            <select name="kse" class="form-control input-sm kbe_data">
-<option value="11">11 - Центральное Правительство</option>
-<option value="12">12 - Региональные и местные органы управления</option>
-<option value="13">13 - Центральные (национальные) банки</option>
-<option value="14">14 - Другие депозитные организации</option>
-<option value="15">15 - Другие финансовые организации</option>
-<option value="16">16 - Государственные нефинансовые организации</option>
-<option value="17">17 - Негосударственные нефинансовые организации</option>
-<option value="18">18 - Некоммерческие орг                            <div class="input-group">о                                <input type="text" name="bank_name" class="form-control input-sm" id="bank_name" value="" placeholder="Наименование банка" aria-describedby="bank_name" readonly="" wfd-id="id2">>                                <span class="input-group-btn" id="bank_name">                                     <button type="button" id="showRefBank" class="btn btn-primary input-sm">t                                        Выбрать банк                                    </button>                                    th class="col-md-4">Наименование банка</th>
-                        <td class="col-md-8">
-                            <div class="input-group">
-                                <input type="text" name="bank_name" class="f                            </div>" aria-describedby="bank_name" readonly="" wfd-id="id2">
-                                <span class="input-group-btn" id="bank_name">
-                                    <button type="button" id="showRefBank" class="btn btn-primary input-sm">
-<input type="hidden" name="ref_banks_id" id="ref_banks_id" value="" wfd-id="id3">                                           </button>                                    
-                                </span>
-                            </div>
-                            
-<input type="hidden" name="ref_banks_id" id="ref_ba                    </tr>>                    <tr>                         <th>Тип счета</select></th>                         <td>-                            <select name="bills_type" class="form-control input-sm">      </td>
-                    </tr>
-                    <tr>
-                        <th>Тип счета</th>
-                        <td>
-                            <select name="bills_type" class="form-control input-sm">
-<option value="1">Расчётный счёт</option>
-<option value="2">Валютный счёт</option>
-<option value="3">Текущий счёт подразделения</option>
-<option value="4">Спецссудный счет</option>
-<option value="5">Сберегательный счет по договору банковского вклада</option>
-<option value="6">Транзитный счет</option>
-<option value="7">Краткосрочный счет</option>
-<option value="8">Накопительный счет</option>
-<option value="9">Корреспондентский счет банка</option>
-<option value="10">Субкорресп. счет</option>
-<option value="11">Пластиковая корпоративная карточка</option>
-<option value="12">Подсобно-доходный счет</option>
-<option value="13">Спец.счет для выплаты пенсии</option>
-<option value="14">Ликвидационный счет</option>
-<option value="15">Расчетный счет бюдж. организ-й</option>
-<option value="16">Карт-счет</option>
-<option value="17">Металлический счет</option>
-<option value="18">Депозитный счет для размещения пенсионных активов </option>
-<option value="19">Счет спонсорской и благотворительной помощи</option>
-<option value="20">Текущий счёт</option>
-<option value="21">Депозитный счет</option>
-<option value="22">Контрольный счет наличности</option>
-<option value="23">Текущий счет физ.лица</option>
-<option value="24">Текущий счет организации</option>
-</select>                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <button type="button" class="btn btn-default input-sm" id="btnAddBanks">
-                                        Добавить новый банк                                    </button>
-                        </td>
-                    </tr>
-                </tbody></table>
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th></th>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="sign_old_format" value="1">
+                                        Использовать старый формат подписи
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>Номер счета</th>
+                            <td>
+                                <input type="text" name="iik" id="iik" value="" class="form-control input-sm" maxlength="20">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>КБе</th>
+                            <td>
+                                <select name="kse" class="form-control input-sm kbe_data">
+                                    <option value="">-- выберите --</option>
+                                    <option value="11">11 - Центральное Правительство</option>
+                                    <option value="12">12 - Региональные и местные органы управления</option>
+                                    <option value="13">13 - Центральные (национальные) банки</option>
+                                    <option value="14">14 - Другие депозитные организации</option>
+                                    <option value="15">15 - Другие финансовые организации</option>
+                                    <option value="16">16 - Государственные нефинансовые организации</option>
+                                    <option value="17">17 - Негосударственные нефинансовые организации</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>Наименование банка</th>
+                            <td>
+                                <div class="input-group">
+                                    <input type="text" name="bank_name" id="bank_name" class="form-control input-sm" placeholder="Наименование банка" readonly>
+                                    <span class="input-group-btn">
+                                        <button type="button" id="showRefBank" class="btn btn-primary btn-sm">Выбрать банк</button>
+                                    </span>
+                                </div>
+
+                                <input type="hidden" name="ref_banks_id" id="ref_banks_id" value="">
+                                <input type="hidden" name="rezident" id="rezident" value="">
+                                <div class="text-muted small" style="margin-top:6px">BIK: <span id="bik_bank"></span></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>Тип счета</th>
+                            <td>
+                                <select name="bills_type" class="form-control input-sm">
+                                    <option value="1">Расчётный счёт</option>
+                                    <option value="2">Валютный счёт</option>
+                                    <option value="3">Текущий счёт подразделения</option>
+                                    <option value="4">Спецссудный счет</option>
+                                    <option value="5">Сберегательный счет по договору банковского вклада</option>
+                                    <option value="6">Транзитный счет</option>
+                                    <option value="7">Краткосрочный счет</option>
+                                    <option value="8">Накопительный счет</option>
+                                    <option value="9">Корреспондентский счет банка</option>
+                                    <option value="10">Субкорресп. счет</option>
+                                    <option value="11">Пластиковая корпоративная карточка</option>
+                                    <option value="12">Подсобно-доходный счет</option>
+                                    <option value="13">Спец.счет для выплаты пенсии</option>
+                                    <option value="14">Ликвидационный счет</option>
+                                    <option value="15">Расчетный счет бюдж. организ-й</option>
+                                    <option value="16">Карт-счет</option>
+                                    <option value="17">Металлический счет</option>
+                                    <option value="18">Депозитный счет для размещения пенсионных активов</option>
+                                    <option value="19">Счет спонсорской и благотворительной помощи</option>
+                                    <option value="20">Текущий счёт</option>
+                                    <option value="21">Депозитный счет</option>
+                                    <option value="22">Контрольный счет наличности</option>
+                                    <option value="23">Текущий счет физ.лица</option>
+                                    <option value="24">Текущий счет организации</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <button type="button" class="btn btn-default btn-sm" id="btnAddBanks">Добавить новый банк</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
                 <hr>
-                <a role="button" class="btn btn-default" href="">
-                    ← Вернуться в список счетов                </a>
-                <button type="submit" class="btn btn-default" name="save" value="Y">
-                    Сохранить →                </button>
+
+                <a role="button" class="btn btn-default" href="">← Вернуться в список счетов</a>
+                <button type="submit" class="btn btn-default" name="save" value="Y">Сохранить →</button>
             </form>
         </div>
     </div>
+    <div class="clearfix"></div>
 </div>
-<div class="clearfix">
-</div></div>
-        <div class="clearfix"></div>
-        
-            </div>
     <!-- END CONTAINER -->
 
 </div>
