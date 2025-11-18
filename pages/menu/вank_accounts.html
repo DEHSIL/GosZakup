@@ -177,15 +177,63 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                             <th class="text-center"></th>
                                                     </tr>
                     </thead>
-                    <tbody>
+                    <script>
+                            document.addEventListener("DOMContentLoaded", ()=>{
+                                const field = document.querySelector("#CardField")
 
-                                                    <tr class="active">
+                                if (field) {
+                                    const cardFlag = localStorage.getItem('userCard')
+
+                                    field.innerHTML = ''
+
+                                    const cardTrue = `
+                                        <td><a href="4">KZ63722S000033373498</a> </td>
+                                        <td>CASPKZKA</td>
+                                        <td>11 </td>
+                                        <td>АО "KASPI BANK"</td>
+                                        <td>2025-10-28</td>
+                                        <td>—</td>
+                                        <td class="hidden-xs">Расчётный счёт</td>
+                                        <td class="text-center">
+                                                                                                                                        <input type="checkbox" class="select-garant" id="bills-4258234" name="billsg[]" value="4258234" wfd-id="id2">
+                                                                                                                                        </td>
+                                        <td class="text-center">
+                                                                                                                                        <input type="checkbox" class="select-one" id="bill-4258234" name="bills[]" value="4258234" wfd-id="id3">
+                                                                                                                                        </td>
+                                        <td class="text-center">
+                                            <input type="checkbox" checked="" disabled="" wfd-id="id4">
+                                        </td>
+                                        <td><a href="" class="btn btn-sm btn-primary">Изменить</a></tr>
+                                    `
+
+                                    const cardFalse = `
+                                                             <tr class="active">
+                                            <td colspan="8" class="text-center">
+                                                <p class="text-center text-muted"><br><br>
+                                                    Данные по счетам не найдены<br><br>
+                                                </p>
+                                            </td>
+                                        </tr>                                    `
+                                    
+                                    if (cardFlag === 'true'){
+                                        field.innerHTML = cardTrue 
+                                    } else {
+                                        field.innerHTML = cardFalse
+                                    }
+                                }
+                            })
+                        </script>
+                    <tbody id="CardField">
+                        
+                        <!-- <tr class="active">
                                 <td colspan="8" class="text-center">
                                     <p class="text-center text-muted"><br><br>
                                         Данные по счетам не найдены<br><br>
                                     </p>
                                 </td>
-                            </tr>
+                            </tr> -->
+
+
                                             </tbody>
                 </table>
 
